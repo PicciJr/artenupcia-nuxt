@@ -1,0 +1,20 @@
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+/* purgecss end ignore */
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: 'Freestyle';
+  src: url('./freestyle-font.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Eraslight';
+  src: url('./eras-light-itc/ErasLightITC.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inkfree';
+  src: url('./Inkfree.ttf') format('truetype');
+}
