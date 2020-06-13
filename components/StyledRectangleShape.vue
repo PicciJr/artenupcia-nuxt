@@ -1,13 +1,13 @@
 <template>
   <div class="flex px-4 py-2 font-free">
     <div
-      class="relative w-fit object-contain py-2 px-2 border border-an-salmon text-3xl text-center sm:text-justify"
+      class="relative w-fit object-contain py-2 px-2 border-2 border-an-salmon text-2xl sm:text-5xl text-center"
     >
       <div class="pl-4">
         {{ textRectangle }}
       </div>
       <div
-        class="absolute top-0 ml-1 -mt-2 w-full object-contain h-full px-4 py-2 border border-an-salmon"
+        class="absolute top-0 ml-1 -mt-3 w-full object-contain h-full px-4 py-2 border-2 border-an-salmon"
       ></div>
     </div>
   </div>

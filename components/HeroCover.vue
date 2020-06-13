@@ -1,18 +1,24 @@
 <template>
   <div class="flex sm:mb-4">
-    <div class="flex-1 relative opacity-75 h-64">
-      <iframe
+    <div class="flex-1 relative opacity-75 h-96">
+      <!-- <iframe
         src="https://www.youtube.com/embed/D4nppWHURjI?autoplay=1"
         autoplay
         muted
         loop
         class="object-cover w-full h-full"
-      ></iframe>
+      ></iframe> -->
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F1080_9999_100%2Fcoming-soon-1898936_1280.jpg?alt=media&token=df9e7e3c-1be7-4a74-b430-5a8ca321a504"
+        class="object-cover w-full h-full"
+      />
       <div class="absolute bottom-0 right-0 px-2 py-4">
         <div class="border-white">
           <button
             class="heartbeat px-8 py-3 my-2 bg-an-cielo border border-an-salmon border-8 inline-block hover:bg-teal-500 hover:font-bold rounded-full shadow-lg text-black text-xl"
-          >Cuéntame tu idea</button>
+          >
+            Cuéntame tu idea
+          </button>
         </div>
       </div>
     </div>
@@ -20,7 +26,7 @@
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style scoped>

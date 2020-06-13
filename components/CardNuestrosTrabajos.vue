@@ -1,6 +1,6 @@
 <template>
   <div class="p-2">
-    <img :src="imgSrc" class="w-full shadow-md cursor-pointer sm:h-96" />
+    <img :src="imgSrc" class="object-cover shadow-md cursor-pointer" />
     <div class="p-2 text-an-azul-oscuro text-sm italic">{{ footerText }}</div>
   </div>
 </template>
@@ -9,14 +9,17 @@
 export default {
   props: {
     imgSrc: {
-      type: String,
+      type: String
     },
     footerText: {
-      type: String,
+      type: String
     },
-    linkTo: {
-      type: String,
-    },
-  },
-};
+    trabajo: {
+      type: Object,
+      default() {
+        return null
+      }
+    }
+  }
+}
 </script>

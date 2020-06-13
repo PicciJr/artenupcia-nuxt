@@ -8,20 +8,24 @@
     <HeroCover :class="{ hidden: hideMainElements }" />
     <!--Contenedor de todo el layout para que tengan la misma identacion -->
     <div class="px-4 xl:mx-24" :class="{ hidden: hideMainElements }">
-      <div class="flex flex-col py-4 xl:flex-row justify-center">
-        <div class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4">
-          <div class="pr-12 sm:pr-56">
-            <h2
-              class="border-b border-an-marron mb-4 font-inkfree text-3xl"
-              id="invitaciones-personalizadas"
-            >
-              Invitaciones personalizadas
-            </h2>
-          </div>
+      <div class="sm:w-1/3 mt-2">
+        <h2
+          class="mb-2 font-inkfree text-2xl sm:text-3xl text-center"
+          id="invitaciones-personalizadas"
+        >
+          Invitaciones personalizadas
+        </h2>
+      </div>
+      <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
+      <!-- Flex -->
+      <div class="flex flex-col py-2 xl:flex-row justify-center">
+        <div class="w-full p-1 sm:p-3 xl:p-4">
           <StyledRectangleShape
             :textRectangle="'Si tu boda es única, tu invitación también'"
           />
-          <p class="font-eras py-4 text-sm text-an-azul-oscuro sm:text-xl">
+          <p
+            class="font-eras py-4 text-sm text-an-azul-oscuro sm:text-xl text-justify"
+          >
             ¿Te imaginas que vuestra invitación de boda fuera más que una
             invitación? En Artenupcia buscamos que vuestra papelería de boda sea
             única y especial. De calidad, y con un diseño original que refleje
@@ -36,18 +40,24 @@
           </p>
         </div>
         <div class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4">
-          <CardItem />
+          <CardItem
+            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F1080_9999_100%2FIMG_4974.jpg?alt=media&token=3220d014-1f93-4964-b9b4-4eee372a3793"
+          />
         </div>
       </div>
       <!--Como lo hacemos -->
+      <div class="sm:w-1/3 mt-2">
+        <h2 class="mb-2 font-inkfree text-2xl sm:text-3xl text-center">
+          ¿Cómo lo hacemos?
+        </h2>
+      </div>
+      <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
+      <!-- Flex -->
       <div class="flex flex-col py-4 xl:flex-row justify-center">
         <div class="w-full p-1 sm:p-3 xl:p-4">
-          <div class="pr-12 sm:pr-56">
-            <h2 class="border-b border-an-marron mb-4 font-inkfree text-3xl">
-              ¿Cómo lo hacemos?
-            </h2>
-          </div>
-          <p class="font-eras py-4 text-sm text-an-azul-oscuro sm:text-xl">
+          <p
+            class="font-eras py-4 text-sm text-an-azul-oscuro sm:text-xl text-justify"
+          >
             Mediante técnicas artesanales de pintura como acuarelas, tinta
             china, lápices o grafito, o también técnicas digitales creamos
             vuestro diseño para aplicarlo en las invitaciones y crear vuestra
@@ -59,27 +69,37 @@
       </div>
       <div class="flex flex-col py-4 xl:flex-row justify-center">
         <div class="w-full xl:w-1/3 p-1 sm:p-3 xl:p-4">
-          <CardItem />
+          <CardItem
+            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F1080_9999_100%2FIMG_4974.jpg?alt=media&token=3220d014-1f93-4964-b9b4-4eee372a3793"
+          />
         </div>
         <div class="w-full xl:w-1/3 p-1 sm:p-3 xl:p-4">
-          <CardItem />
+          <CardItem
+            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F1080_9999_100%2FIMG_4974.jpg?alt=media&token=3220d014-1f93-4964-b9b4-4eee372a3793"
+          />
         </div>
         <div class="w-full xl:w-1/3 p-1 sm:p-3 xl:p-4">
-          <CardItem />
+          <CardItem
+            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F1080_9999_100%2FIMG_4974.jpg?alt=media&token=3220d014-1f93-4964-b9b4-4eee372a3793"
+          />
         </div>
       </div>
       <!--Nuestros trabajos -->
+      <div class="sm:w-1/3 mt-2">
+        <h2
+          class="mb-2 font-inkfree text-2xl sm:text-3xl text-center"
+          id="nuestros-trabajos"
+        >
+          Nuestros trabajos
+        </h2>
+      </div>
+      <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
+      <!-- Flex -->
       <div class="flex flex-col py-4 xl:flex-row">
         <div class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4">
-          <div class="pr-12 sm:pr-56">
-            <h2
-              class="border-b border-an-marron mb-4 font-inkfree text-3xl"
-              id="nuestros-trabajos"
-            >
-              Nuestros trabajos
-            </h2>
-          </div>
-          <p class="font-eras py-4 text-sm text-an-azul-oscuro sm:text-xl">
+          <p
+            class="font-eras py-4 text-sm text-an-azul-oscuro sm:text-xl text-justify"
+          >
             Echa un vistazo a otras bodas y eventos maravillosos en los que
             hemos trabajado! Como cada trabajo para nosotros es único no vas a
             encontrar un catálogo de invitaciones pero puedes ver otros encargos
@@ -89,67 +109,49 @@
         <!--Slider solo movil -->
         <CarruselImagenes class="sm:hidden" />
       </div>
-      <div class="flex flex-col py-4 xl:flex-row">
+      <!-- Loop para trabajos -->
+      <div class="flex flex-col py-4 xl:flex-row flex-wrap">
         <div
+          v-for="trabajo in trabajos"
+          :key="trabajo.id"
           class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4 transition duration-500 ease-in-out transform hover:-translate-y-4"
-          @click="redirectTo('pablo-y-blanca')"
+          @click="redirectTo(trabajo.urlTo, trabajo.id)"
         >
           <CardNuestrosTrabajos
-            imgSrc="https://img.freepik.com/vector-gratis/elegante-plantilla-tarjeta-invitacion-boda-peonias-aquarel_119048-241.jpg?size=626&ext=jpg"
-            footerText="Pablo y Blanca"
-          />
-        </div>
-        <div
-          class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4 transition duration-500 ease-in-out transform hover:-translate-y-4"
-        >
-          <CardNuestrosTrabajos
-            imgSrc="https://img.freepik.com/free-vector/elegant-peony-wedding-invitation-card-template_21799-2780.jpg?size=626&ext=jpg"
-            footerText="Felipe y Andrés"
+            v-if="trabajo.mainImgSrc"
+            :imgSrc="trabajo.mainImgSrc"
+            :footerText="trabajo.footerText"
           />
         </div>
       </div>
-      <div class="flex flex-col py-4 xl:flex-row">
-        <div
-          class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4 transition duration-500 ease-in-out transform hover:-translate-y-4"
-        >
-          <CardNuestrosTrabajos
-            imgSrc="https://img.freepik.com/free-vector/elegant-peony-wedding-invitation-card-template_21799-2780.jpg?size=626&ext=jpg"
-            footerText="Felipe y Andrés"
-          />
-        </div>
-        <div
-          class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4 transition duration-500 ease-in-out transform hover:-translate-y-4"
-        >
-          <CardNuestrosTrabajos
-            imgSrc="https://img.freepik.com/vector-gratis/elegante-plantilla-tarjeta-invitacion-boda-peonias-aquarel_119048-241.jpg?size=626&ext=jpg"
-            footerText="Pablo y Blanca"
-          />
-        </div>
-      </div>
-      <div class="flex justify-center">
+      <!-- <div class="flex justify-center">
         <button
           class="px-8 py-3 mt-2 mb-12 bg-an-cielo border border-an-salmon border-8 inline-block hover:bg-teal-500 hover:font-bold rounded-full shadow-lg text-black text-xl"
         >
           Ver más trabajos
         </button>
-      </div>
+      </div> -->
       <!--Sobre Artenupcia -->
+      <div class="sm:w-1/3 mt-2">
+        <h2
+          class="mb-2 font-inkfree text-2xl sm:text-3xl text-center"
+          id="sobre-artenupcia"
+        >
+          Sobre Artenupcia
+        </h2>
+      </div>
+      <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
+      <!-- Flex -->
       <div class="flex flex-col py-4 xl:flex-row justify-center">
         <div class="w-full p-1 sm:p-3 xl:p-4">
-          <div class="pr-12 sm:pr-56">
-            <h2
-              class="border-b border-an-marron mb-4 font-inkfree text-3xl"
-              id="sobre-artenupcia"
-            >
-              Sobre Artenupcia
-            </h2>
-          </div>
           <StyledRectangleShape
             :textRectangle="
               'Artenupcia nace y quiere que cada detalle de tu boda sea especial'
             "
           />
-          <p class="font-eras py-4 text-sm text-an-azul-oscuro sm:text-xl">
+          <p
+            class="font-eras py-4 text-sm text-an-azul-oscuro sm:text-xl text-justify"
+          >
             Yo soy Begoña, enamorada del arte, y Artenupcia es mi proyecto
             personal. Desde la ilusión que me crea poder captar los momentos
             únicos de vuestra vida crece Artenupcia. Donde desde el corazón
@@ -167,18 +169,20 @@
         </div>
       </div>
       <!--¿Necesitas inspiración? -->
+      <div class="sm:w-1/3 mt-2">
+        <h2
+          class="mb-2 font-inkfree text-2xl sm:text-3xl text-center"
+          id="necesitas-inspiracion"
+        >
+          ¿Necesitas inspiración?
+        </h2>
+      </div>
+      <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
+      <!-- Flex -->
       <div class="flex flex-col py-4 xl:flex-row justify-center">
         <div class="w-full sm:pr-8">
-          <div class="pr-12 sm:pr-56">
-            <h2
-              class="border-b border-an-marron mb-4 font-inkfree text-3xl"
-              id="necesitas-inspiracion"
-            >
-              ¿Necesitas inspiración?
-            </h2>
-          </div>
           <!-- Instagram Banner -->
-          <BannerTextCallToAction
+          <BannerTextOnly
             headingText="¡Écha un vistazo en nuestro Instagram!"
             mainText="Busca entre nuestros trabajos y momentos para encontrar a tus
                   musas:"
@@ -196,7 +200,7 @@
                 />
               </svg>
             </template>
-          </BannerTextCallToAction>
+          </BannerTextOnly>
         </div>
         <!--Slider solo movil -->
         <CarruselImagenes class="sm:hidden" />
@@ -214,6 +218,7 @@
 </template>
 
 <script>
+import { db } from '@/plugins/firebaseConfig.js'
 import Header from '@/components/Header'
 import MenuNavbar from '@/components/MenuNavbar'
 import HeroCover from '@/components/HeroCover'
@@ -224,10 +229,36 @@ import InstagramFeed from '@/components/InstagramFeed'
 import instagramApi from '@/api/instagramApi.js'
 import NewsletterForm from '@/components/NewsletterForm'
 import CardNuestrosTrabajos from '@/components/CardNuestrosTrabajos'
-import BannerTextCallToAction from '@/components/BannerTextCallToAction'
+import BannerTextOnly from '@/components/BannerTextOnly'
 
 export default {
   name: 'App',
+  asyncData({ app, params, error, store }) {
+    /** IG posts are retrieved */
+    // const posts = await instagramApi.getUserMedia()
+    // console.log('esto son los posts: ' + posts)
+    // return {
+    //   igPosts: posts
+    // }
+    /** Get nuestros trabajos */
+    const trabajosArray = []
+    return db
+      .collection('fl_content')
+      .get()
+      .then(querySnapshot => {
+        querySnapshot.forEach(doc => {
+          // crear nuevo trabajo a partir de datos
+          const newTrabajo = {
+            id: doc.data().id,
+            mainImgSrc: doc.data().mainImgSrc,
+            footerText: doc.data().footerText,
+            urlTo: doc.data().urlTo
+          }
+          trabajosArray.push(newTrabajo)
+        })
+        return { trabajos: trabajosArray }
+      })
+  },
   data() {
     return {
       hideMainElements: false,
@@ -244,22 +275,16 @@ export default {
     InstagramFeed,
     NewsletterForm,
     CardNuestrosTrabajos,
-    BannerTextCallToAction
+    BannerTextOnly
   },
   methods: {
     handleToggleMenu(status) {
       this.hideMainElements = !status
     },
-    redirectTo(link) {
+    /** Enviar usuario a trabajo seleccionado y actualizar el valor en store */
+    redirectTo(link, idTrabajo) {
       this.$router.push('/nuestros-trabajos/' + link)
-    }
-  },
-  async asyncData() {
-    /** IG posts are retrieved */
-    const posts = await instagramApi.getUserMedia()
-    console.log('esto son los posts: ' + posts)
-    return {
-      igPosts: posts
+      this.$store.dispatch('setPostSelectedByUser', idTrabajo)
     }
   }
 }
