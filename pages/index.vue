@@ -24,7 +24,7 @@
             :textRectangle="'Si tu boda es única, tu invitación también'"
           />
           <p
-            class="font-eras py-4 text-sm text-an-azul-oscuro sm:text-xl text-justify"
+            class="font-eras font-bold py-4 text-md text-an-azul-oscuro sm:text-xl text-justify"
           >
             ¿Te imaginas que vuestra invitación de boda fuera más que una
             invitación? En Artenupcia buscamos que vuestra papelería de boda sea
@@ -39,9 +39,9 @@
             vuestras.
           </p>
         </div>
-        <div class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4">
+        <div class="w-full p-1 sm:p-3 xl:p-4">
           <CardItem
-            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F1080_9999_100%2FIMG_4974.jpg?alt=media&token=3220d014-1f93-4964-b9b4-4eee372a3793"
+            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4968.jpg?alt=media&token=072e7134-105e-49ce-a37e-d386f0e70a7e"
           />
         </div>
       </div>
@@ -56,7 +56,7 @@
       <div class="flex flex-col py-4 xl:flex-row justify-center">
         <div class="w-full p-1 sm:p-3 xl:p-4">
           <p
-            class="font-eras py-4 text-sm text-an-azul-oscuro sm:text-xl text-justify"
+            class="font-eras font-bold py-4 text-md text-an-azul-oscuro sm:text-xl text-justify"
           >
             Mediante técnicas artesanales de pintura como acuarelas, tinta
             china, lápices o grafito, o también técnicas digitales creamos
@@ -70,17 +70,17 @@
       <div class="flex flex-col py-4 xl:flex-row justify-center">
         <div class="w-full xl:w-1/3 p-1 sm:p-3 xl:p-4">
           <CardItem
-            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F1080_9999_100%2FIMG_4974.jpg?alt=media&token=3220d014-1f93-4964-b9b4-4eee372a3793"
+            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4900%204000x4000.jpg?alt=media&token=f548c689-273d-421d-a3d3-a7b2dc67c6d3"
           />
         </div>
         <div class="w-full xl:w-1/3 p-1 sm:p-3 xl:p-4">
           <CardItem
-            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F1080_9999_100%2FIMG_4974.jpg?alt=media&token=3220d014-1f93-4964-b9b4-4eee372a3793"
+            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4918%204000x4000.jpg?alt=media&token=268e80b2-09ec-4008-a764-c3c15d6c6ffc"
           />
         </div>
         <div class="w-full xl:w-1/3 p-1 sm:p-3 xl:p-4">
           <CardItem
-            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F1080_9999_100%2FIMG_4974.jpg?alt=media&token=3220d014-1f93-4964-b9b4-4eee372a3793"
+            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4969.jpg?alt=media&token=1fdd25aa-5cff-4029-9245-5a486bcd2756"
           />
         </div>
       </div>
@@ -98,7 +98,7 @@
       <div class="flex flex-col py-4 xl:flex-row">
         <div class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4">
           <p
-            class="font-eras py-4 text-sm text-an-azul-oscuro sm:text-xl text-justify"
+            class="font-eras font-bold py-4 text-md text-an-azul-oscuro sm:text-xl text-justify"
           >
             Echa un vistazo a otras bodas y eventos maravillosos en los que
             hemos trabajado! Como cada trabajo para nosotros es único no vas a
@@ -115,7 +115,7 @@
           v-for="trabajo in trabajos"
           :key="trabajo.id"
           class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4 transition duration-500 ease-in-out transform hover:-translate-y-4"
-          @click="redirectTo(trabajo.urlTo, trabajo.id)"
+          @click="redirectToTrabajo(trabajo.id)"
         >
           <CardNuestrosTrabajos
             v-if="trabajo.mainImgSrc"
@@ -150,7 +150,7 @@
             "
           />
           <p
-            class="font-eras py-4 text-sm text-an-azul-oscuro sm:text-xl text-justify"
+            class="font-eras font-bold py-4 text-md text-an-azul-oscuro sm:text-xl text-justify"
           >
             Yo soy Begoña, enamorada del arte, y Artenupcia es mi proyecto
             personal. Desde la ilusión que me crea poder captar los momentos
@@ -205,6 +205,7 @@
         <!--Slider solo movil -->
         <CarruselImagenes class="sm:hidden" />
       </div>
+      <!-- Feed Instagram desktop -->
       <div class="flex flex-col py-4 xl:flex-row justify-center">
         <InstagramFeed :igPosts="igPosts" />
       </div>
@@ -233,13 +234,7 @@ import BannerTextOnly from '@/components/BannerTextOnly'
 
 export default {
   name: 'App',
-  asyncData({ app, params, error, store }) {
-    /** IG posts are retrieved */
-    // const posts = await instagramApi.getUserMedia()
-    // console.log('esto son los posts: ' + posts)
-    // return {
-    //   igPosts: posts
-    // }
+  asyncData({ app, params, error, store, redirect }) {
     /** Get nuestros trabajos */
     const trabajosArray = []
     return db
@@ -257,6 +252,10 @@ export default {
           trabajosArray.push(newTrabajo)
         })
         return { trabajos: trabajosArray }
+      })
+      .catch(err => {
+        console.log(err)
+        redirect('/error')
       })
   },
   data() {
@@ -281,10 +280,9 @@ export default {
     handleToggleMenu(status) {
       this.hideMainElements = !status
     },
-    /** Enviar usuario a trabajo seleccionado y actualizar el valor en store */
-    redirectTo(link, idTrabajo) {
-      this.$router.push('/nuestros-trabajos/' + link)
-      this.$store.dispatch('setPostSelectedByUser', idTrabajo)
+    /** Enviar usuario a trabajo seleccionado */
+    redirectToTrabajo(idTrabajo) {
+      this.$router.push('/nuestros-trabajos/' + idTrabajo)
     }
   }
 }

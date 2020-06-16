@@ -24,9 +24,9 @@
         </div>
         <!-- Contenido texto de trabajo -->
         <div class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4">
-          <h2 class="text-2xl">{{ headingText }}</h2>
+          <h2 class="font-eras text-2xl">{{ headingText }}</h2>
           <div
-            class="py-4 text-sm text-an-azul-oscuro sm:text-base text-justify"
+            class="font-eras py-4 text-md text-an-azul-oscuro sm:text-lg font-bold text-justify"
           >
             {{ mainText }}
           </div>
@@ -34,7 +34,9 @@
       </div>
     </div>
     <!-- Call to action del usuario -->
-    <CallToActionBanner class="mb-8" linkTo="/contacto" />
+    <div class="p-2">
+      <CallToActionBanner class="mb-8" linkTo="/contacto" />
+    </div>
   </div>
 </template>
 
@@ -54,10 +56,10 @@ export default {
     CallToActionBanner,
     ThumbnailMedia
   },
-  asyncData({ app, store }) {
+  asyncData({ app, store, route, redirect }) {
     return db
       .collection('fl_content')
-      .doc(store.state.postSelectedId)
+      .doc(route.params.id)
       .get()
       .then(function(doc) {
         if (doc.exists) {
@@ -74,11 +76,11 @@ export default {
               doc.data().imgLink5
             ]
           }
+        } else {
+          redirect('/error')
         }
       })
-      .catch(function(error) {
-        console.log('Error getting document:', error)
-      })
+      .catch(err => redirect('/error'))
   },
   methods: {
     handleSwitchImage(src) {
@@ -87,3 +89,17 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.font-free {
+  font-family: 'Freestyle';
+}
+
+.font-eras {
+  font-family: 'Eraslight';
+}
+
+.font-inkfree {
+  font-family: 'Inkfree';
+}
+</style>

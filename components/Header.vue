@@ -33,7 +33,7 @@
       </div>
       <!-- Contiene opciones de menu -->
       <div
-        class="flex flex-col font-eras absolute pt-12 px-8 w-full text-2xl text-center"
+        class="flex flex-col font-eras absolute pt-12 w-full text-2xl text-center"
         style="top: 50%; left: 50%; transform: translate(-50%, -50%);"
       >
         <div @click="toggleMenu" class="mb-10">

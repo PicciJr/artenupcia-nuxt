@@ -16,7 +16,6 @@ export default {
   },
   methods: {
     switchImage() {
-      console.log("ejecutando en hijo");
       this.$emit("hover", this.imgSrc);
     },
   },

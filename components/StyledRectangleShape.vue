@@ -1,7 +1,7 @@
 <template>
   <div class="flex px-4 py-2 font-free">
     <div
-      class="relative w-fit object-contain py-2 px-2 border-2 border-an-salmon text-2xl sm:text-5xl text-center"
+      class="relative w-fit object-contain py-2 px-2 border-2 border-an-salmon text-3xl sm:text-5xl text-center"
     >
       <div class="pl-4">
         {{ textRectangle }}

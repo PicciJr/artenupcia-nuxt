@@ -18,3 +18,12 @@
   font-family: 'Inkfree';
   src: url('./Inkfree.ttf') format('truetype');
 }
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.25s;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}

@@ -10,7 +10,7 @@
           :class="{
             'border-2 border-r-4 border-red-700 shadow-md':
               errorsFlag.email.length > 0,
-            'border-2 border-gray-300': errorsFlag.email.length <= 0,
+            'border-2 border-gray-300': errorsFlag.email.length <= 0
           }"
           type="email"
           @input="checkEmailValidity"
@@ -53,12 +53,12 @@
         <div class="mb-2">
           <button
             type="button"
-            class="relative inline-flex items-center px-2 sm:px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150"
+            class="relative inline-flex items-center px-2 sm:px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150"
             :class="{
               'bg-an-crema opacity-75 font-extrabold bg-an':
                 opcionInvitaciones === 0,
               'border-2 border-r-4 border-red-700 shadow-md':
-                errorsFlag.invitaciones.length > 0,
+                errorsFlag.invitaciones.length > 0
             }"
             @click="setOpcionInvitaciones(0)"
           >
@@ -66,11 +66,11 @@
           </button>
           <button
             type="button"
-            class="-ml-px relative inline-flex items-center px-2 sm:px-4 py-2 border border-gray-300 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150"
+            class="relative inline-flex items-center px-2 sm:px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150"
             :class="{
               'bg-an-crema opacity-75 font-extrabold': opcionInvitaciones === 1,
               'border-2 border-r-4 border-red-700 shadow-md':
-                errorsFlag.invitaciones.length > 0,
+                errorsFlag.invitaciones.length > 0
             }"
             @click="setOpcionInvitaciones(1)"
           >
@@ -78,11 +78,11 @@
           </button>
           <button
             type="button"
-            class="-ml-px relative inline-flex items-center px-2 sm:px-4 py-2 rounded-r-md border border-gray-300 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150"
+            class="relative inline-flex items-center px-2 sm:px-4 py-2 rounded-r-md border border-gray-300 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150"
             :class="{
               'bg-an-crema opacity-75 font-extrabold': opcionInvitaciones === 2,
               'border-2 border-r-4 border-red-700 shadow-md':
-                errorsFlag.invitaciones.length > 0,
+                errorsFlag.invitaciones.length > 0
             }"
             @click="setOpcionInvitaciones(2)"
           >
@@ -131,7 +131,7 @@
         :class="{
           'border-2 border-r-4 border-red-700 shadow-md':
             errorsFlag.textoLargo.length > 0,
-          'border border-gray-300': errorsFlag.textoLargo.length <= 0,
+          'border border-gray-300': errorsFlag.textoLargo.length <= 0
         }"
         rows="3"
         @input="checkTextoLargoValidity"
@@ -154,127 +154,126 @@
 </template>
 
 <script>
-import { db } from "@/plugins/firebaseConfig.js";
+import { db } from '@/plugins/firebaseConfig.js'
 export default {
   data() {
     return {
       userData: {
-        email: "",
-        invitaciones: "",
-        opcionInteres: "Invitaciones de Boda",
-        textoLargo: "",
-        telefono: "",
+        email: '',
+        invitaciones: '',
+        opcionInteres: 'Invitaciones de Boda',
+        textoLargo: '',
+        telefono: ''
       },
       errorsFlag: {
-        email: "",
-        invitaciones: "",
-        textoLargo: "",
+        email: '',
+        invitaciones: '',
+        textoLargo: ''
       },
       formSubmitted: false,
-      opcionInvitaciones: -1,
-    };
+      opcionInvitaciones: -1
+    }
   },
   methods: {
     checkInputFields() {
       // todo tiene que estar relleno
       // datos validos, si todo ok entonces enviar a BBDD
-      this.formSubmitted = true;
-      this.checkEmailValidity();
-      this.checkInvitacionesValidity();
-      this.checkTextoLargoValidity();
+      this.formSubmitted = true
+      this.checkEmailValidity()
+      this.checkInvitacionesValidity()
+      this.checkTextoLargoValidity()
       if (
         this.checkEmailValidity() &&
         this.checkInvitacionesValidity() &&
         this.checkTextoLargoValidity()
       ) {
-        this.addUserToDatabase();
+        this.addUserToDatabase(this.$router)
       }
     },
     checkEmailValidity() {
-      this.errorsFlag.email = "";
-      const regEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      this.errorsFlag.email = ''
+      const regEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
       if (this.formSubmitted) {
         if (this.userData.email.length <= 0)
           this.errorsFlag.email =
-            "Por favor, indica un email al que podamos contactarte.";
+            'Por favor, indica un email al que podamos contactarte.'
         else if (!regEx.test(String(this.userData.email).toLowerCase())) {
           this.errorsFlag.email =
-            "Por favor, introduce un email válido al que podamos contactarte";
+            'Por favor, introduce un email válido al que podamos contactarte'
         } else {
-          this.errorsFlag.email = "";
-          return true;
+          this.errorsFlag.email = ''
+          return true
         }
       }
-      return false;
+      return false
     },
     checkInvitacionesValidity() {
       if (this.formSubmitted) {
         if (this.userData.invitaciones.length <= 0)
           this.errorsFlag.invitaciones =
-            "¿Cuántas invitaciones necesitas aproximadamente?";
+            '¿Cuántas invitaciones necesitas aproximadamente?'
         else {
-          this.errorsFlag.invitaciones = "";
-          return true;
+          this.errorsFlag.invitaciones = ''
+          return true
         }
       }
-      return false;
+      return false
     },
     checkTextoLargoValidity() {
-      this.errorsFlag.textoLargo = "";
+      this.errorsFlag.textoLargo = ''
       if (this.formSubmitted) {
         if (this.userData.textoLargo.length <= 0)
           this.errorsFlag.textoLargo =
-            "Saber más de vosotros nos ayuda a obtener un resultado que seguro que os encantará";
+            'Saber más de vosotros nos ayuda a obtener un resultado que seguro que os encantará'
         else {
-          this.errorsFlag.textoLargo = "";
-          return true;
+          this.errorsFlag.textoLargo = ''
+          return true
         }
-        return false;
+        return false
       }
     },
-    addUserToDatabase() {
-      const that = this;
+    addUserToDatabase(router) {
+      const that = this
       // Add a new document in collection "cities"
-      db.collection("contactformusers")
+      db.collection('contactformusers')
         .doc(this.userData.email)
         .set({
           email: this.userData.email,
           telefono: this.userData.telefono,
           invitaciones: this.userData.invitaciones,
           interesPrincipal: this.userData.opcionInteres,
-          textoDescriptivo: this.userData.textoLargo,
+          textoDescriptivo: this.userData.textoLargo
         })
         .then(function() {
-          console.log("Document successfully written!");
-          that.$router.push("/contacto-exito");
+          router.push('/contacto-exito')
         })
         .catch(function(error) {
-          console.error("Error writing document: ", error);
-        });
+          router.push('/error')
+        })
     },
     setOpcionInvitaciones(opcionSeleccionada) {
-      this.errorsFlag.invitaciones = "";
-      if (opcionSeleccionada === 0) this.userData.invitaciones = "Menos de 50";
+      this.errorsFlag.invitaciones = ''
+      if (opcionSeleccionada === 0) this.userData.invitaciones = 'Menos de 50'
       else if (opcionSeleccionada === 1)
-        this.userData.invitaciones = "Entre 50-100";
+        this.userData.invitaciones = 'Entre 50-100'
       else if (opcionSeleccionada === 2)
-        this.userData.invitaciones = "Más de 100";
-      this.opcionInvitaciones = opcionSeleccionada;
-    },
-  },
-};
+        this.userData.invitaciones = 'Más de 100'
+      this.opcionInvitaciones = opcionSeleccionada
+    }
+  }
+}
 </script>
 
 <style scoped>
 .font-eras {
-  font-family: "Eraslight";
+  font-family: 'Eraslight';
 }
 
 .font-free {
-  font-family: "Freestyle";
+  font-family: 'Freestyle';
 }
 
 .font-inkfree {
-  font-family: "Inkfree";
+  font-family: 'Inkfree';
 }
 </style>
