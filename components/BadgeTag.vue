@@ -5,7 +5,7 @@
       :class="setBadgeStyle"
       @click="setBadgeStatus"
     >
-      Badge
+      {{ badgeText }}
     </span>
   </div>
 </template>
@@ -13,6 +13,10 @@
 <script>
 export default {
   props: {
+    badgeText: {
+      type: String,
+      default: 'Filtro'
+    },
     /** blue, red, gray */
     color: {
       type: String,
@@ -36,6 +40,10 @@ export default {
           ? 'font-medium bg-red-100 text-red-800 hover:shadow-outline border border-red'
           : this.color === 'red' && this.isActive
           ? 'font-extrabold bg-red-300 text-red-800 border-2 border-red'
+          : this.color === 'gray' && this.isActive === false
+          ? 'font-medium bg-gray-100 text-gray-800 hover:shadow-outline border border-gray'
+          : this.color === 'gray' && this.isActive
+          ? 'font-extrabold bg-gray-300 text-gray-800 border-2 border-gray'
           : ''
       return computedClass
     }
