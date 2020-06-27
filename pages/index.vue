@@ -59,11 +59,11 @@
             class="font-eras font-bold py-4 text-md text-an-azul-oscuro sm:text-xl text-justify"
           >
             Mediante técnicas artesanales de pintura como acuarelas, tinta
-            china, lápices o grafito, o también técnicas digitales creamos
+            china, lápices o grafito, o también técnicas digitales, creamos
             vuestro diseño para aplicarlo en las invitaciones y crear vuestra
             papelería de boda. Si queréis un momento realmente especial os
             recomendamos que completéis las invitaciones con el resto de
-            papelería que en Artenupcia podemos ofrecerte.
+            papelería que en Artenupcia podemos ofreceros.
           </p>
         </div>
       </div>
@@ -75,12 +75,12 @@
         </div>
         <div class="w-full xl:w-1/3 p-1 sm:p-3 xl:p-4">
           <CardItem
-            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4918%204000x4000.jpg?alt=media&token=268e80b2-09ec-4008-a764-c3c15d6c6ffc"
+            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4969.jpg?alt=media&token=1fdd25aa-5cff-4029-9245-5a486bcd2756"
           />
         </div>
         <div class="w-full xl:w-1/3 p-1 sm:p-3 xl:p-4">
           <CardItem
-            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4969.jpg?alt=media&token=1fdd25aa-5cff-4029-9245-5a486bcd2756"
+            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4918%204000x4000.jpg?alt=media&token=268e80b2-09ec-4008-a764-c3c15d6c6ffc"
           />
         </div>
       </div>
@@ -100,14 +100,12 @@
           <p
             class="font-eras font-bold py-4 text-md text-an-azul-oscuro sm:text-xl text-justify"
           >
-            Echa un vistazo a otras bodas y eventos maravillosos en los que
+            ¡Echa un vistazo a otras bodas y eventos maravillosos en los que
             hemos trabajado! Como cada trabajo para nosotros es único no vas a
             encontrar un catálogo de invitaciones pero puedes ver otros encargos
             que hemos hecho para coger ideas.
           </p>
         </div>
-        <!--Slider solo movil -->
-        <CarruselImagenes class="sm:hidden" />
       </div>
       <!-- Loop para trabajos -->
       <div class="flex flex-col py-4 xl:flex-row flex-wrap">
@@ -124,13 +122,15 @@
           />
         </div>
       </div>
-      <!-- <div class="flex justify-center">
+      <div class="flex justify-center mb-12">
         <button
-          class="px-8 py-3 mt-2 mb-12 bg-an-cielo border border-an-salmon border-8 inline-block hover:bg-teal-500 hover:font-bold rounded-full shadow-lg text-black text-xl"
+          class="w-1/2 sm:w-1/6 flex items-center justify-center sm:px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-black bg-an-salmon hover:bg-an-crema focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
         >
-          Ver más trabajos
+          <nuxt-link to="/nuestros-trabajos">
+            Ver más trabajos
+          </nuxt-link>
         </button>
-      </div> -->
+      </div>
       <!--Sobre Artenupcia -->
       <div class="sm:w-1/3 mt-2">
         <h2
@@ -154,11 +154,11 @@
           >
             Yo soy Begoña, enamorada del arte, y Artenupcia es mi proyecto
             personal. Desde la ilusión que me crea poder captar los momentos
-            únicos de vuestra vida crece Artenupcia. Donde desde el corazón
-            hacemos vuestros diseños, a mano, con delicadeza y amor. Y es que
+            únicos de vuestra vida crece Artenupcia. Donde, desde el corazón,
+            hacemos vuestros diseños a mano, con delicadeza y amor. Y es que
             para mí mi mayor emoción es en el momento en el que veis vuestra
-            historia captada en vuestras invitaciones.Por eso estoy deseando
-            ayudaros con la papelería única de vuestra boda. No dudes en
+            historia captada en vuestras invitaciones. Por eso estoy deseando
+            ayudaros con la papelería única de vuestra boda. No dudéis en
             contactar conmigo y contarme vuestra idea para que juntos hagamos
             cada detalle de vuestra boda especial, al igual que vosotros y que
             vuestra historia.
@@ -203,7 +203,7 @@
           </BannerTextOnly>
         </div>
         <!--Slider solo movil -->
-        <CarruselImagenes class="sm:hidden" />
+        <CarruselImagenes class="sm:hidden" :igPosts="igPosts" />
       </div>
       <!-- Feed Instagram desktop -->
       <div class="flex flex-col py-4 xl:flex-row justify-center">
@@ -215,6 +215,8 @@
       </div>
     </div>
     <!--Contenedor de todo el layout para que tengan la misma identacion -->
+    <!--Footer -->
+    <Footer :socialProfiles="socialProfiles" />
   </div>
 </template>
 
@@ -231,13 +233,14 @@ import instagramApi from '@/api/instagramApi.js'
 import NewsletterForm from '@/components/NewsletterForm'
 import CardNuestrosTrabajos from '@/components/CardNuestrosTrabajos'
 import BannerTextOnly from '@/components/BannerTextOnly'
+import Footer from '@/components/Footer'
 
 export default {
   name: 'App',
-  asyncData({ app, params, error, store, redirect }) {
+  async asyncData({ app, params, error, store, redirect }) {
     /** Get nuestros trabajos */
     const trabajosArray = []
-    return db
+    const trabajos = await db
       .collection('fl_content')
       .get()
       .then(querySnapshot => {
@@ -251,17 +254,62 @@ export default {
           }
           trabajosArray.push(newTrabajo)
         })
-        return { trabajos: trabajosArray }
       })
       .catch(err => {
         console.log(err)
         redirect('/error')
       })
+
+    /** Get Instagram Posts */
+    const postsArray = []
+    const igPosts = await db
+      .collection('instagramposts')
+      .get()
+      .then(querySnapshot => {
+        querySnapshot.forEach(doc => {
+          // crear nuevo post a partir de datos
+          const newIgPost = {
+            shortCode: doc.data().shortCode,
+            linkTo: doc.data().linkTo
+          }
+          postsArray.push(newIgPost)
+        })
+      })
+      .catch(err => {
+        console.log(err)
+        redirect('/error')
+      })
+
+    /** Retorna los posts de Instagram y los trabajos */
+    return {
+      trabajos: trabajosArray,
+      igPosts: postsArray
+    }
   },
   data() {
     return {
       hideMainElements: false,
-      igPosts: []
+      /** Perfiles en RRSS para el footer */
+      socialProfiles: [
+        {
+          linkTo: 'https://www.instagram.com',
+          imgSrc:
+            'https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Flogo%20instagram.eLPebNaf06Ip6yetKwzi.jpg?alt=media&token=af592d0e-94a7-4e55-82ac-b4c5b761cdf2',
+          imgAlt: 'artenupcia-instagram'
+        },
+        {
+          linkTo: 'https://www.facebook.com',
+          imgSrc:
+            'https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Flogo%20fb.t1sG8o58wO0mqKqmxtDE.jpg?alt=media&token=cef93cb7-9022-4b68-b4db-eee5ca9ef922',
+          imgAlt: 'artenupcia-facebook'
+        },
+        {
+          linkTo: 'https://www.pinterest.com',
+          imgSrc:
+            'https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Flogo%20pinterest.TTxWmYJNx5G1LeMJFrRT.jpg?alt=media&token=d9cc4412-bd63-4c30-a7c1-8b272fc8bd4d',
+          imgAlt: 'artenupcia-pinterest'
+        }
+      ]
     }
   },
   components: {
@@ -274,9 +322,11 @@ export default {
     InstagramFeed,
     NewsletterForm,
     CardNuestrosTrabajos,
-    BannerTextOnly
+    BannerTextOnly,
+    Footer
   },
   methods: {
+    /** Ocultar elementos principales para el menu del movil */
     handleToggleMenu(status) {
       this.hideMainElements = !status
     },

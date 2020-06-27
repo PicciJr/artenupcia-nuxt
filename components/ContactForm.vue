@@ -47,7 +47,7 @@
       </svg>
     </div>
     <!-- Num invitaciones -->
-    <label>Numero de invitaciones aproximado:</label>
+    <label>Número de invitaciones aproximado:</label>
     <div class="mb-4">
       <div class="flex max-w-md relative">
         <div class="mb-2">
@@ -97,30 +97,10 @@
     <!-- Interes principal -->
     <label>¿En qué estáis más interesados?</label>
     <div class="mb-6">
-      <div class="inline-block relative w-64 max-w-md">
-        <select
-          v-model="userData.opcionInteres"
-          class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-        >
-          <option>Invitaciones de Boda</option>
-          <option>Papelería completa de Boda</option>
-          <option>Papelería de Eventos</option>
-          <option>No lo sé, ¿me asesorais? &#128517;</option>
-        </select>
-        <div
-          class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-        >
-          <svg
-            class="fill-current h-4 w-4"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-            />
-          </svg>
-        </div>
-      </div>
+      <dropdown-group
+        :options="opcionesDeInvitacion"
+        @selected="handleInvitacionesOptionSelected"
+      ></dropdown-group>
     </div>
     <!-- Text box -->
     <label>Cuéntanos tu idea y las dudas que puedas tener:</label>
@@ -155,7 +135,11 @@
 
 <script>
 import { db } from '@/plugins/firebaseConfig.js'
+import DropdownGroup from '@/components/DropdownGroup'
 export default {
+  components: {
+    DropdownGroup
+  },
   data() {
     return {
       userData: {
@@ -171,10 +155,31 @@ export default {
         textoLargo: ''
       },
       formSubmitted: false,
-      opcionInvitaciones: -1
+      /** opcion de numero de invitaciones */
+      opcionInvitaciones: -1,
+      /** opcion dropdown de servicios disponibles */
+      opcionesDeInvitacion: [
+        {
+          idOption: 0,
+          optionText: 'Invitaciones de Boda'
+        },
+        {
+          idOption: 1,
+          optionText: 'Papelería completa de Boda'
+        },
+        {
+          idOption: 2,
+          optionText: 'Papelería de Eventos'
+        },
+        {
+          idOption: 3,
+          optionText: 'No lo sé, ¿me asesoráis?'
+        }
+      ]
     }
   },
   methods: {
+    /** Chequeo de todos los campos e invocacion a firebase para guardar */
     checkInputFields() {
       // todo tiene que estar relleno
       // datos validos, si todo ok entonces enviar a BBDD
@@ -190,6 +195,7 @@ export default {
         this.addUserToDatabase(this.$router)
       }
     },
+    /** Chequeo de validez de email */
     checkEmailValidity() {
       this.errorsFlag.email = ''
       const regEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -207,6 +213,7 @@ export default {
       }
       return false
     },
+    /** Cheuqeo de numero de invitaciones seleccionado */
     checkInvitacionesValidity() {
       if (this.formSubmitted) {
         if (this.userData.invitaciones.length <= 0)
@@ -219,6 +226,7 @@ export default {
       }
       return false
     },
+    /** Chequeo de text area */
     checkTextoLargoValidity() {
       this.errorsFlag.textoLargo = ''
       if (this.formSubmitted) {
@@ -232,6 +240,7 @@ export default {
         return false
       }
     },
+    /** Añadir a Firebase */
     addUserToDatabase(router) {
       const that = this
       // Add a new document in collection "cities"
@@ -251,6 +260,7 @@ export default {
           router.push('/error')
         })
     },
+    /** Opcion de numero de invitaciones */
     setOpcionInvitaciones(opcionSeleccionada) {
       this.errorsFlag.invitaciones = ''
       if (opcionSeleccionada === 0) this.userData.invitaciones = 'Menos de 50'
@@ -259,6 +269,17 @@ export default {
       else if (opcionSeleccionada === 2)
         this.userData.invitaciones = 'Más de 100'
       this.opcionInvitaciones = opcionSeleccionada
+    },
+    /** Opcion de dropdown seleccionada por el usuario */
+    handleInvitacionesOptionSelected(idOption) {
+      const index = this.opcionesDeInvitacion.findIndex(
+        option => option.idOption === idOption
+      )
+      if (index !== -1) {
+        this.userData.opcionInteres = this.opcionesDeInvitacion[
+          index
+        ].optionText
+      }
     }
   }
 }

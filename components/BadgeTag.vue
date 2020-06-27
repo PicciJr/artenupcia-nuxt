@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="m-2">
     <span
       class="inline-flex items-center px-2 py-1 rounded-md text-sm leading-5 cursor-pointer"
       :class="setBadgeStyle"
       @click="setBadgeStatus"
     >
-      {{ badgeText }}
+      {{ badge.badgeText }}
     </span>
   </div>
 </template>
@@ -13,18 +13,20 @@
 <script>
 export default {
   props: {
-    badgeText: {
-      type: String,
-      default: 'Filtro'
+    badge: {
+      type: Object,
+      default() {
+        return {
+          idBadge: -1,
+          badgeText: 'Filtro',
+          isActive: false
+        }
+      }
     },
     /** blue, red, gray */
     color: {
       type: String,
       default: 'blue'
-    },
-    isActive: {
-      type: Boolean,
-      default: false
     }
   },
   computed: {
@@ -32,18 +34,18 @@ export default {
     setBadgeStyle() {
       let computedClass = ''
       computedClass =
-        this.color === 'blue' && this.isActive === false
+        this.color === 'blue' && this.badge.isActive === false
           ? 'font-medium bg-blue-100 text-blue-800 hover:shadow-outline border border-blue'
-          : this.color === 'blue' && this.isActive
-          ? 'font-extrabold bg-blue-300 text-blue-800 border-2 border-blue'
-          : this.color === 'red' && this.isActive === false
+          : this.color === 'blue' && this.badge.isActive
+          ? 'font-extrabold bg-blue-300 text-blue-800 border border-blue'
+          : this.color === 'red' && this.badge.isActive === false
           ? 'font-medium bg-red-100 text-red-800 hover:shadow-outline border border-red'
-          : this.color === 'red' && this.isActive
-          ? 'font-extrabold bg-red-300 text-red-800 border-2 border-red'
-          : this.color === 'gray' && this.isActive === false
+          : this.color === 'red' && this.badge.isActive
+          ? 'font-extrabold bg-red-300 text-red-800 border border-red'
+          : this.color === 'gray' && this.badge.isActive === false
           ? 'font-medium bg-gray-100 text-gray-800 hover:shadow-outline border border-gray'
-          : this.color === 'gray' && this.isActive
-          ? 'font-extrabold bg-gray-300 text-gray-800 border-2 border-gray'
+          : this.color === 'gray' && this.badge.isActive
+          ? 'font-extrabold bg-gray-300 text-gray-800 border border-gray'
           : ''
       return computedClass
     }
@@ -51,8 +53,7 @@ export default {
   methods: {
     /** Toggle del estado de la badge cuando pulsa el usuario y comunicar al padre */
     setBadgeStatus() {
-      this.$emit('click', this.isActive)
-      return (this.isActive = !this.isActive)
+      this.$emit('click', this.badge.idBadge)
     }
   }
 }

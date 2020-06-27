@@ -1,19 +1,22 @@
 <!-- Carrusel imagenes version movil -->
 <template>
   <div class="flex">
-    <!-- <div
+    <div
       class="flex flex-col justify-center rounded-lg block mx-auto shadow-xl mt-8"
       :class="animateIn"
       v-touch:swipe.right="swipeItemRight"
       v-touch:swipe.left="swipeItemLeft"
     >
       <a
-        :href="
-          'https://www.instagram.com/p/' + igPosts[currentImage].shortCode
-        "
+        :href="'https://www.instagram.com/p/' + igPosts[currentImage].linkTo"
         target="_blank"
       >
-        <img class="w-64 h-64" :src="igPosts[currentImage].imgUrl" />
+        <img
+          class="w-64 h-64"
+          :src="
+            'https://www.instagram.com/p/' + igPosts[currentImage].shortCode
+          "
+        />
       </a>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +27,7 @@
           d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
         />
       </svg>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -41,20 +44,22 @@ export default {
     igPosts: Array
   },
   methods: {
+    /** Controlar el swipe. Importante: siempre la longitud va uno por encima, de ahi que se ponga el -1 en ambas partes */
     swipeItemRight() {
       this.itemSwipedRight = true
       // duration linked to the animation duration CSS
       setTimeout(() => {
         if (this.currentImage > 0) this.currentImage--
-        else this.currentImage = 9
+        else this.currentImage = this.igPosts.length - 1
         this.itemSwipedRight = false
       }, 300)
     },
+    /** Controlar el swipe. Importante: siempre la longitud va uno por encima, de ahi que se ponga el -1 en ambas partes */
     swipeItemLeft() {
       this.itemSwipedLeft = true
       // duration linked to the animation duration CSS
       setTimeout(() => {
-        if (this.currentImage < 9) this.currentImage++
+        if (this.currentImage < this.igPosts.length - 1) this.currentImage++
         else this.currentImage = 0
         this.itemSwipedLeft = false
       }, 300)
@@ -74,7 +79,7 @@ export default {
 <style scoped>
 @-webkit-keyframes fadeOutLeft {
   from {
-    opacity: 1;
+    opacity: 0.5;
   }
 
   to {
@@ -86,7 +91,7 @@ export default {
 
 @keyframes fadeOutLeft {
   from {
-    opacity: 1;
+    opacity: 0.5;
   }
 
   to {
@@ -104,7 +109,7 @@ export default {
 
 @-webkit-keyframes fadeOutRight {
   from {
-    opacity: 1;
+    opacity: 0.5;
   }
 
   to {
@@ -116,7 +121,7 @@ export default {
 
 @keyframes fadeOutRight {
   from {
-    opacity: 1;
+    opacity: 0.5;
   }
 
   to {

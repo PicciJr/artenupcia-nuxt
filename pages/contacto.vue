@@ -17,7 +17,7 @@
         <h2
           class="text-2xl leading-8 font-extrabold tracking-tight text-gray-900 font-inkfree sm:text-3xl sm:leading-9"
         >
-          Solícitanos presupuesto
+          ¡Empecemos!
         </h2>
         <ContactForm />
       </div>

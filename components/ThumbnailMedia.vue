@@ -1,6 +1,6 @@
 <template>
   <div
-    class="p-1 ml-4 border border-gray-200 shadow-lg rounded-lg cursor-pointer"
+    class="ml-4 border border-gray-200 shadow-lg rounded-lg cursor-pointer"
     @mouseover="switchImage"
   >
     <img class="w-20" :src="imgSrc" :alt="imgAlt" />
