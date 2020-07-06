@@ -1,14 +1,20 @@
 <template>
-  <div class="w-full h-24 mt-12 bg-white">
+  <div class="w-full mb-8 bg-white">
     <div class="flex justify-center items-center">
-      <div v-for="profile in socialProfiles" :key="profile.id" class="w-16 p-2">
-        <a :href="profile.linkTo" target="_blank">
-          <img
-            class="cursor-pointer"
-            :src="profile.imgSrc"
-            :alt="profile.imgAlt"
-          />
-        </a>
+      <div class="flex justify-center sm:pl-16 w-full sm:w-5/6">
+        <div
+          v-for="profile in socialProfiles"
+          :key="profile.id"
+          class="p-2"
+        >
+          <a :href="profile.linkTo" target="_blank">
+            <img
+              class="w-16 cursor-pointer"
+              :src="profile.imgSrc"
+              :alt="profile.imgAlt"
+            />
+          </a>
+        </div>
       </div>
     </div>
   </div>

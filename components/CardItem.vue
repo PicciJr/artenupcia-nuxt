@@ -1,6 +1,6 @@
 <template>
-  <div class="shadow-xl">
-    <img class="object-cover" :src="imgSrc" />
+  <div>
+    <img class="object-cover shadow-2xl" :src="imgSrc" />
   </div>
 </template>
 

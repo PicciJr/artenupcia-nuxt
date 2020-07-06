@@ -24,6 +24,10 @@
         </div>
         <!-- Contenido texto de trabajo -->
         <div class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4">
+          <!-- Etiquetas de trabajo -->
+          <div class="mb-2">
+            <badge-tag-group v-if="badgeItems" :badgeItems="badgeItems"></badge-tag-group>
+          </div>
           <h2 class="font-eras text-2xl">{{ headingText }}</h2>
           <div
             class="font-eras py-4 text-md text-an-azul-oscuro sm:text-lg font-bold text-justify"
@@ -46,6 +50,7 @@ import MenuNavbar from '@/components/MenuNavbar'
 import CardNuestrosTrabajos from '@/components/CardNuestrosTrabajos'
 import CallToActionBanner from '@/components/CallToActionBanner'
 import ThumbnailMedia from '@/components/ThumbnailMedia'
+import BadgeTagGroup from '@/components/BadgeTagGroup'
 import { db } from '@/plugins/firebaseConfig.js'
 
 export default {
@@ -54,7 +59,8 @@ export default {
     MenuNavbar,
     CardNuestrosTrabajos,
     CallToActionBanner,
-    ThumbnailMedia
+    ThumbnailMedia,
+    BadgeTagGroup
   },
   asyncData({ app, store, route, redirect }) {
     return db
@@ -74,7 +80,8 @@ export default {
               doc.data().imgLink3,
               doc.data().imgLink4,
               doc.data().imgLink5
-            ]
+            ],
+            badgeItems: doc.data().tags
           }
         } else {
           redirect('/error')

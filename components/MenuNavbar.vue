@@ -39,7 +39,7 @@
         >
         <div class="border-r border-an-marron mb-2"></div>
         <div
-          class="no-underline text-grey-dark tracking-wide font-bold py-3 pl-12"
+          class="no-underline text-an-azul-oscuro tracking-wide font-extrabold py-3 pl-12"
         >
           <nuxt-link to="/contacto">Contacto</nuxt-link>
         </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-wrap">
-    <div v-for="badge in badgeItems" :key="badge.id">
+    <div v-for="badge in badgeItems" :key="badge.id" class="pr-2">
       <BadgeTag
         :badge="badge"
         :color="badgeColors"
@@ -23,18 +23,15 @@ export default {
         return [
           {
             idBadge: 0,
-            badgeText: 'Filtro 1',
-            isActive: false
+            badgeText: 'Filtro 1'
           },
           {
             idBadge: 1,
-            badgeText: 'Filtro 2',
-            isActive: false
+            badgeText: 'Filtro 2'
           },
           {
             idBadge: 3,
-            badgeText: 'Filtro 3',
-            isActive: false
+            badgeText: 'Filtro 3'
           }
         ]
       }

@@ -1,6 +1,6 @@
 <!-- Pagina para filtrado completo de todos los trabajos -->
 <template>
-  <div class="px-4 xl:mx-24">
+  <div class="px-4 xl:mx-48">
     <!-- Header with icon logo -->
     <Header class="relative top-0 z-30 w-full" />
     <!-- Menu nav Bar only visible in wide screens -->
@@ -56,6 +56,12 @@ export default {
         console.log(err)
         redirect('/error')
       })
+  },
+  methods: {
+    /** Enviar usuario a trabajo seleccionado */
+    redirectToTrabajo(idTrabajo) {
+      this.$router.push('/nuestros-trabajos/' + idTrabajo)
+    }
   }
 }
 </script>

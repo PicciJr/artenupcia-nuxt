@@ -10,7 +10,7 @@
       >
         <!-- imagenes dimensionadas en cuadrado para que parezcan tipo instagram -->
         <img
-          class="w-84 h-84 p-2 hover:shadow-outline rounded-lg cursor-pointer"
+          class="w-72 h-72 p-2 hover:shadow-outline rounded-lg cursor-pointer"
           :src="'https://www.instagram.com/p/' + img.shortCode"
         />
       </a>

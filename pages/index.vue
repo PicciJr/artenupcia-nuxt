@@ -6,217 +6,238 @@
     <MenuNavbar />
     <!-- No margin Hero cover -->
     <HeroCover :class="{ hidden: hideMainElements }" />
-    <!--Contenedor de todo el layout para que tengan la misma identacion -->
-    <div class="px-4 xl:mx-24" :class="{ hidden: hideMainElements }">
-      <div class="sm:w-1/3 mt-2">
-        <h2
-          class="mb-2 font-inkfree text-2xl sm:text-3xl text-center"
-          id="invitaciones-personalizadas"
-        >
-          Invitaciones personalizadas
-        </h2>
-      </div>
-      <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
-      <!-- Flex -->
-      <div class="flex flex-col py-2 xl:flex-row justify-center">
-        <div class="w-full p-1 sm:p-3 xl:p-4">
-          <StyledRectangleShape
-            :textRectangle="'Si tu boda es única, tu invitación también'"
-          />
-          <p
-            class="font-eras font-bold py-4 text-md text-an-azul-oscuro sm:text-xl text-justify"
+    <div :class="{ hidden: hideMainElements }">
+      <!--Contenedor para que tengan la misma identacion -->
+      <div class="px-4 xl:px-24">
+        <div class="sm:w-1/3 mt-2">
+          <h2
+            class="mb-2 font-inkfree text-2xl sm:text-3xl text-center"
+            id="invitaciones-personalizadas"
           >
-            ¿Te imaginas que vuestra invitación de boda fuera más que una
-            invitación? En Artenupcia buscamos que vuestra papelería de boda sea
-            única y especial. De calidad, y con un diseño original que refleje
-            la esencia de cada pareja. Queremos plasmar vuestra historia, que
-            con tan solo una invitación todos vuestros invitados sientan vuestro
-            amor, sientan vuestra historia. Vuestra papelería de boda será
-            inolvidable, les sorprenderá y hasta la guardarán de recuerdo.
-            Nuestro modo de trabajar es muy sencillo, nos contáis vuestra
-            historia o idea y nos ponemos manos a la obra para haceros unas
-            invitaciones totalmente personalizadas y únicas pero sobretodo,
-            vuestras.
-          </p>
+            Invitaciones personalizadas
+          </h2>
         </div>
-        <div class="w-full p-1 sm:p-3 xl:p-4">
-          <CardItem
-            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4968.jpg?alt=media&token=072e7134-105e-49ce-a37e-d386f0e70a7e"
-          />
+        <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
+        <!-- Flex -->
+        <div class="flex flex-col py-2 xl:flex-row justify-center">
+          <div class="w-full p-1 sm:p-3 xl:p-4">
+            <StyledRectangleShape
+              :textRectangle="'Si tu boda es única, tu invitación también'"
+            />
+            <p
+              class="font-eras font-bold py-4 text-md text-an-azul-oscuro sm:text-xl text-justify"
+            >
+              ¿Te imaginas que vuestra invitación de boda fuera más que una
+              invitación? En Artenupcia buscamos que vuestra papelería de boda
+              sea única y especial. De calidad, y con un diseño original que
+              refleje la esencia de cada pareja. Queremos plasmar vuestra
+              historia, que con tan solo una invitación todos vuestros invitados
+              sientan vuestro amor, sientan vuestra historia. Vuestra papelería
+              de boda será inolvidable, les sorprenderá y hasta la guardarán de
+              recuerdo. Nuestro modo de trabajar es muy sencillo, nos contáis
+              vuestra historia o idea y nos ponemos manos a la obra para haceros
+              unas invitaciones totalmente personalizadas y únicas pero
+              sobretodo, vuestras.
+            </p>
+          </div>
+          <div class="w-full p-1 sm:p-3 xl:p-4">
+            <CardItem
+              imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4968.jpg?alt=media&token=072e7134-105e-49ce-a37e-d386f0e70a7e"
+            />
+          </div>
         </div>
+        <!--Como lo hacemos con foto roadmap -->
+        <div class="sm:w-1/3 mt-2">
+          <h2 class="mb-2 font-inkfree text-2xl sm:text-3xl text-center">
+            ¿Cómo lo hacemos?
+          </h2>
+        </div>
+        <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
       </div>
-      <!--Como lo hacemos -->
-      <div class="sm:w-1/3 mt-2">
-        <h2 class="mb-2 font-inkfree text-2xl sm:text-3xl text-center">
-          ¿Cómo lo hacemos?
-        </h2>
-      </div>
-      <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
-      <!-- Flex -->
-      <div class="flex flex-col py-4 xl:flex-row justify-center">
-        <div class="w-full p-1 sm:p-3 xl:p-4">
-          <p
-            class="font-eras font-bold py-4 text-md text-an-azul-oscuro sm:text-xl text-justify"
+      <!-- Imagen roadmap, no padding full width -->
+      <img
+        class="w-full mt-8 hidden xl:block"
+        src="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fcomo-lo-hacemos-4.jpg?alt=media&token=c5384b46-695a-485e-8a43-459e3253a7d0"
+        alt="artenupcia-como-lo-hacemos"
+      />
+      <!-- Mobile version -->
+      <img
+        class="w-full xl:hidden"
+        src="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fcomo-lo-hacemos-mobile.jpg?alt=media&token=65606a97-985d-4f8d-93b8-c4f097eab4d2"
+        alt="artenupcia-como-lo-hacemos"
+      />
+      <!--Contenedor para que tengan la misma identacion -->
+      <div class="px-4 xl:px-24">
+        <!-- Flex -->
+        <div class="flex flex-col xl:flex-row justify-center">
+          <div class="w-full p-1 sm:p-3 xl:p-4">
+            <p
+              class="font-eras font-bold py-4 text-md text-an-azul-oscuro sm:text-xl text-justify"
+            >
+              Mediante técnicas artesanales de pintura como acuarelas, tinta
+              china, lápices o grafito, o también técnicas digitales, creamos
+              vuestro diseño para aplicarlo en las invitaciones y crear vuestra
+              papelería de boda. Si queréis un momento realmente especial os
+              recomendamos que completéis las invitaciones con el resto de
+              papelería que en Artenupcia podemos ofreceros.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col py-4 xl:flex-row justify-center">
+          <div class="w-full xl:w-1/3 p-1 sm:p-3 xl:p-4">
+            <CardItem
+              imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4900%204000x4000.jpg?alt=media&token=f548c689-273d-421d-a3d3-a7b2dc67c6d3"
+            />
+          </div>
+          <div class="w-full xl:w-1/3 p-1 sm:p-3 xl:p-4">
+            <CardItem
+              imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4969.jpg?alt=media&token=1fdd25aa-5cff-4029-9245-5a486bcd2756"
+            />
+          </div>
+          <div class="w-full xl:w-1/3 p-1 sm:p-3 xl:p-4">
+            <CardItem
+              imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4918%204000x4000.jpg?alt=media&token=268e80b2-09ec-4008-a764-c3c15d6c6ffc"
+            />
+          </div>
+        </div>
+        <!--Nuestros trabajos -->
+        <div class="sm:w-1/3 mt-2">
+          <h2
+            class="mb-2 font-inkfree text-2xl sm:text-3xl text-center"
+            id="nuestros-trabajos"
           >
-            Mediante técnicas artesanales de pintura como acuarelas, tinta
-            china, lápices o grafito, o también técnicas digitales, creamos
-            vuestro diseño para aplicarlo en las invitaciones y crear vuestra
-            papelería de boda. Si queréis un momento realmente especial os
-            recomendamos que completéis las invitaciones con el resto de
-            papelería que en Artenupcia podemos ofreceros.
-          </p>
+            Nuestros trabajos
+          </h2>
         </div>
-      </div>
-      <div class="flex flex-col py-4 xl:flex-row justify-center">
-        <div class="w-full xl:w-1/3 p-1 sm:p-3 xl:p-4">
-          <CardItem
-            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4900%204000x4000.jpg?alt=media&token=f548c689-273d-421d-a3d3-a7b2dc67c6d3"
-          />
+        <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
+        <!-- Flex -->
+        <div class="flex flex-col py-4 xl:flex-row">
+          <div class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4">
+            <p
+              class="font-eras font-bold py-4 text-md text-an-azul-oscuro sm:text-xl text-justify"
+            >
+              ¡Echa un vistazo a otras bodas y eventos maravillosos en los que
+              hemos trabajado! Como cada trabajo para nosotros es único no vas a
+              encontrar un catálogo de invitaciones pero puedes ver otros
+              encargos que hemos hecho para coger ideas.
+            </p>
+          </div>
         </div>
-        <div class="w-full xl:w-1/3 p-1 sm:p-3 xl:p-4">
-          <CardItem
-            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4969.jpg?alt=media&token=1fdd25aa-5cff-4029-9245-5a486bcd2756"
-          />
-        </div>
-        <div class="w-full xl:w-1/3 p-1 sm:p-3 xl:p-4">
-          <CardItem
-            imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4918%204000x4000.jpg?alt=media&token=268e80b2-09ec-4008-a764-c3c15d6c6ffc"
-          />
-        </div>
-      </div>
-      <!--Nuestros trabajos -->
-      <div class="sm:w-1/3 mt-2">
-        <h2
-          class="mb-2 font-inkfree text-2xl sm:text-3xl text-center"
-          id="nuestros-trabajos"
-        >
-          Nuestros trabajos
-        </h2>
-      </div>
-      <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
-      <!-- Flex -->
-      <div class="flex flex-col py-4 xl:flex-row">
-        <div class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4">
-          <p
-            class="font-eras font-bold py-4 text-md text-an-azul-oscuro sm:text-xl text-justify"
+        <!-- Loop para trabajos -->
+        <div class="flex flex-col py-4 xl:flex-row flex-wrap">
+          <div
+            v-for="trabajo in trabajos"
+            :key="trabajo.id"
+            class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4 transition duration-500 ease-in-out transform hover:-translate-y-4"
+            @click="redirectToTrabajo(trabajo.id)"
           >
-            ¡Echa un vistazo a otras bodas y eventos maravillosos en los que
-            hemos trabajado! Como cada trabajo para nosotros es único no vas a
-            encontrar un catálogo de invitaciones pero puedes ver otros encargos
-            que hemos hecho para coger ideas.
-          </p>
+            <CardNuestrosTrabajos
+              v-if="trabajo.mainImgSrc"
+              :imgSrc="trabajo.mainImgSrc"
+              :footerText="trabajo.footerText"
+            />
+          </div>
         </div>
-      </div>
-      <!-- Loop para trabajos -->
-      <div class="flex flex-col py-4 xl:flex-row flex-wrap">
-        <div
-          v-for="trabajo in trabajos"
-          :key="trabajo.id"
-          class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4 transition duration-500 ease-in-out transform hover:-translate-y-4"
-          @click="redirectToTrabajo(trabajo.id)"
-        >
-          <CardNuestrosTrabajos
-            v-if="trabajo.mainImgSrc"
-            :imgSrc="trabajo.mainImgSrc"
-            :footerText="trabajo.footerText"
-          />
-        </div>
-      </div>
-      <div class="flex justify-center mb-12">
-        <button
-          class="w-1/2 sm:w-1/6 flex items-center justify-center sm:px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-black bg-an-salmon hover:bg-an-crema focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
-        >
-          <nuxt-link to="/nuestros-trabajos">
-            Ver más trabajos
-          </nuxt-link>
-        </button>
-      </div>
-      <!--Sobre Artenupcia -->
-      <div class="sm:w-1/3 mt-2">
-        <h2
-          class="mb-2 font-inkfree text-2xl sm:text-3xl text-center"
-          id="sobre-artenupcia"
-        >
-          Sobre Artenupcia
-        </h2>
-      </div>
-      <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
-      <!-- Flex -->
-      <div class="flex flex-col py-4 xl:flex-row justify-center">
-        <div class="w-full p-1 sm:p-3 xl:p-4">
-          <StyledRectangleShape
-            :textRectangle="
-              'Artenupcia nace y quiere que cada detalle de tu boda sea especial'
-            "
-          />
-          <p
-            class="font-eras font-bold py-4 text-md text-an-azul-oscuro sm:text-xl text-justify"
+        <div class="flex justify-center mb-12">
+          <button
+            class="w-1/2 sm:w-1/6 flex items-center justify-center sm:px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-black bg-an-salmon hover:bg-an-crema focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
           >
-            Yo soy Begoña, enamorada del arte, y Artenupcia es mi proyecto
-            personal. Desde la ilusión que me crea poder captar los momentos
-            únicos de vuestra vida crece Artenupcia. Donde, desde el corazón,
-            hacemos vuestros diseños a mano, con delicadeza y amor. Y es que
-            para mí mi mayor emoción es en el momento en el que veis vuestra
-            historia captada en vuestras invitaciones. Por eso estoy deseando
-            ayudaros con la papelería única de vuestra boda. No dudéis en
-            contactar conmigo y contarme vuestra idea para que juntos hagamos
-            cada detalle de vuestra boda especial, al igual que vosotros y que
-            vuestra historia.
-          </p>
+            <nuxt-link to="/nuestros-trabajos">
+              Ver más trabajos
+            </nuxt-link>
+          </button>
         </div>
-        <div class="w-full p-1 sm:p-3 xl:p-4">
-          <CardItem />
+        <!--Sobre Artenupcia -->
+        <div class="sm:w-1/3 mt-2">
+          <h2
+            class="mb-2 font-inkfree text-2xl sm:text-3xl text-center"
+            id="sobre-artenupcia"
+          >
+            Sobre Artenupcia
+          </h2>
         </div>
-      </div>
-      <!--¿Necesitas inspiración? -->
-      <div class="sm:w-1/3 mt-2">
-        <h2
-          class="mb-2 font-inkfree text-2xl sm:text-3xl text-center"
-          id="necesitas-inspiracion"
-        >
-          ¿Necesitas inspiración?
-        </h2>
-      </div>
-      <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
-      <!-- Flex -->
-      <div class="flex flex-col py-4 xl:flex-row justify-center">
-        <div class="w-full sm:pr-8">
-          <!-- Instagram Banner -->
-          <BannerTextOnly
-            headingText="¡Écha un vistazo en nuestro Instagram!"
-            mainText="Busca entre nuestros trabajos y momentos para encontrar a tus
+        <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
+        <!-- Flex -->
+        <div class="flex flex-col py-4 xl:flex-row justify-center">
+          <div class="w-full p-1 sm:p-3 xl:p-4">
+            <StyledRectangleShape
+              :textRectangle="
+                'Artenupcia nace y quiere que cada detalle de tu boda sea especial'
+              "
+            />
+            <p
+              class="font-eras font-bold py-4 text-md text-an-azul-oscuro sm:text-xl text-justify"
+            >
+              Yo soy Begoña, enamorada del arte, y Artenupcia es mi proyecto
+              personal. Desde la ilusión que me crea poder captar los momentos
+              únicos de vuestra vida crece Artenupcia. Donde, desde el corazón,
+              hacemos vuestros diseños a mano, con delicadeza y amor. Y es que
+              para mí mi mayor emoción es en el momento en el que veis vuestra
+              historia captada en vuestras invitaciones. Por eso estoy deseando
+              ayudaros con la papelería única de vuestra boda. No dudéis en
+              contactar conmigo y contarme vuestra idea para que juntos hagamos
+              cada detalle de vuestra boda especial, al igual que vosotros y que
+              vuestra historia.
+            </p>
+          </div>
+          <div class="w-full p-1 sm:p-3 xl:p-4">
+            <CardItem />
+          </div>
+        </div>
+        <!--¿Necesitas inspiración? -->
+        <div class="sm:w-1/3 mt-2">
+          <h2
+            class="mb-2 font-inkfree text-2xl sm:text-3xl text-center"
+            id="necesitas-inspiracion"
+          >
+            ¿Necesitas inspiración?
+          </h2>
+        </div>
+        <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
+        <!-- Flex -->
+        <div class="flex flex-col py-4 xl:flex-row justify-center">
+          <div class="w-full sm:pr-8">
+            <!-- Instagram Banner -->
+            <BannerTextOnly
+              headingText="¡Écha un vistazo en nuestro Instagram!"
+              mainText="Busca entre nuestros trabajos y momentos para encontrar a tus
                   musas:"
-          >
-            <template #svgLeft>
-              <svg
-                class="w-6 h-6"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                />
-              </svg>
-            </template>
-          </BannerTextOnly>
+            >
+              <template #svgLeft>
+                <svg
+                  class="w-6 h-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </template>
+            </BannerTextOnly>
+          </div>
+          <!--Slider solo movil -->
+          <CarruselImagenes class="sm:hidden" :igPosts="igPosts" />
         </div>
-        <!--Slider solo movil -->
-        <CarruselImagenes class="sm:hidden" :igPosts="igPosts" />
-      </div>
-      <!-- Feed Instagram desktop -->
-      <div class="flex flex-col py-4 xl:flex-row justify-center">
-        <InstagramFeed :igPosts="igPosts" />
+        <!-- Feed Instagram desktop -->
+        <div class="flex flex-col py-4 mb-4 xl:flex-row justify-center">
+          <InstagramFeed :igPosts="igPosts" />
+        </div>
       </div>
       <!--Newsletter -->
-      <div class="flex flex-col py-4 xl:flex-row justify-center">
+      <div class="relative flex flex-col py-2 justify-center items-center">
         <NewsletterForm />
+        <!--Footer -->
+        <Footer :socialProfiles="socialProfiles" />
+        <img
+          class="w-2/6 pl-24 absolute bottom-0 right-0 hidden sm:block object-cover"
+          src="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Fflor-web.jpg?alt=media&token=fc376cf6-0dc6-4048-8e18-c7e597c354b9"
+          alt="artenupcia-footer-image"
+        />
       </div>
     </div>
-    <!--Contenedor de todo el layout para que tengan la misma identacion -->
-    <!--Footer -->
-    <Footer :socialProfiles="socialProfiles" />
   </div>
 </template>
 

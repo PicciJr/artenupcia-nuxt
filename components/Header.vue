@@ -79,7 +79,7 @@
             >Inspiración</nuxt-link
           >
         </div>
-        <div @click="toggleMenu" class="mb-10">
+        <div @click="toggleMenu" class="mb-10 text-gray-700 font-extrabold">
           <nuxt-link to="/contacto" class="mb-6 px-4"
             >Contacto</nuxt-link
           >
@@ -91,7 +91,7 @@
       <!-- logo Artenupcia -->
       <img
         src="../assets/img/logo-artenupcia-recortado.png"
-        class="w-64 h-48"
+        class="w-72 h-48"
       />
     </nuxt-link>
     <h1 class="font-free text-4xl">
