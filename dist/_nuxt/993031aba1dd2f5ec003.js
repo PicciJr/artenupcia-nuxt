@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{265:function(n,t,e){"use strict";e.r(t);var r={asyncData:function(n){return(0,n.redirect)("/error-ruta")}},c=e(26),component=Object(c.a)(r,(function(){var n=this.$createElement;return(this._self._c||n)("div")}),[],!1,null,null,null);t.default=component.exports}}]);
