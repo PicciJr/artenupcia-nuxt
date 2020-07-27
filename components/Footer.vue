@@ -1,3 +1,4 @@
+<!-- Footer con los links a redes sociales -->
 <template>
   <div class="w-full mb-8 bg-white">
     <div class="flex justify-center items-center">
@@ -23,6 +24,7 @@
 <script>
 export default {
   props: {
+    /** Links a RRSS */
     socialProfiles: {
       type: Array,
       default() {

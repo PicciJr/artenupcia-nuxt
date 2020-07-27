@@ -1,7 +1,7 @@
-<!-- Grupo de dropdown de elementos -->
+<!-- Grupo de dropdown de elementos. P.ej input de una sola seleccion -->
 <template>
   <div
-    class="relative w-full sm:w-1/3 inline-block text-left"
+    class="relative w-full inline-block text-left"
     @click="toggleVisibility"
   >
     <div>
@@ -53,6 +53,7 @@
 <script>
 export default {
   props: {
+    /** Opciones disponibles en el dropdown */
     options: {
       type: Array,
       default() {
@@ -67,8 +68,8 @@ export default {
   },
   data() {
     return {
-      isVisible: false,
-      currentSelectedOptionId: 0
+      isVisible: false, // para controlar la visibilidad del dropdown
+      currentSelectedOptionId: 0 // controlar la opcion seleccionada
     }
   },
   computed: {

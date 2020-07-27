@@ -1,3 +1,4 @@
+<!-- Pagina a la que se redirige desde /contacto si todo ok -->
 <template>
   <div>
     <!-- Header with icon logo -->
@@ -21,12 +22,15 @@
         </div>
         <div class="mb-6">
           <span class="pr-4">💞</span> Mientras, ¿te apetece echar un vistazo a
+          <!-- Posibilidad de redireccion al usuario -->
           <nuxt-link
             :to="{
               path: '/',
-              hash: '#nuestros-trabajos'
+              hash: '#nuestros-trabajos',
             }"
-            ><span class="text-an-salmon font-extrabold text-lg">nuestros trabajos?</span></nuxt-link
+            ><span class="text-an-salmon font-extrabold text-lg"
+              >nuestros trabajos?</span
+            ></nuxt-link
           >
         </div>
       </div>
@@ -35,26 +39,26 @@
 </template>
 
 <script>
-import Header from '@/components/Header'
-import MenuNavbar from '@/components/MenuNavbar'
+import Header from "@/components/Header";
+import MenuNavbar from "@/components/MenuNavbar";
 export default {
   components: {
     Header,
-    MenuNavbar
-  }
-}
+    MenuNavbar,
+  },
+};
 </script>
 
 <style scoped>
 .font-eras {
-  font-family: 'Eraslight';
+  font-family: "Eraslight";
 }
 
 .font-free {
-  font-family: 'Freestyle';
+  font-family: "Freestyle";
 }
 
 .font-inkfree {
-  font-family: 'Inkfree';
+  font-family: "Inkfree";
 }
 </style>

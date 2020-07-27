@@ -1,4 +1,4 @@
-<!-- Pagina redirect cuando hay un error -->
+<!-- Pagina redirect cuando hay un error genérico, redirige a la home -->
 <template>
   <div>
     <!-- Header with icon logo -->

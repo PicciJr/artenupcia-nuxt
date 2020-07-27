@@ -11,8 +11,8 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_googleanalytics_7556e0d1 from 'nuxt_plugin_googleanalytics_7556e0d1' // Source: ./google-analytics.js (mode: 'client')
-import nuxt_plugin_axios_406f3435 from 'nuxt_plugin_axios_406f3435' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_googleanalytics_0e0bb764 from 'nuxt_plugin_googleanalytics_0e0bb764' // Source: ./google-analytics.js (mode: 'client')
+import nuxt_plugin_axios_46febb82 from 'nuxt_plugin_axios_46febb82' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_vue2touchevents_147d6945 from 'nuxt_plugin_vue2touchevents_147d6945' // Source: ../plugins/vue2-touch-events.js (mode: 'all')
 import nuxt_plugin_firebaseConfig_eef54710 from 'nuxt_plugin_firebaseConfig_eef54710' // Source: ../plugins/firebaseConfig.js (mode: 'all')
 
@@ -153,12 +153,12 @@ async function createApp (ssrContext) {
 
   // Plugin execution
 
-  if (process.client && typeof nuxt_plugin_googleanalytics_7556e0d1 === 'function') {
-    await nuxt_plugin_googleanalytics_7556e0d1(app.context, inject)
+  if (process.client && typeof nuxt_plugin_googleanalytics_0e0bb764 === 'function') {
+    await nuxt_plugin_googleanalytics_0e0bb764(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_406f3435 === 'function') {
-    await nuxt_plugin_axios_406f3435(app.context, inject)
+  if (typeof nuxt_plugin_axios_46febb82 === 'function') {
+    await nuxt_plugin_axios_46febb82(app.context, inject)
   }
 
   if (typeof nuxt_plugin_vue2touchevents_147d6945 === 'function') {

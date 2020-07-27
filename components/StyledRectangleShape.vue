@@ -1,3 +1,4 @@
+<!-- Rectangulo con estilo que esta formado por 2 bordes superpuestos y un texto centrado entre ellos -->
 <template>
   <div class="flex px-4 py-2 font-free">
     <div
@@ -16,7 +17,7 @@
 <script>
 export default {
   props: {
-    textRectangle: String,
+    textRectangle: String, // texto contenido dentro de los rectangulos
   },
 };
 </script>

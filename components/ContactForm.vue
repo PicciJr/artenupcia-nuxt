@@ -1,3 +1,4 @@
+<!-- Formulario de contacto con su logica de validacion de datos -->
 <template>
   <div class="flex flex-col text-gray-600 font-eras">
     <!-- Email -->
@@ -10,7 +11,7 @@
           :class="{
             'border-2 border-r-4 border-red-700 shadow-md':
               errorsFlag.email.length > 0,
-            'border-2 border-gray-300': errorsFlag.email.length <= 0
+            'border-2 border-gray-300': errorsFlag.email.length <= 0,
           }"
           type="email"
           @input="checkEmailValidity"
@@ -35,6 +36,9 @@
       <input
         v-model="userData.telefono"
         class="relative w-full sm:w-1/2 mb-2 pl-6 bg-white h-10 rounded-lg border-2 border-gray-300 text-sm focus:outline-none"
+        type="tel"
+        maxlength="9"
+        @keydown="handleTelefonoInput($event)"
       />
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -48,55 +52,21 @@
     </div>
     <!-- Num invitaciones -->
     <label>Número de invitaciones aproximado:</label>
-    <div class="mb-4">
-      <div class="flex max-w-md relative">
-        <div class="mb-2">
-          <button
-            type="button"
-            class="relative inline-flex items-center px-2 sm:px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150"
-            :class="{
-              'bg-an-crema opacity-75 font-extrabold bg-an':
-                opcionInvitaciones === 0,
-              'border-2 border-r-4 border-red-700 shadow-md':
-                errorsFlag.invitaciones.length > 0
-            }"
-            @click="setOpcionInvitaciones(0)"
-          >
-            Menos de 50
-          </button>
-          <button
-            type="button"
-            class="relative inline-flex items-center px-2 sm:px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150"
-            :class="{
-              'bg-an-crema opacity-75 font-extrabold': opcionInvitaciones === 1,
-              'border-2 border-r-4 border-red-700 shadow-md':
-                errorsFlag.invitaciones.length > 0
-            }"
-            @click="setOpcionInvitaciones(1)"
-          >
-            Entre 50-100
-          </button>
-          <button
-            type="button"
-            class="relative inline-flex items-center px-2 sm:px-4 py-2 rounded-r-md border border-gray-300 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150"
-            :class="{
-              'bg-an-crema opacity-75 font-extrabold': opcionInvitaciones === 2,
-              'border-2 border-r-4 border-red-700 shadow-md':
-                errorsFlag.invitaciones.length > 0
-            }"
-            @click="setOpcionInvitaciones(2)"
-          >
-            Más de 100
-          </button>
-        </div>
-      </div>
+    <div class="mb-2">
+      <input
+        class="w-full h-10 rounded-lg pl-2 border-2 border-gray-300 sm:w-1/2"
+        type="number"
+        v-model="userData.invitaciones"
+        min="0"
+        @keyup="handleNumInvitaciones($event)"
+      />
       <div v-if="errorsFlag.invitaciones" class="text-sm text-red-700 mb-6">
         {{ errorsFlag.invitaciones }}
       </div>
     </div>
     <!-- Interes principal -->
     <label>¿En qué estáis más interesados?</label>
-    <div class="mb-6">
+    <div class="w-full sm:w-1/2 mb-6">
       <dropdown-group
         :options="opcionesDeInvitacion"
         @selected="handleInvitacionesOptionSelected"
@@ -111,7 +81,7 @@
         :class="{
           'border-2 border-r-4 border-red-700 shadow-md':
             errorsFlag.textoLargo.length > 0,
-          'border border-gray-300': errorsFlag.textoLargo.length <= 0
+          'border border-gray-300': errorsFlag.textoLargo.length <= 0,
         }"
         rows="3"
         @input="checkTextoLargoValidity"
@@ -138,51 +108,52 @@ import { db } from '@/plugins/firebaseConfig.js'
 import DropdownGroup from '@/components/DropdownGroup'
 export default {
   components: {
-    DropdownGroup
+    DropdownGroup,
   },
   data() {
     return {
+      /** Datos de usuario para validacion */
       userData: {
         email: '',
-        invitaciones: '',
+        invitaciones: 0,
         opcionInteres: 'Invitaciones de Boda',
         textoLargo: '',
-        telefono: ''
+        telefono: '',
       },
+      /** Para controlar visibilidad de mensajes de error */
       errorsFlag: {
         email: '',
         invitaciones: '',
-        textoLargo: ''
+        textoLargo: '',
       },
-      formSubmitted: false,
-      /** opcion de numero de invitaciones */
-      opcionInvitaciones: -1,
+      formSubmitted: false, // controlar si el usuario ha enviado el formulario o no
       /** opcion dropdown de servicios disponibles */
       opcionesDeInvitacion: [
         {
           idOption: 0,
-          optionText: 'Invitaciones de Boda'
+          optionText: 'Invitaciones de Boda',
         },
         {
           idOption: 1,
-          optionText: 'Papelería completa de Boda'
+          optionText: 'Papelería completa de Boda',
         },
         {
           idOption: 2,
-          optionText: 'Papelería de Eventos'
+          optionText: 'Papelería de Eventos',
         },
         {
           idOption: 3,
-          optionText: 'No lo sé, ¿me asesoráis?'
-        }
-      ]
+          optionText: 'No lo sé, ¿me asesoráis?',
+        },
+      ],
     }
   },
   methods: {
-    /** Chequeo de todos los campos e invocacion a firebase para guardar */
+    /** Chequeo de todos los campos e invocacion a firebase para guardar
+     * todo tiene que estar relleno
+     * datos validos, si todo ok entonces enviar a BBDD
+     */
     checkInputFields() {
-      // todo tiene que estar relleno
-      // datos validos, si todo ok entonces enviar a BBDD
       this.formSubmitted = true
       this.checkEmailValidity()
       this.checkInvitacionesValidity()
@@ -213,10 +184,10 @@ export default {
       }
       return false
     },
-    /** Cheuqeo de numero de invitaciones seleccionado */
+    /** Chequeo de numero de invitaciones seleccionado */
     checkInvitacionesValidity() {
       if (this.formSubmitted) {
-        if (this.userData.invitaciones.length <= 0)
+        if (this.userData.invitaciones <= 0)
           this.errorsFlag.invitaciones =
             '¿Cuántas invitaciones necesitas aproximadamente?'
         else {
@@ -232,7 +203,7 @@ export default {
       if (this.formSubmitted) {
         if (this.userData.textoLargo.length <= 0)
           this.errorsFlag.textoLargo =
-            'Saber más de vosotros nos ayuda a obtener un resultado que seguro que os encantará'
+            'Saber más de vosotros nos ayuda a obtener un resultado que seguro que os encantará.'
         else {
           this.errorsFlag.textoLargo = ''
           return true
@@ -251,7 +222,7 @@ export default {
           telefono: this.userData.telefono,
           invitaciones: this.userData.invitaciones,
           interesPrincipal: this.userData.opcionInteres,
-          textoDescriptivo: this.userData.textoLargo
+          textoDescriptivo: this.userData.textoLargo,
         })
         .then(function() {
           router.push('/contacto-exito')
@@ -260,28 +231,30 @@ export default {
           router.push('/error')
         })
     },
-    /** Opcion de numero de invitaciones */
-    setOpcionInvitaciones(opcionSeleccionada) {
-      this.errorsFlag.invitaciones = ''
-      if (opcionSeleccionada === 0) this.userData.invitaciones = 'Menos de 50'
-      else if (opcionSeleccionada === 1)
-        this.userData.invitaciones = 'Entre 50-100'
-      else if (opcionSeleccionada === 2)
-        this.userData.invitaciones = 'Más de 100'
-      this.opcionInvitaciones = opcionSeleccionada
-    },
     /** Opcion de dropdown seleccionada por el usuario */
     handleInvitacionesOptionSelected(idOption) {
       const index = this.opcionesDeInvitacion.findIndex(
-        option => option.idOption === idOption
+        (option) => option.idOption === idOption
       )
       if (index !== -1) {
         this.userData.opcionInteres = this.opcionesDeInvitacion[
           index
         ].optionText
       }
-    }
-  }
+    },
+    /** Prevenir que el usuario introduzca valores negativos */
+    handleNumInvitaciones(event) {
+      if (event.keyCode === 189 || event.keyCode === 109) {
+        this.userData.invitaciones = 0
+      }
+    },
+    /** Prevenir que el usuario solo introduzca valores numericos */
+    handleTelefonoInput(event) {
+      if ((event.keyCode >= 48 && event.keyCode <= 57) || event.keyCode === 8) {
+        return this.userData.telefono
+      } else event.preventDefault()
+    },
+  },
 }
 </script>
 

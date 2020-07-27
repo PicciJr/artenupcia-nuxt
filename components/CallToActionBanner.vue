@@ -1,3 +1,5 @@
+<!-- Banner full width que incluye un CTA al final de la parte derecha 
+Se le puede pasar un enlace para que lleve al usuario a un sitio -->
 <template>
   <div
     class="flex flex-col justify-between items-center px-4 py-2 bg-an-cielo shadow-xl rounded-lg sm:flex-row"
@@ -18,10 +20,13 @@
           />
         </svg>
       </div>
-      <div class="px-2 text-lg text-center sm:text-left text-white font-semibold">
+      <div
+        class="px-2 text-lg text-center sm:text-left text-white font-semibold"
+      >
         ¿Te gustan estilos como este? ¡Contáctanos aquí!
       </div>
     </div>
+    <!-- Call to action -->
     <button
       class="w-full sm:w-1/4 flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-black bg-an-salmon hover:bg-an-crema focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
       @click="$router.push(linkTo)"
@@ -34,7 +39,7 @@
 <script>
 export default {
   props: {
-    linkTo: String,
+    linkTo: String, // enlace al que redirigir si el usuario pulsa el banner
   },
 };
 </script>

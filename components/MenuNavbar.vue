@@ -1,3 +1,4 @@
+<!-- Barra de menus solo apta para desktop. Cada elemento del menu es un nuxt-link -->
 <template>
   <div>
     <div class="font-eras flex justify-center px-4 sm:mx-24 xl:text-xl text-center text-black">

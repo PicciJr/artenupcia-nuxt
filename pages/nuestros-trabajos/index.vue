@@ -5,6 +5,7 @@
     <Header class="relative top-0 z-30 w-full" />
     <!-- Menu nav Bar only visible in wide screens -->
     <MenuNavbar />
+    <!-- Grid de trabajos -->
     <div class="flex flex-col py-4 xl:flex-row flex-wrap">
       <div
         v-for="trabajo in trabajos"
@@ -23,45 +24,45 @@
 </template>
 
 <script>
-import { db } from '@/plugins/firebaseConfig.js'
-import Header from '@/components/Header'
-import MenuNavbar from '@/components/MenuNavbar'
-import CardNuestrosTrabajos from '@/components/CardNuestrosTrabajos'
+import { db } from "@/plugins/firebaseConfig.js";
+import Header from "@/components/Header";
+import MenuNavbar from "@/components/MenuNavbar";
+import CardNuestrosTrabajos from "@/components/CardNuestrosTrabajos";
 export default {
   components: {
     Header,
     MenuNavbar,
-    CardNuestrosTrabajos
+    CardNuestrosTrabajos,
   },
   asyncData({ app, params, error, store, redirect }) {
     /** Get nuestros trabajos */
-    const trabajosArray = []
+    const trabajosArray = [];
     return db
-      .collection('fl_content')
+      .collection("fl_content")
       .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
           // crear nuevo trabajo a partir de datos
           const newTrabajo = {
             id: doc.data().id,
             mainImgSrc: doc.data().mainImgSrc,
             footerText: doc.data().footerText,
-            urlTo: doc.data().urlTo
-          }
-          trabajosArray.push(newTrabajo)
-        })
-        return { trabajos: trabajosArray }
+            urlTo: doc.data().urlTo,
+          };
+          trabajosArray.push(newTrabajo);
+        });
+        return { trabajos: trabajosArray };
       })
-      .catch(err => {
-        console.log(err)
-        redirect('/error')
-      })
+      .catch((err) => {
+        console.log(err);
+        redirect("/error");
+      });
   },
   methods: {
     /** Enviar usuario a trabajo seleccionado */
     redirectToTrabajo(idTrabajo) {
-      this.$router.push('/nuestros-trabajos/' + idTrabajo)
-    }
-  }
-}
+      this.$router.push("/nuestros-trabajos/" + idTrabajo);
+    },
+  },
+};
 </script>

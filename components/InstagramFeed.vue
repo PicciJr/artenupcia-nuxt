@@ -19,13 +19,9 @@
 </template>
 
 <script>
-import CarruselImagenes from '@/components/CarruselImagenes'
 export default {
-  components: {
-    CarruselImagenes
-  },
   props: {
-    igPosts: Array
-  }
-}
+    igPosts: Array, // array de fotos de instagram que se debe renderizar
+  },
+};
 </script>

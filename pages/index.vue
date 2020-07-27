@@ -18,7 +18,6 @@
           </h2>
         </div>
         <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
-        <!-- Flex -->
         <div class="flex flex-col py-2 xl:flex-row justify-center">
           <div class="w-full p-1 sm:p-3 xl:p-4">
             <StyledRectangleShape
@@ -194,7 +193,6 @@
           </h2>
         </div>
         <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
-        <!-- Flex -->
         <div class="flex flex-col py-4 xl:flex-row justify-center">
           <div class="w-full sm:pr-8">
             <!-- Instagram Banner -->
@@ -227,7 +225,7 @@
         </div>
       </div>
       <!--Newsletter -->
-      <div class="relative flex flex-col py-2 justify-center items-center">
+      <div class="relative flex flex-col py-8 justify-center items-center">
         <img
           class="w-2/6 pl-16 absolute bottom-0 left-0 hidden sm:block object-cover"
           style="transform: scaleX(-1)"
@@ -243,6 +241,10 @@
           alt="artenupcia-footer-image"
         />
       </div>
+    </div>
+    <!-- Back to top button, solo visible en Desktop -->
+    <div class="pb-4 pr-8" :class="setBackToTopVisibility">
+      <ButtonBackToTop @click="handleBackToTop" />
     </div>
   </div>
 </template>
@@ -260,6 +262,7 @@ import instagramApi from '@/api/instagramApi.js'
 import NewsletterForm from '@/components/NewsletterForm'
 import CardNuestrosTrabajos from '@/components/CardNuestrosTrabajos'
 import BannerTextOnly from '@/components/BannerTextOnly'
+import ButtonBackToTop from '@/components/ButtonBackToTop'
 import Footer from '@/components/Footer'
 
 export default {
@@ -270,19 +273,19 @@ export default {
     const trabajos = await db
       .collection('fl_content')
       .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
           // crear nuevo trabajo a partir de datos
           const newTrabajo = {
             id: doc.data().id,
             mainImgSrc: doc.data().mainImgSrc,
             footerText: doc.data().footerText,
-            urlTo: doc.data().urlTo
+            urlTo: doc.data().urlTo,
           }
           trabajosArray.push(newTrabajo)
         })
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err)
         redirect('/error')
       })
@@ -292,17 +295,17 @@ export default {
     const igPosts = await db
       .collection('instagramposts')
       .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
           // crear nuevo post a partir de datos
           const newIgPost = {
             shortCode: doc.data().shortCode,
-            linkTo: doc.data().linkTo
+            linkTo: doc.data().linkTo,
           }
           postsArray.push(newIgPost)
         })
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err)
         redirect('/error')
       })
@@ -310,7 +313,7 @@ export default {
     /** Retorna los posts de Instagram y los trabajos */
     return {
       trabajos: trabajosArray,
-      igPosts: postsArray
+      igPosts: postsArray,
     }
   },
   data() {
@@ -322,21 +325,22 @@ export default {
           linkTo: 'https://www.instagram.com',
           imgSrc:
             'https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Flogo%20instagram.eLPebNaf06Ip6yetKwzi.jpg?alt=media&token=af592d0e-94a7-4e55-82ac-b4c5b761cdf2',
-          imgAlt: 'artenupcia-instagram'
+          imgAlt: 'artenupcia-instagram',
         },
         {
           linkTo: 'https://www.facebook.com',
           imgSrc:
             'https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Flogo%20fb.t1sG8o58wO0mqKqmxtDE.jpg?alt=media&token=cef93cb7-9022-4b68-b4db-eee5ca9ef922',
-          imgAlt: 'artenupcia-facebook'
+          imgAlt: 'artenupcia-facebook',
         },
         {
           linkTo: 'https://www.pinterest.com',
           imgSrc:
             'https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Flogo%20pinterest.TTxWmYJNx5G1LeMJFrRT.jpg?alt=media&token=d9cc4412-bd63-4c30-a7c1-8b272fc8bd4d',
-          imgAlt: 'artenupcia-pinterest'
-        }
-      ]
+          imgAlt: 'artenupcia-pinterest',
+        },
+      ],
+      isBackToTopVisible: false,
     }
   },
   components: {
@@ -350,7 +354,22 @@ export default {
     NewsletterForm,
     CardNuestrosTrabajos,
     BannerTextOnly,
-    Footer
+    Footer,
+    ButtonBackToTop,
+  },
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  computed: {
+    /** Controlar visibilidad del boton back to top */
+    setBackToTopVisibility() {
+      return this.isBackToTopVisible
+        ? 'hidden sm:block fixed bottom-0 right-0'
+        : 'hidden'
+    },
   },
   methods: {
     /** Ocultar elementos principales para el menu del movil */
@@ -360,8 +379,20 @@ export default {
     /** Enviar usuario a trabajo seleccionado */
     redirectToTrabajo(idTrabajo) {
       this.$router.push('/nuestros-trabajos/' + idTrabajo)
-    }
-  }
+    },
+    /** Funcion para controlar en qué posicion de scroll está el usuario y en base
+     * a eso ocultar o mostrar el boton back to top
+     */
+    handleScroll() {
+      window.scrollY > window.innerHeight
+        ? (this.isBackToTopVisible = true)
+        : (this.isBackToTopVisible = false)
+    },
+    /** Funcion que recibe evento y gestiona el scroll hacia arriba */
+    handleBackToTop() {
+      window.scroll(0, 0)
+    },
+  },
 }
 </script>
 

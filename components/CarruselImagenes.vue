@@ -1,4 +1,5 @@
-<!-- Carrusel imagenes version movil -->
+<!-- Carrusel imagenes pensado para movil con gestos de swipe
+Las imagenes tienen un enlace que pueden redirigir al usuario -->
 <template>
   <div class="flex">
     <div
@@ -35,12 +36,13 @@
 export default {
   data() {
     return {
-      currentImage: 0,
-      itemSwipedRight: false,
-      itemSwipedLeft: false
+      currentImage: 0, // controla que imagen mostrar
+      itemSwipedRight: false, // controla gesto de usuario a derecha
+      itemSwipedLeft: false // controla gesto de usuario a izquierda
     }
   },
   props: {
+    /** Array de imagenes que compone todo el carrusel */
     igPosts: Array
   },
   methods: {

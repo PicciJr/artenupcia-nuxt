@@ -1,3 +1,4 @@
+<!-- Contiene logo, elementos del menu solo para movil -->
 <template>
   <div class="flex flex-col items-center">
     <!-- Menu movil -->
@@ -80,13 +81,11 @@
           >
         </div>
         <div @click="toggleMenu" class="mb-10 text-gray-700 font-extrabold">
-          <nuxt-link to="/contacto" class="mb-6 px-4"
-            >Contacto</nuxt-link
-          >
+          <nuxt-link to="/contacto" class="mb-6 px-4">Contacto</nuxt-link>
         </div>
       </div>
     </div>
-    <!--Menu no-movil -->
+    <!-- Logo que redirige a la home -->
     <nuxt-link to="/">
       <!-- logo Artenupcia -->
       <img
@@ -94,13 +93,12 @@
         class="w-72 h-48"
       />
     </nuxt-link>
+    <!-- Heading text -->
     <h1 class="font-free text-4xl">
       Tu historia, tu invitación
     </h1>
 
-    <div
-      class="hidden sm:block sm:w-full sm:px-72"
-    >
+    <div class="hidden sm:block sm:w-full sm:px-72">
       <div class="border-t border-an-marron mb-2"></div>
     </div>
   </div>
@@ -110,11 +108,12 @@
 export default {
   data() {
     return {
-      hideMobileMenu: true,
-      toggleButton: false,
+      hideMobileMenu: true, // controla la visibilidad de los elementos en movil
+      toggleButton: false, // para togglear la variable hideMobileMenu
     };
   },
   methods: {
+    /** Controla la visibilidad de los elementos del menu movil */
     toggleMenu() {
       this.hideMobileMenu = !this.hideMobileMenu;
       this.$emit("toggleMenu");

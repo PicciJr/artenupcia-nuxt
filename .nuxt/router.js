@@ -3,14 +3,14 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _375d9328 = () => interopDefault(import('../pages/contacto.vue' /* webpackChunkName: "pages/contacto" */))
-const _0029442c = () => interopDefault(import('../pages/contacto-exito.vue' /* webpackChunkName: "pages/contacto-exito" */))
-const _0b5c007f = () => interopDefault(import('../pages/error.vue' /* webpackChunkName: "pages/error" */))
-const _7218a02e = () => interopDefault(import('../pages/error-ruta.vue' /* webpackChunkName: "pages/error-ruta" */))
-const _11371fc8 = () => interopDefault(import('../pages/nuestros-trabajos/index.vue' /* webpackChunkName: "pages/nuestros-trabajos/index" */))
-const _48101d07 = () => interopDefault(import('../pages/nuestros-trabajos/_id/index.vue' /* webpackChunkName: "pages/nuestros-trabajos/_id/index" */))
-const _70d43b6e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
-const _05faf2d6 = () => interopDefault(import('../pages/_.vue' /* webpackChunkName: "pages/_" */))
+const _5de2a816 = () => interopDefault(import('../pages/contacto.vue' /* webpackChunkName: "pages/contacto" */))
+const _79f4618e = () => interopDefault(import('../pages/contacto-exito.vue' /* webpackChunkName: "pages/contacto-exito" */))
+const _52853a5c = () => interopDefault(import('../pages/error.vue' /* webpackChunkName: "pages/error" */))
+const _63e6b9bb = () => interopDefault(import('../pages/error-ruta.vue' /* webpackChunkName: "pages/error-ruta" */))
+const _17a1f8a2 = () => interopDefault(import('../pages/nuestros-trabajos/index.vue' /* webpackChunkName: "pages/nuestros-trabajos/index" */))
+const _211ea1cc = () => interopDefault(import('../pages/nuestros-trabajos/_id/index.vue' /* webpackChunkName: "pages/nuestros-trabajos/_id/index" */))
+const _da1176c8 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _138f12ae = () => interopDefault(import('../pages/_.vue' /* webpackChunkName: "pages/_" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -30,35 +30,35 @@ export const routerOptions = {
 
   routes: [{
     path: "/contacto",
-    component: _375d9328,
+    component: _5de2a816,
     name: "contacto"
   }, {
     path: "/contacto-exito",
-    component: _0029442c,
+    component: _79f4618e,
     name: "contacto-exito"
   }, {
     path: "/error",
-    component: _0b5c007f,
+    component: _52853a5c,
     name: "error"
   }, {
     path: "/error-ruta",
-    component: _7218a02e,
+    component: _63e6b9bb,
     name: "error-ruta"
   }, {
     path: "/nuestros-trabajos",
-    component: _11371fc8,
+    component: _17a1f8a2,
     name: "nuestros-trabajos"
   }, {
     path: "/nuestros-trabajos/:id?",
-    component: _48101d07,
+    component: _211ea1cc,
     name: "nuestros-trabajos-id"
   }, {
     path: "/",
-    component: _70d43b6e,
+    component: _da1176c8,
     name: "index"
   }, {
     path: "/*",
-    component: _05faf2d6,
+    component: _138f12ae,
     name: "all"
   }],
 

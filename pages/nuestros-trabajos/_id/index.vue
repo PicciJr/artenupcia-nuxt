@@ -1,3 +1,4 @@
+<!-- Pagina que representa un trabajo -->
 <template>
   <div>
     <!-- Header with icon logo -->
@@ -26,7 +27,10 @@
         <div class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4">
           <!-- Etiquetas de trabajo -->
           <div class="mb-2">
-            <badge-tag-group v-if="badgeItems" :badgeItems="badgeItems"></badge-tag-group>
+            <badge-tag-group
+              v-if="badgeItems"
+              :badgeItems="badgeItems"
+            ></badge-tag-group>
           </div>
           <h2 class="font-eras text-2xl">{{ headingText }}</h2>
           <div
@@ -45,13 +49,13 @@
 </template>
 
 <script>
-import Header from '@/components/Header'
-import MenuNavbar from '@/components/MenuNavbar'
-import CardNuestrosTrabajos from '@/components/CardNuestrosTrabajos'
-import CallToActionBanner from '@/components/CallToActionBanner'
-import ThumbnailMedia from '@/components/ThumbnailMedia'
-import BadgeTagGroup from '@/components/BadgeTagGroup'
-import { db } from '@/plugins/firebaseConfig.js'
+import Header from "@/components/Header";
+import MenuNavbar from "@/components/MenuNavbar";
+import CardNuestrosTrabajos from "@/components/CardNuestrosTrabajos";
+import CallToActionBanner from "@/components/CallToActionBanner";
+import ThumbnailMedia from "@/components/ThumbnailMedia";
+import BadgeTagGroup from "@/components/BadgeTagGroup";
+import { db } from "@/plugins/firebaseConfig.js";
 
 export default {
   components: {
@@ -60,11 +64,12 @@ export default {
     CardNuestrosTrabajos,
     CallToActionBanner,
     ThumbnailMedia,
-    BadgeTagGroup
+    BadgeTagGroup,
   },
   asyncData({ app, store, route, redirect }) {
+    /** Get info del trabajo */
     return db
-      .collection('fl_content')
+      .collection("fl_content")
       .doc(route.params.id)
       .get()
       .then(function(doc) {
@@ -79,34 +84,35 @@ export default {
               doc.data().imgLink2,
               doc.data().imgLink3,
               doc.data().imgLink4,
-              doc.data().imgLink5
+              doc.data().imgLink5,
             ],
-            badgeItems: doc.data().tags
-          }
+            badgeItems: doc.data().tags,
+          };
         } else {
-          redirect('/error')
+          redirect("/error");
         }
       })
-      .catch(err => redirect('/error'))
+      .catch((err) => redirect("/error"));
   },
   methods: {
+    /** Funcion para cambiar de imagen en el slider */
     handleSwitchImage(src) {
-      this.imgSrc = src
-    }
-  }
-}
+      this.imgSrc = src;
+    },
+  },
+};
 </script>
 
 <style scoped>
 .font-free {
-  font-family: 'Freestyle';
+  font-family: "Freestyle";
 }
 
 .font-eras {
-  font-family: 'Eraslight';
+  font-family: "Eraslight";
 }
 
 .font-inkfree {
-  font-family: 'Inkfree';
+  font-family: "Inkfree";
 }
 </style>
