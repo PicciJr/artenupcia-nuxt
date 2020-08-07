@@ -229,15 +229,17 @@
         <img
           class="w-2/6 pl-16 absolute bottom-0 left-0 hidden sm:block object-cover"
           style="transform: scaleX(-1)"
-          src="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Fflor-web.jpg?alt=media&token=fc376cf6-0dc6-4048-8e18-c7e597c354b9"
+          src="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Fflor-web.png?alt=media&token=7794d9ef-7b75-45ed-a59c-a463d1771919"
           alt="artenupcia-footer-image"
         />
-        <NewsletterForm />
+        <div class="px-4">
+          <NewsletterForm />
+        </div>
         <!--Footer -->
         <Footer :socialProfiles="socialProfiles" />
         <img
           class="w-2/6 pl-16 absolute bottom-0 right-0 hidden sm:block object-cover"
-          src="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Fflor-web.jpg?alt=media&token=fc376cf6-0dc6-4048-8e18-c7e597c354b9"
+          src="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Fflor-web.png?alt=media&token=7794d9ef-7b75-45ed-a59c-a463d1771919"
           alt="artenupcia-footer-image"
         />
       </div>
