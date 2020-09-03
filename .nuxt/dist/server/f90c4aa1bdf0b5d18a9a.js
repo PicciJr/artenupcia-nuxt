@@ -1,0 +1,1 @@
+exports.ids=[1],exports.modules={94:function(t,e,r){"use strict";r.r(e);var n={asyncData:({redirect:t})=>t("/error-ruta")},c=r(1),component=Object(c.a)(n,(function(){var t=this.$createElement;return(this._self._c||t)("div",[])}),[],!1,null,null,"06db74f2");e.default=component.exports}};
