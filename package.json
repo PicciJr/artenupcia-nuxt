@@ -15,6 +15,7 @@
     "@nuxtjs/google-analytics": "^2.3.0",
     "firebase": "^7.15.0",
     "nuxt": "^2.0.0",
+    "vue-click-outside": "^1.1.0",
     "vue2-touch-events": "^2.2.1"
   },
   "devDependencies": {

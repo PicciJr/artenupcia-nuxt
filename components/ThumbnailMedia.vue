@@ -3,6 +3,7 @@
   <div
     class="ml-4 border border-gray-200 shadow-lg rounded-lg cursor-pointer"
     @mouseover="switchImage"
+    @click="openImage"
   >
     <img class="w-20" :src="imgSrc" :alt="imgAlt" />
   </div>
@@ -19,6 +20,10 @@ export default {
     /** Permite cambiar la imagen sobre la que el usuario hace hover. Pej en un carrusel de imagenes. */
     switchImage() {
       this.$emit("hover", this.imgSrc);
+    },
+    /** Permite indicar qué imagen se debe abrir en el modal que la contiene. */
+    openImage() {
+      this.$emit("click", this.imgSrc);
     },
   },
 };

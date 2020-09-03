@@ -19,6 +19,16 @@
   src: url('./Inkfree.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Znikomit';
+  src: url('./znikomit.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GravityLight';
+  src: url('./gravity/Gravity-Light.otf') format('truetype');
+}
+
 .page-enter-active,
 .page-leave-active {
   transition: opacity 0.25s;

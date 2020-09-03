@@ -11,10 +11,10 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+        content: process.env.npm_package_description || '',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
    ** Customize the progress-bar color
@@ -27,13 +27,17 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/vue2-touch-events.js', '~/plugins/firebaseConfig.js'],
+  plugins: [
+    '~/plugins/vue2-touch-events.js',
+    '~/plugins/firebaseConfig.js',
+    { src: '~/plugins/click-outside.js', ssr: true },
+  ],
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
   ],
   /*
    ** Nuxt.js modules
@@ -44,9 +48,9 @@ export default {
     [
       '@nuxtjs/google-analytics',
       {
-        id: 'UA-161289524-1'
-      }
-    ]
+        id: 'UA-161289524-1',
+      },
+    ],
   ],
   /*
    ** Axios module configuration
@@ -60,20 +64,20 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {},
   },
   vue: {
     config: {
       productionTip: false,
-      devtools: true
-    }
+      devtools: true,
+    },
   },
   pageTransition: {
     name: 'page',
-    mode: 'out-in'
+    mode: 'out-in',
   },
   layoutTransition: {
     name: 'layout',
-    mode: 'out-in'
-  }
+    mode: 'out-in',
+  },
 }

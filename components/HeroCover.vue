@@ -1,25 +1,26 @@
 <!-- Portada Hero para la Home / Contendra un video -->
 <template>
   <div class="flex sm:mb-4">
-    <div class="flex-1 relative opacity-75 h-96">
-      <!-- <iframe
-        src="https://www.youtube.com/embed/D4nppWHURjI?autoplay=1"
+    <div class="w-full relative opacity-75">
+      <video
         autoplay
         muted
         loop
-        class="object-cover w-full h-full"
-      ></iframe> -->
-      <img
-        src="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F1080_9999_100%2Fcoming-soon-1898936_1280.jpg?alt=media&token=df9e7e3c-1be7-4a74-b430-5a8ca321a504"
-        class="object-cover w-full h-full"
-      />
+        class="min-w-full object-cover content-center h-96 sm:h-136"
+      >
+        <source
+          src="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fvideo1-an-2.mp4?alt=media&token=99b420e2-9020-4903-ae1e-a7bd926d8a0e"
+          type="video/mp4"
+        />
+      </video>
       <!-- Call to action -->
-      <div class="absolute bottom-0 right-0 px-2 py-4">
-        <div class="border-white">
+      <div class="absolute px-2 py-4 btn-style">
+        <div class="p-1">
           <button
-            class="heartbeat px-8 py-3 my-2 bg-an-cielo border border-an-salmon border-8 inline-block hover:bg-teal-500 hover:font-bold rounded-full shadow-lg text-black text-xl"
+            class="heartbeat w-64 px-5 py-3 text-lg text-white bg-opacity-75 font-extrabold rounded-md bg-an-salmon border border-transparent hover:border-4 hover:border-white focus:outline-none transition duration-150 ease-in-out opacity-75"
+            @click.prevent="$router.push('/contacto')"
           >
-            Cuéntame tu idea
+            ¡Cuéntanos tu idea!
           </button>
         </div>
       </div>
@@ -28,7 +29,7 @@
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style scoped>
@@ -110,6 +111,29 @@ export default {};
     transform: scale(1);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .btn-style {
+    bottom: 20px;
+    right: 5%;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  .btn-style {
+    bottom: 100px;
+    right: 5%;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .btn-style {
+    bottom: 50px;
+    right: 5%;
   }
 }
 </style>

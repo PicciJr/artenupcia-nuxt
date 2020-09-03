@@ -15,6 +15,7 @@ import nuxt_plugin_googleanalytics_0e0bb764 from 'nuxt_plugin_googleanalytics_0e
 import nuxt_plugin_axios_46febb82 from 'nuxt_plugin_axios_46febb82' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_vue2touchevents_147d6945 from 'nuxt_plugin_vue2touchevents_147d6945' // Source: ../plugins/vue2-touch-events.js (mode: 'all')
 import nuxt_plugin_firebaseConfig_eef54710 from 'nuxt_plugin_firebaseConfig_eef54710' // Source: ../plugins/firebaseConfig.js (mode: 'all')
+import nuxt_plugin_clickoutside_5b0e370d from 'nuxt_plugin_clickoutside_5b0e370d' // Source: ../plugins/click-outside.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -167,6 +168,10 @@ async function createApp (ssrContext) {
 
   if (typeof nuxt_plugin_firebaseConfig_eef54710 === 'function') {
     await nuxt_plugin_firebaseConfig_eef54710(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_clickoutside_5b0e370d === 'function') {
+    await nuxt_plugin_clickoutside_5b0e370d(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first

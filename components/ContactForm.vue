@@ -1,6 +1,6 @@
 <!-- Formulario de contacto con su logica de validacion de datos -->
 <template>
-  <div class="flex flex-col text-gray-600 font-eras">
+  <div class="flex flex-col text-gray-600 font-gravity-l">
     <!-- Email -->
     <label>Email:</label>
     <div class="mb-4">
@@ -259,15 +259,30 @@ export default {
 </script>
 
 <style scoped>
-.font-eras {
-  font-family: 'Eraslight';
-}
-
 .font-free {
   font-family: 'Freestyle';
+}
+
+.font-eras {
+  font-family: 'Eraslight';
 }
 
 .font-inkfree {
   font-family: 'Inkfree';
 }
+
+.font-znikomit {
+  font-family: 'Znikomit';
+}
+
+.font-gravity-l {
+  font-family: 'GravityLight';
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 </style>

@@ -1,8 +1,12 @@
 <!-- Card que representa un trabajo unico, con su imagen correspondiente -->
 <template>
   <div class="p-2">
-    <img :src="imgSrc" class="object-cover shadow-md cursor-pointer" />
-    <div class="p-2 text-an-azul-oscuro text-sm italic">{{ footerText }}</div>
+    <img
+      :src="imgSrc"
+      class="object-cover shadow-md cursor-pointer"
+      @click="$emit('click')"
+    />
+    <div class="p-2 text-an-azul-oscuro text-sm font-znikomit">{{ footerText }}</div>
   </div>
 </template>
 
@@ -11,12 +15,34 @@ export default {
   props: {
     /** src de la imagen a mostrar */
     imgSrc: {
-      type: String
+      type: String,
     },
     /** Pie de texto que puede acompañar a la foto */
     footerText: {
-      type: String
-    }
-  }
+      type: String,
+    },
+  },
 }
 </script>
+
+<style scoped>
+.font-free {
+  font-family: 'Freestyle';
+}
+
+.font-eras {
+  font-family: 'Eraslight';
+}
+
+.font-inkfree {
+  font-family: 'Inkfree';
+}
+
+.font-znikomit {
+  font-family: 'Znikomit';
+}
+
+.font-gravity-l {
+  font-family: 'GravityLight';
+}
+</style>
