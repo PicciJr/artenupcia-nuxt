@@ -48,8 +48,8 @@
     <div class="p-2">
       <CallToActionBanner class="mb-8" linkTo="/contacto" />
     </div>
-    <!-- Modal para desplegar imagenes en grande -->
-    <div>
+    <!-- Modal para desplegar imagenes en grande, solo desktop -->
+    <div class="hidden sm:block">
       <ModalPictureContainer
         @close-modal="hideModal"
         @hover="handleSwitchImage"

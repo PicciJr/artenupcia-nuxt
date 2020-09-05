@@ -9,7 +9,7 @@
         class="min-w-full object-cover content-center h-96 sm:h-136"
       >
         <source
-          src="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fvideo1-an-2.mp4?alt=media&token=99b420e2-9020-4903-ae1e-a7bd926d8a0e"
+          src="https://artenupcia.imfast.io/video1-an-2.mp4"
           type="video/mp4"
         />
       </video>
@@ -135,5 +135,10 @@ export default {}
     bottom: 50px;
     right: 5%;
   }
+}
+
+.btn-style {
+  bottom: 20px;
+  right: 5%;
 }
 </style>

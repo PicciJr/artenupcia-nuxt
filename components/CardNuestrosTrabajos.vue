@@ -6,7 +6,7 @@
       class="object-cover shadow-md cursor-pointer"
       @click="$emit('click')"
     />
-    <div class="p-2 text-an-azul-oscuro text-sm font-znikomit">{{ footerText }}</div>
+    <div class="p-2 text-gray-900 text-md font-znikomit">{{ footerText }}</div>
   </div>
 </template>
 

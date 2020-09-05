@@ -32,7 +32,7 @@
     </div>
     <!-- Telefono -->
     <label>Teléfono móvil:</label>
-    <div class="flex relative mb-6">
+    <div class="flex relative mb-4">
       <input
         v-model="userData.telefono"
         class="relative w-full sm:w-1/2 mb-2 pl-6 bg-white h-10 rounded-lg border-2 border-gray-300 text-sm focus:outline-none"
@@ -52,9 +52,15 @@
     </div>
     <!-- Num invitaciones -->
     <label>Número de invitaciones aproximado:</label>
-    <div class="mb-2">
+    <div class="mb-4">
       <input
-        class="w-full h-10 rounded-lg pl-2 border-2 border-gray-300 sm:w-1/2"
+        placeholder="0"
+        class="w-full h-10 rounded-lg pl-2 border-2 border-gray-300 sm:w-1/2 place"
+        :class="{
+          'border-2 border-r-4 border-red-700 shadow-md':
+            errorsFlag.invitaciones.length > 0,
+          'border-2 border-gray-300': errorsFlag.invitaciones.length <= 0,
+        }"
         type="number"
         v-model="userData.invitaciones"
         min="0"
@@ -66,7 +72,7 @@
     </div>
     <!-- Interes principal -->
     <label>¿En qué estáis más interesados?</label>
-    <div class="w-full sm:w-1/2 mb-6">
+    <div class="w-full sm:w-1/2 mb-4">
       <dropdown-group
         :options="opcionesDeInvitacion"
         @selected="handleInvitacionesOptionSelected"
@@ -74,7 +80,7 @@
     </div>
     <!-- Text box -->
     <label>Cuéntanos tu idea y las dudas que puedas tener:</label>
-    <div class="mb-4">
+    <div class="mb-2">
       <textarea
         v-model="userData.textoLargo"
         class="w-full p-2 mb-2 shadow-lg rounded-md resize-none"
@@ -115,7 +121,7 @@ export default {
       /** Datos de usuario para validacion */
       userData: {
         email: '',
-        invitaciones: 0,
+        invitaciones: null,
         opcionInteres: 'Invitaciones de Boda',
         textoLargo: '',
         telefono: '',
@@ -284,5 +290,4 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 </style>

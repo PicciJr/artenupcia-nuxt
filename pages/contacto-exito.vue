@@ -13,24 +13,20 @@
       </h1>
       <div class="px-8 font-eras">
         <div class="mb-6">
-          <span class="pr-4">💒</span>¡Ya tenemos ganas de empezar a prepara
+          <span class="pr-4">💒</span>¡Ya tenemos ganas de empezar a preparar
           vuestra boda!
         </div>
         <div class="mb-6">
-          <span class="pr-4">🔔</span> Te contactaremos brevemente para que
-          empecemos.
+          <span class="pr-4">🔔</span> Te contactaremos en breves.
+          <span class="font-extrabold"
+            >Revisa tu buzón de SPAM por si acaso.</span
+          >
         </div>
         <div class="mb-6">
-          <span class="pr-4">💞</span> Mientras, ¿te apetece echar un vistazo a
+          <span class="pr-4">💞</span> Mientras, puedes inspirarte con
           <!-- Posibilidad de redireccion al usuario -->
-          <nuxt-link
-            :to="{
-              path: '/',
-              hash: '#nuestros-trabajos',
-            }"
-            ><span class="text-an-salmon font-extrabold text-lg"
-              >nuestros trabajos?</span
-            ></nuxt-link
+          <a class="font-extrabold underline text-teal-500" href="https://www.instagram.com/artenupcia/" target="_blank"
+            >nuestro Instagram</a
           >
         </div>
       </div>
@@ -39,26 +35,26 @@
 </template>
 
 <script>
-import Header from "@/components/Header";
-import MenuNavbar from "@/components/MenuNavbar";
+import Header from '@/components/Header'
+import MenuNavbar from '@/components/MenuNavbar'
 export default {
   components: {
     Header,
     MenuNavbar,
   },
-};
+}
 </script>
 
 <style scoped>
 .font-eras {
-  font-family: "Eraslight";
+  font-family: 'Eraslight';
 }
 
 .font-free {
-  font-family: "Freestyle";
+  font-family: 'Freestyle';
 }
 
 .font-inkfree {
-  font-family: "Inkfree";
+  font-family: 'Inkfree';
 }
 </style>

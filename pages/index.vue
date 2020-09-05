@@ -19,7 +19,9 @@
             Invitaciones personalizadas
           </h2>
         </div>
-        <div class="w-full mb-2 sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
+        <div
+          class="w-full mb-2 sm:w-1/3 sm:pr-8 border-b border-an-marron"
+        ></div>
         <div class="flex flex-col mb-16 xl:flex-row justify-center">
           <div class="w-full p-1 sm:p-3 xl:p-4">
             <StyledRectangleShape
@@ -43,7 +45,7 @@
           </div>
           <div class="w-full p-1 sm:p-3 xl:p-4">
             <CardItem
-              imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4968.jpg?alt=media&token=c2e98af1-f78d-4209-946d-fc745e033bd4"
+              imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4968.jpg?alt=media&token=d248211c-717b-4916-bd77-65b59e8a2213"
             />
           </div>
         </div>
@@ -87,17 +89,17 @@
         <div class="flex flex-col mb-16 xl:flex-row justify-center">
           <div class="w-full xl:w-1/3 p-2 sm:p-3 xl:p-4">
             <CardItem
-              imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4900%204000x4000.jpg?alt=media&token=f548c689-273d-421d-a3d3-a7b2dc67c6d3"
+              imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4900.VwlbH66KS3aN4jCoJphZ.jpg?alt=media&token=732c8a7a-02de-4d70-a1e9-69adbee56a8c"
             />
           </div>
           <div class="w-full xl:w-1/3 p-2 sm:p-3 xl:p-4">
             <CardItem
-              imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4969.jpg?alt=media&token=1fdd25aa-5cff-4029-9245-5a486bcd2756"
+              imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4969.jpg?alt=media&token=d4cbdd56-af7f-4f61-8eb2-0b572f5434cc"
             />
           </div>
           <div class="w-full xl:w-1/3 p-2 sm:p-3 xl:p-4">
             <CardItem
-              imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4918.jpg?alt=media&token=497b01d0-1ab3-4c9e-974f-0fccb66d9fb5"
+              imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4918.e4DYib1VTf6ZYqVca3uK.jpg?alt=media&token=c5e128a6-e3dd-4e99-8d87-82d1a1f1a1c1"
             />
           </div>
         </div>
@@ -110,7 +112,9 @@
             Nuestros trabajos
           </h2>
         </div>
-        <div class="w-full mb-2 sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
+        <div
+          class="w-full mb-2 sm:w-1/3 sm:pr-8 border-b border-an-marron"
+        ></div>
         <!-- Flex -->
         <div class="flex flex-col xl:flex-row">
           <div class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4">
@@ -157,7 +161,9 @@
             Sobre Artenupcia
           </h2>
         </div>
-        <div class="w-full mb-2 sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
+        <div
+          class="w-full mb-2 sm:w-1/3 sm:pr-8 border-b border-an-marron"
+        ></div>
         <!-- Flex -->
         <div class="flex flex-col mb-16 xl:flex-row justify-center">
           <div class="w-full p-1 sm:p-3 xl:p-4">
@@ -173,7 +179,7 @@
               personal. Desde la ilusión que me crea poder captar los momentos
               únicos de vuestra vida crece Artenupcia. Donde, desde el corazón,
               hacemos vuestros diseños a mano, con delicadeza y amor. Y es que
-              para mí mi mayor emoción es en el momento en el que veis vuestra
+              para mí, mi mayor emoción es el momento en el que veis vuestra
               historia captada en vuestras invitaciones. Por eso estoy deseando
               ayudaros con la papelería única de vuestra boda. No dudéis en
               contactar conmigo y contarme vuestra idea para que juntos hagamos
@@ -181,8 +187,13 @@
               vuestra historia.
             </p>
           </div>
+          <!-- Foto Begoña -->
           <div class="w-full p-1 sm:p-3 xl:p-4">
-            <CardItem />
+            <div class="sm:px-20">
+              <CardItem
+                imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Fabout_me.jpg?alt=media&token=b487f62b-2ad8-4965-80df-3b07014884b3"
+              />
+            </div>
           </div>
         </div>
         <!--¿Necesitas inspiración? -->
@@ -219,10 +230,17 @@
             </BannerTextOnly>
           </div>
           <!--Slider solo movil -->
-          <CarruselImagenes class="sm:hidden" :igPosts="igPosts" />
+          <CarruselImagenes
+            v-if="igPosts !== []"
+            class="sm:hidden"
+            :igPosts="igPosts"
+          />
         </div>
         <!-- Feed Instagram desktop -->
-        <div class="flex flex-col py-4 mb-4 xl:flex-row justify-center">
+        <div
+          v-if="igPosts !== []"
+          class="flex flex-col py-4 mb-4 xl:flex-row justify-center"
+        >
           <InstagramFeed :igPosts="igPosts" />
         </div>
       </div>
@@ -310,6 +328,7 @@ export default {
         })
       })
       .catch((err) => {
+        igPosts = [] // por seguridad, ante posible fallo
         console.log(err)
         redirect('/error')
       })
@@ -326,19 +345,19 @@ export default {
       /** Perfiles en RRSS para el footer */
       socialProfiles: [
         {
-          linkTo: 'https://www.instagram.com',
+          linkTo: 'https://www.instagram.com/artenupcia/',
           imgSrc:
             'https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Flogo%20instagram.eLPebNaf06Ip6yetKwzi.jpg?alt=media&token=af592d0e-94a7-4e55-82ac-b4c5b761cdf2',
           imgAlt: 'artenupcia-instagram',
         },
         {
-          linkTo: 'https://www.facebook.com',
+          linkTo: 'https://www.facebook.com/artenupcia.papeleriadeboda',
           imgSrc:
             'https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Flogo%20fb.t1sG8o58wO0mqKqmxtDE.jpg?alt=media&token=cef93cb7-9022-4b68-b4db-eee5ca9ef922',
           imgAlt: 'artenupcia-facebook',
         },
         {
-          linkTo: 'https://www.pinterest.com',
+          linkTo: 'https://www.pinterest.es/artenupcia/',
           imgSrc:
             'https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Flogo%20pinterest.TTxWmYJNx5G1LeMJFrRT.jpg?alt=media&token=d9cc4412-bd63-4c30-a7c1-8b272fc8bd4d',
           imgAlt: 'artenupcia-pinterest',
