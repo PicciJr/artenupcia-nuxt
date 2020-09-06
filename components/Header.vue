@@ -1,6 +1,6 @@
 <!-- Contiene logo, elementos del menu solo para movil -->
 <template>
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col items-center font-znikomit text-gray-700 font-semibold">
     <!-- Menu movil -->
     <div class="self-end pr-12">
       <svg
@@ -34,7 +34,7 @@
       </div>
       <!-- Contiene opciones de menu -->
       <div
-        class="flex flex-col font-eras absolute pt-12 w-full text-2xl text-center"
+        class="flex flex-col absolute pt-12 w-full text-2xl text-center"
         style="top: 50%; left: 50%; transform: translate(-50%, -50%);"
       >
         <div @click="toggleMenu" class="mb-10">
@@ -110,26 +110,38 @@ export default {
     return {
       hideMobileMenu: true, // controla la visibilidad de los elementos en movil
       toggleButton: false, // para togglear la variable hideMobileMenu
-    };
+    }
   },
   methods: {
     /** Controla la visibilidad de los elementos del menu movil */
     toggleMenu() {
-      this.hideMobileMenu = !this.hideMobileMenu;
-      this.$emit("toggleMenu");
-      this.toggleButton = !this.toggleButton;
+      this.hideMobileMenu = !this.hideMobileMenu
+      this.$emit('toggleMenu')
+      this.toggleButton = !this.toggleButton
     },
   },
-};
+}
 </script>
 
 <style scoped>
 .font-free {
-  font-family: "Freestyle";
+  font-family: 'Freestyle';
 }
 
 .font-eras {
-  font-family: "Eraslight";
+  font-family: 'Eraslight';
+}
+
+.font-inkfree {
+  font-family: 'Inkfree';
+}
+
+.font-znikomit {
+  font-family: 'Znikomit';
+}
+
+.font-gravity-l {
+  font-family: 'GravityLight';
 }
 
 .scale-in-top {

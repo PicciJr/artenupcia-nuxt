@@ -11,7 +11,7 @@
       <h1 class="font-free text-4xl mb-4">
         Gracias por contactarnos!
       </h1>
-      <div class="px-8 font-eras">
+      <div class="px-8 font-gravity-l">
         <div class="mb-6">
           <span class="pr-4">💒</span>¡Ya tenemos ganas de empezar a preparar
           vuestra boda!
@@ -25,7 +25,10 @@
         <div class="mb-6">
           <span class="pr-4">💞</span> Mientras, puedes inspirarte con
           <!-- Posibilidad de redireccion al usuario -->
-          <a class="font-extrabold underline text-teal-500" href="https://www.instagram.com/artenupcia/" target="_blank"
+          <a
+            class="font-extrabold unde text-teal-500"
+            href="https://www.instagram.com/artenupcia/"
+            target="_blank"
             >nuestro Instagram</a
           >
         </div>
@@ -46,15 +49,23 @@ export default {
 </script>
 
 <style scoped>
-.font-eras {
-  font-family: 'Eraslight';
-}
-
 .font-free {
   font-family: 'Freestyle';
 }
 
+.font-eras {
+  font-family: 'Eraslight';
+}
+
 .font-inkfree {
   font-family: 'Inkfree';
+}
+
+.font-znikomit {
+  font-family: 'Znikomit';
+}
+
+.font-gravity-l {
+  font-family: 'GravityLight';
 }
 </style>

@@ -207,7 +207,7 @@
         </div>
         <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
         <div class="flex flex-col py-4 xl:flex-row justify-center">
-          <div class="w-full sm:pr-8">
+          <div class="w-full sm:pr-8 font-gravity-l">
             <!-- Instagram Banner -->
             <BannerTextOnly
               headingText="¡Écha un vistazo en nuestro Instagram!"
