@@ -351,7 +351,8 @@ export default {
           imgAlt: 'artenupcia-instagram',
         },
         {
-          linkTo: 'https://www.facebook.com/artenupcia.papeleriadeboda',
+          linkTo:
+            'https://www.facebook.com/Artenupcia-Papeler%C3%ADa-de-boda-101667711683772/',
           imgSrc:
             'https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Flogo%20fb.t1sG8o58wO0mqKqmxtDE.jpg?alt=media&token=cef93cb7-9022-4b68-b4db-eee5ca9ef922',
           imgAlt: 'artenupcia-facebook',

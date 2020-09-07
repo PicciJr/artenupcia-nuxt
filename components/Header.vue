@@ -94,7 +94,7 @@
       />
     </nuxt-link>
     <!-- Heading text -->
-    <h1 class="font-free text-4xl">
+    <h1 class="font-free font-medium text-4xl">
       Tu historia, tu invitación
     </h1>
 
