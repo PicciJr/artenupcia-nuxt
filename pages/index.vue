@@ -37,10 +37,15 @@
               historia, que con tan solo una invitación todos vuestros invitados
               sientan vuestro amor, sientan vuestra historia. Vuestra papelería
               de boda será inolvidable, les sorprenderá y hasta la guardarán de
-              recuerdo. Nuestro modo de trabajar es muy sencillo, nos contáis
-              vuestra historia o idea y nos ponemos manos a la obra para haceros
-              unas invitaciones totalmente personalizadas y únicas pero
-              sobretodo, vuestras.
+              recuerdo.
+            </p>
+            <p
+              class="font-gravity-l font-bold py-4 text-md text-gray-600 sm:text-xl text-justify"
+            >
+              Nuestro modo de trabajar es muy sencillo, nos contáis vuestra
+              historia o idea y nos ponemos manos a la obra para haceros unas
+              invitaciones totalmente personalizadas y únicas pero sobretodo,
+              vuestras.
             </p>
           </div>
           <div class="w-full p-1 sm:p-3 xl:p-4">
@@ -80,9 +85,15 @@
               Mediante técnicas artesanales de pintura como acuarelas, tinta
               china, lápices o grafito, o también técnicas digitales, creamos
               vuestro diseño para aplicarlo en las invitaciones y crear vuestra
-              papelería de boda. Si queréis un momento realmente especial os
-              recomendamos que completéis las invitaciones con el resto de
-              papelería que en Artenupcia podemos ofreceros.
+              papelería de boda.
+            </p>
+            <br>
+            <p
+              class="font-gravity-l font-bold text-md text-gray-600 sm:text-xl text-justify"
+            >
+              Si queréis un momento realmente especial os recomendamos que
+              completéis las invitaciones con el resto de papelería que en
+              Artenupcia podemos ofreceros.
             </p>
           </div>
         </div>
@@ -181,11 +192,12 @@
               hacemos vuestros diseños a mano, con delicadeza y amor. Y es que
               para mí, mi mayor emoción es el momento en el que veis vuestra
               historia captada en vuestras invitaciones. Por eso estoy deseando
-              ayudaros con la papelería única de vuestra boda. No dudéis en
+              ayudaros con la papelería única de vuestra boda.
+            </p>
+            <p class="font-gravity-l font-bold py-4 text-md text-gray-600 sm:text-xl text-justify">No dudéis en
               contactar conmigo y contarme vuestra idea para que juntos hagamos
               cada detalle de vuestra boda especial, al igual que vosotros y que
-              vuestra historia.
-            </p>
+              vuestra historia.</p>
           </div>
           <!-- Foto Begoña -->
           <div class="w-full p-1 sm:p-3 xl:p-4">

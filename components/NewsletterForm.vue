@@ -8,7 +8,7 @@
         ¿Quieres estar a la última en tendencias de boda?
         <br class="hidden sm:inline" />
       </h2>
-      <div class="font-eras text-an-cielo text-xl">
+      <div class="font-eras text-an-cielo text-xl font-bold">
         Únete a nuestro newsletter.
       </div>
       <!-- Datos de usuario -->

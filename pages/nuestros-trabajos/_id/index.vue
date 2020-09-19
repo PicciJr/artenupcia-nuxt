@@ -39,7 +39,7 @@
           <div
             class="font-gravity-l font-bold py-4 text-md text-gray-600 sm:text-xl text-justify"
           >
-            {{ mainText }}
+            <span v-html="mainText"></span>
           </div>
         </div>
       </div>
@@ -95,10 +95,9 @@ export default {
       .get()
       .then(function(doc) {
         if (doc.exists) {
-          // return trabajo
           return {
             headingText: doc.data().headingText,
-            mainText: doc.data().mainText,
+            mainText: doc.data().textMarkup,
             imgSrc: doc.data().mainImgSrc,
             thumbnailArray: [
               doc.data().imgLink1,
