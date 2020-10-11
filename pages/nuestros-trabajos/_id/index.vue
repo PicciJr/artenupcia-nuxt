@@ -6,11 +6,11 @@
     <!-- Menu nav Bar only visible in wide screens -->
     <MenuNavbar />
     <div class="px-4 xl:mx-24">
-      <div class="flex flex-col py-4 xl:flex-row justify-center">
-        <div class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4">
+      <div class="flex flex-col justify-center py-4 xl:flex-row">
+        <div class="w-full p-1 xl:w-1/2 sm:p-3 xl:p-4">
           <CardNuestrosTrabajos :imgSrc="imgSrc" @click="openModalImage" />
           <!-- Thumbnail fotos -->
-          <div class="flex p-2 justify-center">
+          <div class="flex justify-center p-2">
             <div
               v-for="thumbnailImgSrc in thumbnailArray"
               :key="thumbnailImgSrc.id"
@@ -25,7 +25,7 @@
           </div>
         </div>
         <!-- Contenido texto de trabajo -->
-        <div class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4">
+        <div class="w-full p-1 xl:w-1/2 sm:p-3 xl:p-4">
           <!-- Etiquetas de trabajo -->
           <div class="mb-2">
             <!-- <badge-tag-group
@@ -33,11 +33,11 @@
               :badgeItems="badgeItems"
             ></badge-tag-group> -->
           </div>
-          <h2 class="mb-2 font-znikomit text-2xl sm:text-3xl">
+          <h2 class="mb-2 text-2xl font-znikomit sm:text-3xl">
             {{ headingText }}
           </h2>
           <div
-            class="font-gravity-l font-bold py-4 text-md text-gray-600 sm:text-xl text-justify"
+            class="py-4 font-bold leading-8 text-justify text-gray-600 font-gravity-l text-md sm:text-xl"
           >
             <span v-html="mainText"></span>
           </div>

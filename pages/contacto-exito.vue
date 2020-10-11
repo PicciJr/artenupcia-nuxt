@@ -6,9 +6,9 @@
     <!-- Menu nav Bar only visible in wide screens -->
     <MenuNavbar />
     <div
-      class="flex flex-col items-center py-4 sm:px-16 text-center sm:text-left"
+      class="flex flex-col items-center py-4 text-center sm:px-16 sm:text-left"
     >
-      <h1 class="font-free text-4xl mb-4">
+      <h1 class="mb-4 text-4xl font-free">
         Gracias por contactarnos!
       </h1>
       <div class="px-8 font-gravity-l">
@@ -26,7 +26,7 @@
           <span class="pr-4">💞</span> Mientras, puedes inspirarte con
           <!-- Posibilidad de redireccion al usuario -->
           <a
-            class="font-extrabold unde text-teal-500"
+            class="font-extrabold text-teal-500 unde"
             href="https://www.instagram.com/artenupcia/"
             target="_blank"
             >nuestro Instagram</a

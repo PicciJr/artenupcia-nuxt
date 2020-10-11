@@ -4,18 +4,18 @@
     <Header class="relative top-0 z-30 w-full" />
     <!-- Menu nav Bar only visible in wide screens -->
     <MenuNavbar />
-    <div class="flex flex-col py-4 xl:flex-row justify-center">
+    <div class="flex flex-col justify-center py-4 xl:flex-row">
       <!-- Foto -->
-      <div class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4">
+      <div class="w-full p-1 xl:w-1/2 sm:p-3 xl:p-4">
         <img
           src="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4964.nbGkHy51Rv5ycKTjiNmo.jpg?alt=media&token=e6b39df2-c1a8-44b0-9f27-de821d620b4e"
-          class="w-full hidden xl:block mb-2 rounded-md"
+          class="hidden w-full mb-2 rounded-md xl:block"
         />
       </div>
       <!-- Formulario de contacto -->
-      <div class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4">
+      <div class="w-full p-1 xl:w-1/2 sm:p-3 xl:p-4">
         <h2
-          class="mb-2 text-2xl leading-8 font-extrabold tracking-tight text-gray-900 font-znikomit sm:text-3xl sm:leading-9"
+          class="mb-2 text-2xl font-extrabold leading-8 tracking-tight text-gray-900 font-znikomit sm:text-3xl sm:leading-9"
         >
           ¡Empecemos!
         </h2>
@@ -43,10 +43,6 @@ export default {
     ContactForm,
     Header,
     MenuNavbar,
-  },
-  async asyncData() {
-    // const response = await apiClient.get(BASE_URL)
-    // console.log(response.data)
   },
 }
 </script>

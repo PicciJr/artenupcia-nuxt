@@ -11,13 +11,13 @@
     Modal panel, show/hide based on modal state.
   -->
     <div
-      class="relative bg-white rounded-lg px-4 pt-5 pb-4 overflow-hidden shadow-xl transform transition-all sm:max-w-screen-lg sm:w-full sm:p-6"
+      class="relative px-4 pt-5 pb-4 overflow-hidden transition-all transform bg-white rounded-lg shadow-xl sm:max-w-screen-lg sm:w-full sm:p-6"
     >
       <!-- Cruz para cerrar -->
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
-        class="absolute opacity-25 right-0 top-0 pr-2 mt-2 w-10 h-10 cursor-pointer"
+        class="absolute top-0 right-0 w-10 h-10 pr-2 mt-2 opacity-25 cursor-pointer"
         @click="$emit('close-modal')"
       >
         <path
@@ -28,7 +28,7 @@
       <!-- <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
-        class="absolute opacity-50 pl-2 w-10 h-10 cursor-pointer"
+        class="absolute w-10 h-10 pl-2 opacity-50 cursor-pointer"
         style="top:50%; left:0%"
         @click="nextImageLeft"
       >
@@ -40,7 +40,7 @@
       <!-- <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
-        class="absolute opacity-50 pr-2 w-10 h-10 cursor-pointer"
+        class="absolute w-10 h-10 pr-2 opacity-50 cursor-pointer"
         style="top:50%; right:0%"
         @click="nextImageRight"
       >
@@ -107,9 +107,6 @@ export default {
       this.$emit('image-left')
     },
     nextImageRight() {
-      console.log('current index', this.currentActiveImageIndex())
-      console.log('new index', this.getNewIndex())
-      console.log('new imgSrc', this.getNewImageSrc())
       this.$emit('image-right', this.getNewImageSrc('right'))
     },
     getNewIndex(moveAction) {

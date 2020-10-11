@@ -8,27 +8,31 @@
     <div class="mb-8">
       <HeroCover :class="{ hidden: hideMainElements }" />
     </div>
-    <div :class="{ hidden: hideMainElements }">
+    <div
+      :class="{
+        hidden: hideMainElements,
+      }"
+    >
       <!--Contenedor para que tengan la misma identacion -->
-      <div class="px-4 xl:px-24">
-        <div class="sm:w-1/3 mt-2">
+      <div class="max-w-screen-xl px-4 mx-auto">
+        <div class="mt-2 sm:w-1/3">
           <h2
-            class="mb-2 font-znikomit text-2xl sm:text-3xl text-center"
+            class="mb-2 text-2xl text-center font-znikomit sm:text-3xl"
             id="invitaciones-personalizadas"
           >
             Invitaciones personalizadas
           </h2>
         </div>
         <div
-          class="w-full mb-2 sm:w-1/3 sm:pr-8 border-b border-an-marron"
+          class="w-full mb-2 border-b sm:w-1/3 sm:pr-8 border-an-marron"
         ></div>
-        <div class="flex flex-col mb-16 xl:flex-row justify-center">
+        <div class="flex flex-col justify-center mb-16 xl:flex-row">
           <div class="w-full p-1 sm:p-3 xl:p-4">
             <StyledRectangleShape
               :textRectangle="'Si tu boda es única, tu invitación también'"
             />
             <p
-              class="font-gravity-l font-bold py-4 text-md text-gray-600 sm:text-xl text-justify"
+              class="py-4 font-bold leading-8 text-justify text-gray-600 sm:leading-normal font-gravity-l text-md sm:text-xl"
             >
               ¿Te imaginas que vuestra invitación de boda fuera más que una
               invitación? En Artenupcia buscamos que vuestra papelería de boda
@@ -40,7 +44,7 @@
               recuerdo.
             </p>
             <p
-              class="font-gravity-l font-bold py-4 text-md text-gray-600 sm:text-xl text-justify"
+              class="py-4 font-bold leading-8 text-justify text-gray-600 sm:leading-normal font-gravity-l text-md sm:text-xl"
             >
               Nuestro modo de trabajar es muy sencillo, nos contáis vuestra
               historia o idea y nos ponemos manos a la obra para haceros unas
@@ -56,15 +60,15 @@
         </div>
         <!--Como lo hacemos con foto roadmap -->
         <div class="sm:w-1/3">
-          <h2 class="mb-2 font-znikomit text-2xl sm:text-3xl text-center">
+          <h2 class="mb-2 text-2xl text-center font-znikomit sm:text-3xl">
             ¿Cómo lo hacemos?
           </h2>
         </div>
-        <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
+        <div class="w-full border-b sm:w-1/3 sm:pr-8 border-an-marron"></div>
       </div>
       <!-- Imagen roadmap, no padding full width -->
       <img
-        class="w-full mt-8 hidden sm:block"
+        class="hidden w-full mt-8 sm:block"
         src="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fcomo-lo-hacemos.jpg?alt=media&token=5c0a7405-7aef-4ea3-bc70-87c54e2b2cb0"
         alt="artenupcia-como-lo-hacemos"
       />
@@ -75,21 +79,21 @@
         alt="artenupcia-como-lo-hacemos"
       />
       <!--Contenedor para que tengan la misma identacion -->
-      <div class="px-4 xl:px-24">
+      <div class="max-w-screen-xl px-4 mx-auto">
         <!-- Flex -->
-        <div class="flex flex-col xl:flex-row justify-center">
+        <div class="flex flex-col justify-center xl:flex-row">
           <div class="w-full p-1 sm:p-3 xl:p-4">
             <p
-              class="font-gravity-l font-bold text-md text-gray-600 sm:text-xl text-justify"
+              class="font-bold leading-8 text-justify text-gray-600 sm:leading-normal font-gravity-l text-md sm:text-xl"
             >
               Mediante técnicas artesanales de pintura como acuarelas, tinta
               china, lápices o grafito, o también técnicas digitales, creamos
               vuestro diseño para aplicarlo en las invitaciones y crear vuestra
               papelería de boda.
             </p>
-            <br>
+            <br />
             <p
-              class="font-gravity-l font-bold text-md text-gray-600 sm:text-xl text-justify"
+              class="font-bold leading-8 text-justify text-gray-600 sm:leading-normal font-gravity-l text-md sm:text-xl"
             >
               Si queréis un momento realmente especial os recomendamos que
               completéis las invitaciones con el resto de papelería que en
@@ -97,18 +101,18 @@
             </p>
           </div>
         </div>
-        <div class="flex flex-col mb-16 xl:flex-row justify-center">
-          <div class="w-full xl:w-1/3 p-2 sm:p-3 xl:p-4">
+        <div class="flex flex-col justify-center mb-16 xl:flex-row">
+          <div class="w-full p-2 xl:w-1/3 sm:p-3 xl:p-4">
             <CardItem
               imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4900.VwlbH66KS3aN4jCoJphZ.jpg?alt=media&token=732c8a7a-02de-4d70-a1e9-69adbee56a8c"
             />
           </div>
-          <div class="w-full xl:w-1/3 p-2 sm:p-3 xl:p-4">
+          <div class="w-full p-2 xl:w-1/3 sm:p-3 xl:p-4">
             <CardItem
               imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4969.jpg?alt=media&token=d4cbdd56-af7f-4f61-8eb2-0b572f5434cc"
             />
           </div>
-          <div class="w-full xl:w-1/3 p-2 sm:p-3 xl:p-4">
+          <div class="w-full p-2 xl:w-1/3 sm:p-3 xl:p-4">
             <CardItem
               imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2FIMG_4918.e4DYib1VTf6ZYqVca3uK.jpg?alt=media&token=c5e128a6-e3dd-4e99-8d87-82d1a1f1a1c1"
             />
@@ -117,20 +121,20 @@
         <!--Nuestros trabajos -->
         <div class="sm:w-1/3">
           <h2
-            class="mb-2 font-znikomit text-2xl sm:text-3xl text-center"
+            class="mb-2 text-2xl text-center font-znikomit sm:text-3xl"
             id="nuestros-trabajos"
           >
             Nuestros trabajos
           </h2>
         </div>
         <div
-          class="w-full mb-2 sm:w-1/3 sm:pr-8 border-b border-an-marron"
+          class="w-full mb-2 border-b sm:w-1/3 sm:pr-8 border-an-marron"
         ></div>
         <!-- Flex -->
         <div class="flex flex-col xl:flex-row">
-          <div class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4">
+          <div class="w-full p-1 xl:w-1/2 sm:p-3 xl:p-4">
             <p
-              class="font-gravity-l font-bold text-md text-gray-600 sm:text-xl text-justify"
+              class="font-bold leading-8 text-justify text-gray-600 sm:leading-normal font-gravity-l text-md sm:text-xl"
             >
               ¡Echa un vistazo a otras bodas y eventos maravillosos en los que
               hemos trabajado! Como cada trabajo para nosotros es único no vas a
@@ -140,11 +144,11 @@
           </div>
         </div>
         <!-- Loop para trabajos -->
-        <div class="flex flex-col xl:flex-row flex-wrap">
+        <div class="flex flex-col flex-wrap xl:flex-row">
           <div
             v-for="trabajo in trabajos"
             :key="trabajo.id"
-            class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4 transition duration-500 ease-in-out transform hover:-translate-y-4"
+            class="w-full p-1 transition duration-500 ease-in-out transform xl:w-1/2 sm:p-3 xl:p-4 hover:-translate-y-4"
             @click="redirectToTrabajo(trabajo.id)"
           >
             <CardNuestrosTrabajos
@@ -156,7 +160,7 @@
         </div>
         <div class="flex justify-center mb-16">
           <button
-            class="w-1/2 sm:w-1/6 flex items-center justify-center sm:px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-black bg-an-salmon hover:bg-an-crema focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+            class="flex items-center justify-center w-1/2 py-3 text-base font-medium leading-6 text-black transition duration-150 ease-in-out border border-transparent rounded-md sm:w-1/6 sm:px-5 bg-an-salmon hover:bg-an-crema focus:outline-none focus:shadow-outline"
           >
             <nuxt-link to="/nuestros-trabajos">
               Ver más trabajos
@@ -166,17 +170,17 @@
         <!--Sobre Artenupcia -->
         <div class="sm:w-1/3">
           <h2
-            class="mb-2 font-znikomit text-2xl sm:text-3xl text-center"
+            class="mb-2 text-2xl text-center font-znikomit sm:text-3xl"
             id="sobre-artenupcia"
           >
             Sobre Artenupcia
           </h2>
         </div>
         <div
-          class="w-full mb-2 sm:w-1/3 sm:pr-8 border-b border-an-marron"
+          class="w-full mb-2 border-b sm:w-1/3 sm:pr-8 border-an-marron"
         ></div>
         <!-- Flex -->
-        <div class="flex flex-col mb-16 xl:flex-row justify-center">
+        <div class="flex flex-col justify-center mb-16 xl:flex-row">
           <div class="w-full p-1 sm:p-3 xl:p-4">
             <StyledRectangleShape
               :textRectangle="
@@ -184,7 +188,7 @@
               "
             />
             <p
-              class="font-gravity-l font-bold py-4 text-md text-gray-600 sm:text-xl text-justify"
+              class="py-4 font-bold leading-8 text-justify text-gray-600 sm:leading-normal font-gravity-l text-md sm:text-xl"
             >
               Yo soy Begoña, enamorada del arte, y Artenupcia es mi proyecto
               personal. Desde la ilusión que me crea poder captar los momentos
@@ -194,10 +198,13 @@
               historia captada en vuestras invitaciones. Por eso estoy deseando
               ayudaros con la papelería única de vuestra boda.
             </p>
-            <p class="font-gravity-l font-bold py-4 text-md text-gray-600 sm:text-xl text-justify">No dudéis en
-              contactar conmigo y contarme vuestra idea para que juntos hagamos
-              cada detalle de vuestra boda especial, al igual que vosotros y que
-              vuestra historia.</p>
+            <p
+              class="py-4 font-bold leading-8 text-justify text-gray-600 sm:leading-normal font-gravity-l text-md sm:text-xl"
+            >
+              No dudéis en contactar conmigo y contarme vuestra idea para que
+              juntos hagamos cada detalle de vuestra boda especial, al igual que
+              vosotros y que vuestra historia.
+            </p>
           </div>
           <!-- Foto Begoña -->
           <div class="w-full p-1 sm:p-3 xl:p-4">
@@ -211,14 +218,14 @@
         <!--¿Necesitas inspiración? -->
         <div class="sm:w-1/3">
           <h2
-            class="mb-2 font-znikomit text-2xl sm:text-3xl text-center"
+            class="mb-2 text-2xl text-center font-znikomit sm:text-3xl"
             id="necesitas-inspiracion"
           >
             ¿Necesitas inspiración?
           </h2>
         </div>
-        <div class="w-full sm:w-1/3 sm:pr-8 border-b border-an-marron"></div>
-        <div class="flex flex-col py-4 xl:flex-row justify-center">
+        <div class="w-full border-b sm:w-1/3 sm:pr-8 border-an-marron"></div>
+        <div class="flex flex-col justify-center py-4 xl:flex-row">
           <div class="w-full sm:pr-8 font-gravity-l">
             <!-- Instagram Banner -->
             <BannerTextOnly
@@ -251,15 +258,15 @@
         <!-- Feed Instagram desktop -->
         <div
           v-if="igPosts !== []"
-          class="flex flex-col py-4 mb-4 xl:flex-row justify-center"
+          class="flex flex-col justify-center py-4 mb-4 xl:flex-row"
         >
           <InstagramFeed :igPosts="igPosts" />
         </div>
       </div>
       <!--Newsletter -->
-      <div class="relative flex flex-col py-8 justify-center items-center">
+      <div class="relative flex flex-col items-center justify-center py-8">
         <img
-          class="w-2/6 pl-16 absolute bottom-0 left-0 hidden sm:block object-cover"
+          class="absolute bottom-0 left-0 hidden object-cover w-2/6 pl-16 sm:block"
           style="transform: scaleX(-1)"
           src="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Fflor-web.png?alt=media&token=7794d9ef-7b75-45ed-a59c-a463d1771919"
           alt="artenupcia-footer-image"
@@ -270,7 +277,7 @@
         <!--Footer -->
         <Footer :socialProfiles="socialProfiles" />
         <img
-          class="w-2/6 pl-16 absolute bottom-0 right-0 hidden sm:block object-cover"
+          class="absolute bottom-0 right-0 hidden object-cover w-2/6 pl-16 sm:block"
           src="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Fflor-web.png?alt=media&token=7794d9ef-7b75-45ed-a59c-a463d1771919"
           alt="artenupcia-footer-image"
         />
@@ -320,7 +327,6 @@ export default {
         })
       })
       .catch((err) => {
-        console.log(err)
         redirect('/error')
       })
 
@@ -341,7 +347,6 @@ export default {
       })
       .catch((err) => {
         igPosts = [] // por seguridad, ante posible fallo
-        console.log(err)
         redirect('/error')
       })
 

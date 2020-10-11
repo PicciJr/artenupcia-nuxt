@@ -1,10 +1,10 @@
 <!-- Contiene logo, elementos del menu solo para movil -->
 <template>
-  <div class="flex flex-col items-center font-znikomit text-gray-700 font-semibold">
+  <div class="flex flex-col items-center font-semibold text-gray-700 font-znikomit">
     <!-- Menu movil -->
     <div class="self-end pr-12">
       <svg
-        class="fixed top-0 h-6 w-6 mt-2 fill-current sm:hidden text-an-cielo cursor-pointer"
+        class="fixed top-0 w-6 h-6 mt-2 cursor-pointer fill-current sm:hidden text-an-cielo"
         :class="{ hidden: toggleButton }"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
@@ -14,7 +14,7 @@
       </svg>
     </div>
     <div
-      class="fixed top-0 scale-in-top flex flex-col w-full h-full sm:hidden"
+      class="fixed top-0 flex flex-col w-full h-full scale-in-top sm:hidden"
       :class="{ hidden: hideMobileMenu }"
     >
       <img src="@/assets/img/marble-background.jpg" class="w-full h-full" />
@@ -23,7 +23,7 @@
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
-          class="fixed top-0 h-6 w-6 mt-2 sm:hidden text-an-cielo cursor-pointer"
+          class="fixed top-0 w-6 h-6 mt-2 cursor-pointer sm:hidden text-an-cielo"
           :class="{ hidden: !toggleButton }"
           @click="toggleMenu"
         >
@@ -34,7 +34,7 @@
       </div>
       <!-- Contiene opciones de menu -->
       <div
-        class="flex flex-col absolute pt-12 w-full text-2xl text-center"
+        class="absolute flex flex-col w-full pt-12 text-2xl text-center"
         style="top: 50%; left: 50%; transform: translate(-50%, -50%);"
       >
         <div @click="toggleMenu" class="mb-10">
@@ -43,7 +43,7 @@
               path: '/',
               hash: '#invitaciones-personalizadas',
             }"
-            class="mb-6 px-4"
+            class="px-4 mb-6"
             >Invitaciones personalizadas</nuxt-link
           >
         </div>
@@ -54,7 +54,7 @@
               path: '/',
               hash: '#nuestros-trabajos',
             }"
-            class="mb-6 px-4"
+            class="px-4 mb-6"
             >Nuestros trabajos</nuxt-link
           >
         </div>
@@ -65,7 +65,7 @@
               path: '/',
               hash: '#sobre-artenupcia',
             }"
-            class="mb-6 px-4"
+            class="px-4 mb-6"
             >Sobre Artenupcia</nuxt-link
           >
         </div>
@@ -76,12 +76,12 @@
               path: '/',
               hash: '#necesitas-inspiracion',
             }"
-            class="mb-6 px-4"
+            class="px-4 mb-6"
             >Inspiración</nuxt-link
           >
         </div>
-        <div @click="toggleMenu" class="mb-10 text-gray-700 font-extrabold">
-          <nuxt-link to="/contacto" class="mb-6 px-4">Contacto</nuxt-link>
+        <div @click="toggleMenu" class="mb-10 font-extrabold text-gray-700">
+          <nuxt-link to="/contacto" class="px-4 mb-6">Contacto</nuxt-link>
         </div>
       </div>
     </div>
@@ -90,16 +90,16 @@
       <!-- logo Artenupcia -->
       <img
         src="../assets/img/logo-artenupcia-recortado.png"
-        class="w-72 h-48"
+        class="h-48 w-72"
       />
     </nuxt-link>
     <!-- Heading text -->
-    <h1 class="font-free font-medium text-4xl">
-      Tu historia, tu invitación
+    <h1 class="text-4xl font-medium font-free">
+      Invitaciones de boda para el recuerdo
     </h1>
 
     <div class="hidden sm:block sm:w-full sm:px-72">
-      <div class="border-t border-an-marron mb-2"></div>
+      <div class="mb-2 border-t border-an-marron"></div>
     </div>
   </div>
 </template>

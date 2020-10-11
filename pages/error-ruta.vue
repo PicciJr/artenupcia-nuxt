@@ -5,15 +5,15 @@
     <Header class="relative top-0 z-30 w-full" />
     <!-- Menu nav Bar only visible in wide screens -->
     <MenuNavbar />
-    <div class="flex justify-center relative">
-      <div class="flex flex-col absolute top-0">
-        <div class="font-eras mb-16 text-center text-white text-5xl font-bold">
+    <div class="relative flex justify-center">
+      <div class="absolute top-0 flex flex-col">
+        <div class="mb-16 text-5xl font-bold text-center text-white font-eras">
           Lo sentimos, la página que has solicitado no existe.
         </div>
-        <div class="font-eras  text-center text-white text-3xl font-bold">
+        <div class="text-3xl font-bold text-center text-white font-eras">
           Puedes volver a nuestra página
           <nuxt-link to="/"
-            ><span class="text-an-salmon font-extrabold">aquí</span></nuxt-link
+            ><span class="font-extrabold text-an-salmon">aquí</span></nuxt-link
           >
         </div>
       </div>

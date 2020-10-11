@@ -6,11 +6,11 @@
     <!-- Menu nav Bar only visible in wide screens -->
     <MenuNavbar />
     <!-- Grid de trabajos -->
-    <div class="flex flex-col py-4 xl:flex-row flex-wrap">
+    <div class="flex flex-col flex-wrap py-4 xl:flex-row">
       <div
         v-for="trabajo in trabajos"
         :key="trabajo.id"
-        class="w-full xl:w-1/2 p-1 sm:p-3 xl:p-4 transition duration-500 ease-in-out transform hover:-translate-y-4"
+        class="w-full p-1 transition duration-500 ease-in-out transform xl:w-1/2 sm:p-3 xl:p-4 hover:-translate-y-4"
         @click="redirectToTrabajo(trabajo.id)"
       >
         <CardNuestrosTrabajos
@@ -24,10 +24,10 @@
 </template>
 
 <script>
-import { db } from "@/plugins/firebaseConfig.js";
-import Header from "@/components/Header";
-import MenuNavbar from "@/components/MenuNavbar";
-import CardNuestrosTrabajos from "@/components/CardNuestrosTrabajos";
+import { db } from '@/plugins/firebaseConfig.js'
+import Header from '@/components/Header'
+import MenuNavbar from '@/components/MenuNavbar'
+import CardNuestrosTrabajos from '@/components/CardNuestrosTrabajos'
 export default {
   components: {
     Header,
@@ -36,9 +36,9 @@ export default {
   },
   asyncData({ app, params, error, store, redirect }) {
     /** Get nuestros trabajos */
-    const trabajosArray = [];
+    const trabajosArray = []
     return db
-      .collection("fl_content")
+      .collection('fl_content')
       .get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
@@ -48,21 +48,20 @@ export default {
             mainImgSrc: doc.data().mainImgSrc,
             footerText: doc.data().footerText,
             urlTo: doc.data().urlTo,
-          };
-          trabajosArray.push(newTrabajo);
-        });
-        return { trabajos: trabajosArray };
+          }
+          trabajosArray.push(newTrabajo)
+        })
+        return { trabajos: trabajosArray }
       })
       .catch((err) => {
-        console.log(err);
-        redirect("/error");
-      });
+        redirect('/error')
+      })
   },
   methods: {
     /** Enviar usuario a trabajo seleccionado */
     redirectToTrabajo(idTrabajo) {
-      this.$router.push("/nuestros-trabajos/" + idTrabajo);
+      this.$router.push('/nuestros-trabajos/' + idTrabajo)
     },
   },
-};
+}
 </script>
