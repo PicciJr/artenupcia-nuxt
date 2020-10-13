@@ -49,7 +49,7 @@ export const routerOptions = {
     component: _17a1f8a2,
     name: "nuestros-trabajos"
   }, {
-    path: "/nuestros-trabajos/:id?",
+    path: "/nuestros-trabajos/:id",
     component: _211ea1cc,
     name: "nuestros-trabajos-id"
   }, {

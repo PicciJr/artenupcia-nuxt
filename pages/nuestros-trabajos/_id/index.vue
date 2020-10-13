@@ -5,9 +5,9 @@
     <Header class="relative top-0 z-30 w-full" />
     <!-- Menu nav Bar only visible in wide screens -->
     <MenuNavbar />
-    <div class="px-4 xl:mx-24">
+    <div class="px-2 sm:px-24">
       <div class="flex flex-col justify-center py-4 xl:flex-row">
-        <div class="w-full p-1 xl:w-1/2 sm:p-3 xl:p-4">
+        <div class="w-full p-1 sm:p-3 xl:p-4">
           <CardNuestrosTrabajos :imgSrc="imgSrc" @click="openModalImage" />
           <!-- Thumbnail fotos -->
           <div class="flex justify-center p-2">
@@ -25,7 +25,7 @@
           </div>
         </div>
         <!-- Contenido texto de trabajo -->
-        <div class="w-full p-1 xl:w-1/2 sm:p-3 xl:p-4">
+        <div class="w-full p-1 sm:p-8">
           <!-- Etiquetas de trabajo -->
           <div class="mb-2">
             <!-- <badge-tag-group
