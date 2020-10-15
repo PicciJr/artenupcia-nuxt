@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export default {
   mode: 'universal',
   target: 'static',
@@ -80,5 +82,14 @@ export default {
   layoutTransition: {
     name: 'layout',
     mode: 'out-in',
+  },
+  generate: {
+    // rutas de nuestros trabajo para que funcione el generate
+    routes: [
+      '/nuestros-trabajos/8IxDmfcVAwUZAHbWUcjN',
+      '/nuestros-trabajos/F82CClxagLvqRSxa7ehY',
+      '/nuestros-trabajos/G5pbvq36dkmvORJ71cPw',
+      '/nuestros-trabajos/PvSPaoVGcOTG3gCu0Rki',
+    ],
   },
 }
