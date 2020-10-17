@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { db } from './plugins/firebaseConfig'
 
 export default {
   mode: 'universal',
@@ -84,12 +85,21 @@ export default {
     mode: 'out-in',
   },
   generate: {
-    // rutas de nuestros trabajo para que funcione el generate
-    routes: [
-      '/nuestros-trabajos/8IxDmfcVAwUZAHbWUcjN',
-      '/nuestros-trabajos/F82CClxagLvqRSxa7ehY',
-      '/nuestros-trabajos/G5pbvq36dkmvORJ71cPw',
-      '/nuestros-trabajos/PvSPaoVGcOTG3gCu0Rki',
-    ],
+    routes() {
+      // rutas de los trabajos a partir de la info de Firebase
+      return db
+        .collection('fl_content')
+        .get()
+        .then((querySnapshot) => {
+          const urlsTrabajos = []
+          querySnapshot.forEach((doc) => {
+            trabajosID.push(`nuestros-trabajos/${doc.data().id}`)
+          })
+          return urlsTrabajos
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    },
   },
 }
