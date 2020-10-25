@@ -12,6 +12,7 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
+import nuxt_plugin_templatesplugind67908f2_63d0f18a from 'nuxt_plugin_templatesplugind67908f2_63d0f18a' // Source: ./templates.plugin.d67908f2.js (mode: 'client')
 import nuxt_plugin_googleanalytics_0e0bb764 from 'nuxt_plugin_googleanalytics_0e0bb764' // Source: ./google-analytics.js (mode: 'client')
 import nuxt_plugin_axios_46febb82 from 'nuxt_plugin_axios_46febb82' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_vue2touchevents_147d6945 from 'nuxt_plugin_vue2touchevents_147d6945' // Source: ../plugins/vue2-touch-events.js (mode: 'all')
@@ -168,6 +169,10 @@ async function createApp(ssrContext, config = {}) {
     }
   }
   // Plugin execution
+
+  if (process.client && typeof nuxt_plugin_templatesplugind67908f2_63d0f18a === 'function') {
+    await nuxt_plugin_templatesplugind67908f2_63d0f18a(app.context, inject)
+  }
 
   if (process.client && typeof nuxt_plugin_googleanalytics_0e0bb764 === 'function') {
     await nuxt_plugin_googleanalytics_0e0bb764(app.context, inject)

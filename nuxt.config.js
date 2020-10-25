@@ -49,10 +49,21 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    // Google analytics
     [
       '@nuxtjs/google-analytics',
       {
         id: 'UA-161289524-1',
+      },
+    ],
+    // Facebook Pixel
+    [
+      'nuxt-facebook-pixel-module',
+      {
+        /* module options */
+        track: 'PageView',
+        pixelId: '838245813591792',
+        disabled: false,
       },
     ],
   ],
@@ -93,7 +104,7 @@ export default {
         .then((querySnapshot) => {
           const urlsTrabajos = []
           querySnapshot.forEach((doc) => {
-            trabajosID.push(`nuestros-trabajos/${doc.data().id}`)
+            urlsTrabajos.push(`nuestros-trabajos/${doc.data().id}`)
           })
           return urlsTrabajos
         })
