@@ -249,18 +249,11 @@
             </BannerTextOnly>
           </div>
           <!--Slider solo movil -->
-          <CarruselImagenes
-            v-if="igPosts !== []"
-            class="sm:hidden"
-            :igPosts="igPosts"
-          />
+          <CarruselImagenes class="sm:hidden" />
         </div>
         <!-- Feed Instagram desktop -->
-        <div
-          v-if="igPosts !== []"
-          class="flex flex-col justify-center py-4 mb-4 xl:flex-row"
-        >
-          <InstagramFeed :igPosts="igPosts" />
+        <div class="flex flex-col justify-center py-4 mb-4 xl:flex-row">
+          <InstagramFeed />
         </div>
       </div>
       <!--Newsletter -->
@@ -330,30 +323,9 @@ export default {
         redirect('/error')
       })
 
-    /** Get Instagram Posts */
-    const postsArray = []
-    const igPosts = await db
-      .collection('instagramposts')
-      .get()
-      .then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-          // crear nuevo post a partir de datos
-          const newIgPost = {
-            shortCode: doc.data().shortCode,
-            linkTo: doc.data().linkTo,
-          }
-          postsArray.push(newIgPost)
-        })
-      })
-      .catch((err) => {
-        igPosts = [] // por seguridad, ante posible fallo
-        redirect('/error')
-      })
-
-    /** Retorna los posts de Instagram y los trabajos */
+    /** Retorna los trabajos */
     return {
       trabajos: trabajosArray,
-      igPosts: postsArray,
     }
   },
   data() {

@@ -3,7 +3,7 @@ Las imagenes tienen un enlace que pueden redirigir al usuario -->
 <template>
   <div class="flex">
     <div
-      class="flex flex-col justify-center rounded-lg block mx-auto shadow-xl mt-8"
+      class="flex flex-col justify-center mx-auto mt-8 rounded-lg shadow-xl"
       :class="animateIn"
       v-touch:swipe.right="swipeItemRight"
       v-touch:swipe.left="swipeItemLeft"
@@ -12,16 +12,11 @@ Las imagenes tienen un enlace que pueden redirigir al usuario -->
         :href="'https://www.instagram.com/p/' + igPosts[currentImage].linkTo"
         target="_blank"
       >
-        <img
-          class="w-64 h-64"
-          :src="
-            'https://www.instagram.com/p/' + igPosts[currentImage].shortCode
-          "
-        />
+        <img class="w-64 h-64" :src="igPosts[currentImage].src" />
       </a>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="self-center w-12 h-12 text-an-salmon fill-current opacity-50"
+        class="self-center w-12 h-12 opacity-50 fill-current text-an-salmon"
         viewBox="0 0 20 20"
       >
         <path
@@ -38,12 +33,25 @@ export default {
     return {
       currentImage: 0, // controla que imagen mostrar
       itemSwipedRight: false, // controla gesto de usuario a derecha
-      itemSwipedLeft: false // controla gesto de usuario a izquierda
+      itemSwipedLeft: false, // controla gesto de usuario a izquierda
+      igPosts: [
+        {
+          linkTo: 'CE19tP7oQAF',
+          src:
+            'https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F1080_9999_100%2Fig-pic-3.jpg?alt=media&token=3de0e73c-6450-4073-91a9-dd9c3595c320',
+        },
+        {
+          linkTo: 'CE1-Pa9o-7O',
+          src:
+            'https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F1080_9999_100%2Fig-pic-2.jpg?alt=media&token=481f23d5-75ba-471b-bc29-68d3fd30fcc6',
+        },
+        {
+          linkTo: 'CE1_C7vowwv',
+          src:
+            'https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F1080_9999_100%2Fig-pic-1.jpg?alt=media&token=2d023ee7-6927-4414-bee0-560a0f155345',
+        },
+      ],
     }
-  },
-  props: {
-    /** Array de imagenes que compone todo el carrusel */
-    igPosts: Array
   },
   methods: {
     /** Controlar el swipe. Importante: siempre la longitud va uno por encima, de ahi que se ponga el -1 en ambas partes */
@@ -65,7 +73,7 @@ export default {
         else this.currentImage = 0
         this.itemSwipedLeft = false
       }, 300)
-    }
+    },
   },
   computed: {
     // computed for class binding, animation when item is swiped
@@ -73,8 +81,8 @@ export default {
       if (this.itemSwipedRight) return 'animated fadeOutRight'
       else if (this.itemSwipedLeft) return 'animated fadeOutLeft'
       return ''
-    }
-  }
+    },
+  },
 }
 </script>
 
