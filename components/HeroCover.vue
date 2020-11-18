@@ -1,15 +1,15 @@
 <!-- Portada Hero para la Home / Contendra un video -->
 <template>
   <div class="flex sm:mb-4">
-    <div class="w-full relative opacity-75">
+    <div class="relative w-full opacity-75">
       <video
         autoplay
         muted
         loop
-        class="min-w-full object-cover content-center h-96 sm:h-136"
+        class="content-center object-cover min-w-full h-96 sm:h-136"
       >
         <source
-          src="https://artenupcia.imfast.io/video1-an-2.mp4"
+          src="https://artenupcia-files.s3.eu-west-3.amazonaws.com/video1-an-2.mp4"
           type="video/mp4"
         />
       </video>
@@ -17,7 +17,7 @@
       <div class="absolute px-2 py-4 btn-style">
         <div class="p-1">
           <button
-            class="heartbeat w-64 px-5 py-3 text-lg text-white bg-opacity-75 font-extrabold rounded-md bg-an-salmon border border-transparent hover:border-4 hover:border-white focus:outline-none transition duration-150 ease-in-out opacity-75"
+            class="w-64 px-5 py-3 text-lg font-extrabold text-white transition duration-150 ease-in-out bg-opacity-75 border border-transparent rounded-md opacity-75 heartbeat bg-an-salmon hover:border-4 hover:border-white focus:outline-none"
             @click.prevent="$router.push('/contacto')"
           >
             ¡Cuéntanos tu idea!

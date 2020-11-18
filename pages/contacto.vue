@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4 xl:mx-48">
+  <div class="px-4 mb-32 xl:mx-48">
     <!-- Header with icon logo -->
     <Header class="relative top-0 z-30 w-full" />
     <!-- Menu nav Bar only visible in wide screens -->

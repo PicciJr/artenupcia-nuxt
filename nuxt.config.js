@@ -21,7 +21,7 @@ export default {
     script: [
       {
         innerHTML: `
-        '!(function(f, b, e, v, n, t, s) {
+        !(function(f, b, e, v, n, t, s) {
           if (f.fbq) return
           n = f.fbq = function() {
             n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
@@ -38,7 +38,7 @@ export default {
           s.parentNode.insertBefore(t, s)
         })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js')
         fbq('init', '838245813591792')
-        fbq('track', 'PageView')'
+        fbq('track', 'PageView')
         `,
         type: 'text/javascript',
         charset: 'utf-8',
@@ -82,7 +82,7 @@ export default {
       {
         id: 'UA-161289524-1',
       },
-    ],
+    ]
   ],
   /*
    ** Axios module configuration
@@ -129,5 +129,5 @@ export default {
           console.log(err)
         })
     },
-  },
+  }
 }

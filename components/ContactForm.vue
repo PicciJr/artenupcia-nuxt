@@ -4,10 +4,10 @@
     <!-- Email -->
     <label>Email:</label>
     <div class="mb-4">
-      <div class="flex relative">
+      <div class="relative flex">
         <input
           v-model="userData.email"
-          class="relative w-full sm:w-1/2 mb-2 pl-6 bg-white h-10 rounded-lg text-sm focus:outline-none"
+          class="relative w-full h-10 pl-6 mb-2 text-sm bg-white rounded-lg sm:w-1/2 focus:outline-none"
           :class="{
             'border-2 border-r-4 border-red-700 shadow-md':
               errorsFlag.email.length > 0,
@@ -17,7 +17,7 @@
           @input="checkEmailValidity"
         />
         <svg
-          class="absolute pt-2 w-6 h-6"
+          class="absolute w-6 h-6 pt-2"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
         >
@@ -32,10 +32,10 @@
     </div>
     <!-- Telefono -->
     <label>Teléfono móvil:</label>
-    <div class="flex relative mb-4">
+    <div class="relative flex mb-4">
       <input
         v-model="userData.telefono"
-        class="relative w-full sm:w-1/2 mb-2 pl-6 bg-white h-10 rounded-lg border-2 border-gray-300 text-sm focus:outline-none"
+        class="relative w-full h-10 pl-6 mb-2 text-sm bg-white border-2 border-gray-300 rounded-lg sm:w-1/2 focus:outline-none"
         type="tel"
         maxlength="9"
         @keydown="handleTelefonoInput($event)"
@@ -43,7 +43,7 @@
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
-        class="absolute pt-2 w-6 h-6"
+        class="absolute w-6 h-6 pt-2"
       >
         <path
           d="M20 18.35V19a1 1 0 0 1-1 1h-2A17 17 0 0 1 0 3V1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4c0 .56-.31 1.31-.7 1.7L3.16 8.84c1.52 3.6 4.4 6.48 8 8l2.12-2.12c.4-.4 1.15-.71 1.7-.71H19a1 1 0 0 1 .99 1v3.35z"
@@ -55,7 +55,7 @@
     <div class="mb-4">
       <input
         placeholder="0"
-        class="w-full h-10 rounded-lg pl-2 border-2 border-gray-300 sm:w-1/2 place"
+        class="w-full h-10 pl-2 border-2 border-gray-300 rounded-lg sm:w-1/2 place"
         :class="{
           'border-2 border-r-4 border-red-700 shadow-md':
             errorsFlag.invitaciones.length > 0,
@@ -66,13 +66,13 @@
         min="0"
         @keyup="handleNumInvitaciones($event)"
       />
-      <div v-if="errorsFlag.invitaciones" class="text-sm text-red-700 mb-6">
+      <div v-if="errorsFlag.invitaciones" class="mb-6 text-sm text-red-700">
         {{ errorsFlag.invitaciones }}
       </div>
     </div>
     <!-- Interes principal -->
     <label>¿En qué estáis más interesados?</label>
-    <div class="w-full sm:w-1/2 mb-4">
+    <div class="w-full mb-4 sm:w-1/2">
       <dropdown-group
         :options="opcionesDeInvitacion"
         @selected="handleInvitacionesOptionSelected"
@@ -83,7 +83,7 @@
     <div class="mb-2">
       <textarea
         v-model="userData.textoLargo"
-        class="w-full p-2 mb-2 shadow-lg rounded-md resize-none"
+        class="w-full p-2 mb-2 rounded-md shadow-lg resize-none"
         :class="{
           'border-2 border-r-4 border-red-700 shadow-md':
             errorsFlag.textoLargo.length > 0,
@@ -92,20 +92,22 @@
         rows="3"
         @input="checkTextoLargoValidity"
       ></textarea>
-      <div v-if="errorsFlag.textoLargo" class="text-sm text-red-700 mb-6">
+      <div v-if="errorsFlag.textoLargo" class="mb-6 text-sm text-red-700">
         {{ errorsFlag.textoLargo }}
       </div>
     </div>
 
     <!-- Submit button -->
-    <div>
+    <div class="mb-2">
       <button
-        class="w-full flex items-center justify-center py-3 border border-transparent font-sans text-base leading-6 font-medium rounded-md text-black bg-an-salmon hover:bg-an-crema focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+        class="flex items-center justify-center w-full py-3 font-sans text-base font-medium leading-6 text-black transition duration-150 ease-in-out border border-transparent rounded-md bg-an-salmon hover:bg-an-crema focus:outline-none focus:shadow-outline"
         @click="checkInputFields"
       >
         Confirmar datos
       </button>
     </div>
+    <!-- Aviso privacidad -->
+    <div class="text-xs font-medium text-gray-800">No usamos estos datos con fines publicitarios.</div>
   </div>
 </template>
 

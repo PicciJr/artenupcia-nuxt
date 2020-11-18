@@ -328,6 +328,7 @@ export default {
       trabajos: trabajosArray,
     }
   },
+  layout: 'default',
   data() {
     return {
       hideMainElements: false,

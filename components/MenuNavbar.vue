@@ -41,9 +41,7 @@
           >Inspiración</nuxt-link
         >
         <div class="mb-2 border-r border-an-marron"></div>
-        <div
-          class="py-3 pl-12 font-extrabold tracking-wide no-underline"
-        >
+        <div class="py-3 pl-12 font-extrabold tracking-wide no-underline">
           <nuxt-link to="/contacto">Contacto</nuxt-link>
         </div>
       </div>
