@@ -8,6 +8,7 @@ const _79f4618e = () => interopDefault(import('../pages/contacto-exito.vue' /* w
 const _52853a5c = () => interopDefault(import('../pages/error.vue' /* webpackChunkName: "pages/error" */))
 const _63e6b9bb = () => interopDefault(import('../pages/error-ruta.vue' /* webpackChunkName: "pages/error-ruta" */))
 const _17a1f8a2 = () => interopDefault(import('../pages/nuestros-trabajos/index.vue' /* webpackChunkName: "pages/nuestros-trabajos/index" */))
+const _a7b3c5d2 = () => interopDefault(import('../pages/politica-privacidad.vue' /* webpackChunkName: "pages/politica-privacidad" */))
 const _211ea1cc = () => interopDefault(import('../pages/nuestros-trabajos/_id/index.vue' /* webpackChunkName: "pages/nuestros-trabajos/_id/index" */))
 const _da1176c8 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 const _138f12ae = () => interopDefault(import('../pages/_.vue' /* webpackChunkName: "pages/_" */))
@@ -48,6 +49,10 @@ export const routerOptions = {
     path: "/nuestros-trabajos",
     component: _17a1f8a2,
     name: "nuestros-trabajos"
+  }, {
+    path: "/politica-privacidad",
+    component: _a7b3c5d2,
+    name: "politica-privacidad"
   }, {
     path: "/nuestros-trabajos/:id",
     component: _211ea1cc,

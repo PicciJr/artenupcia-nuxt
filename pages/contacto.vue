@@ -30,14 +30,6 @@ import ContactForm from '@/components/ContactForm'
 import Header from '@/components/Header'
 import MenuNavbar from '@/components/MenuNavbar'
 
-import axios from 'axios'
-const BASE_URL = 'https://us-central1-artenupcia-node.cloudfunctions.net/app'
-
-const apiClient = axios.create({
-  baseURL: BASE_URL,
-  withCredentials: false,
-})
-
 export default {
   components: {
     ContactForm,

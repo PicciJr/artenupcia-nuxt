@@ -1,6 +1,6 @@
 <!-- Pagina que representa un trabajo -->
 <template>
-  <div class="mb-32">
+  <div>
     <!-- Header with icon logo -->
     <Header class="relative top-0 z-30 w-full" />
     <!-- Menu nav Bar only visible in wide screens -->

@@ -107,12 +107,15 @@
       </button>
     </div>
     <!-- Aviso privacidad -->
-    <div class="text-xs font-medium text-gray-800">No usamos estos datos con fines publicitarios.</div>
+    <div class="text-xs font-medium text-gray-800">
+      No usamos estos datos con fines publicitarios.
+    </div>
   </div>
 </template>
 
 <script>
 import { db } from '@/plugins/firebaseConfig.js'
+import axios from 'axios'
 import DropdownGroup from '@/components/DropdownGroup'
 export default {
   components: {
@@ -171,6 +174,7 @@ export default {
         this.checkInvitacionesValidity() &&
         this.checkTextoLargoValidity()
       ) {
+        this.sendEmailToUser()
         this.addUserToDatabase(this.$router)
       }
     },
@@ -237,6 +241,20 @@ export default {
         })
         .catch(function(error) {
           router.push('/error')
+        })
+    },
+    sendEmailToUser() {
+      const BASE_URL = 'http://localhost:8000'
+      axios
+        .get(BASE_URL + '/send-email', {
+          
+        })
+        .then(function(response) {
+          // handle success
+          console.log('Se ha enviado el email', response)
+        })
+        .catch(function(error) {
+          console.log('Error al enviar email', error)
         })
     },
     /** Opcion de dropdown seleccionada por el usuario */

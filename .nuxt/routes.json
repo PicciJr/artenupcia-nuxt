@@ -35,6 +35,13 @@
     "_name": "_17a1f8a2"
   },
   {
+    "name": "politica-privacidad",
+    "path": "/politica-privacidad",
+    "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/politica-privacidad.vue",
+    "chunkName": "pages/politica-privacidad",
+    "_name": "_a7b3c5d2"
+  },
+  {
     "name": "nuestros-trabajos-id",
     "path": "/nuestros-trabajos/:id",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/nuestros-trabajos/_id/index.vue",

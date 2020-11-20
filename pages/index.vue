@@ -31,26 +31,32 @@
             <StyledRectangleShape
               :textRectangle="'Si tu boda es única, tu invitación también'"
             />
-            <p
+            <div
               class="py-4 font-bold leading-8 text-justify text-gray-600 sm:leading-normal font-gravity-l text-md sm:text-xl"
             >
-              ¿Te imaginas que vuestra invitación de boda fuera más que una
-              invitación? En Artenupcia buscamos que vuestra papelería de boda
-              sea única y especial. De calidad, y con un diseño original que
-              refleje la esencia de cada pareja. Queremos plasmar vuestra
-              historia, que con tan solo una invitación todos vuestros invitados
-              sientan vuestro amor, sientan vuestra historia. Vuestra papelería
-              de boda será inolvidable, les sorprenderá y hasta la guardarán de
-              recuerdo.
-            </p>
-            <p
-              class="py-4 font-bold leading-8 text-justify text-gray-600 sm:leading-normal font-gravity-l text-md sm:text-xl"
-            >
-              Nuestro modo de trabajar es muy sencillo, nos contáis vuestra
-              historia o idea y nos ponemos manos a la obra para haceros unas
-              invitaciones totalmente personalizadas y únicas pero sobretodo,
-              vuestras.
-            </p>
+              <p class="mb-4">
+                ¿Te imaginas que vuestra invitación de boda fuera más que una
+                invitación? Que fuera un recuerdo que vuestros invitados
+                conservaran con cariño para siempre.
+              </p>
+              <p class="mb-4">
+                En Artenupcia buscamos que vuestra papelería de boda sea única y
+                especial. De calidad, y con un diseño original que refleje la
+                esencia de cada pareja. Queremos plasmar vuestra historia, que
+                con tan solo una invitación todos vuestros invitados sientan
+                vuestro amor, sientan vuestra historia.
+              </p>
+              <p class="mb-4">
+                Vuestra papelería de boda será inolvidable, les sorprenderá y
+                hasta la guardarán de recuerdo.
+              </p>
+              <p class="mb-4">
+                Nuestro modo de trabajar es muy sencillo, nos contáis vuestra
+                historia o idea y nos ponemos manos a la obra para haceros unas
+                invitaciones totalmente personalizadas y únicas pero sobretodo,
+                vuestras.
+              </p>
+            </div>
           </div>
           <div class="w-full p-1 sm:p-3 xl:p-4">
             <CardItem
@@ -87,9 +93,9 @@
               class="font-bold leading-8 text-justify text-gray-600 sm:leading-normal font-gravity-l text-md sm:text-xl"
             >
               Mediante técnicas artesanales de pintura como acuarelas, tinta
-              china, lápices o grafito, o también técnicas digitales, creamos
-              vuestro diseño para aplicarlo en las invitaciones y crear vuestra
-              papelería de boda.
+              china, lápices o grafito, o también técnicas de ilustración
+              digital, creamos vuestro diseño para aplicarlo en las invitaciones
+              y crear vuestra papelería de boda.
             </p>
             <br />
             <p
