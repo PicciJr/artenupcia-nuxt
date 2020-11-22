@@ -99,11 +99,18 @@
 
     <!-- Submit button -->
     <div class="mb-2">
-      <button
-        class="flex items-center justify-center w-full py-3 font-sans text-base font-medium leading-6 text-black transition duration-150 ease-in-out border border-transparent rounded-md bg-an-salmon hover:bg-an-crema focus:outline-none focus:shadow-outline"
-        @click="checkInputFields"
-      >
-        Confirmar datos
+      <button :class="setButtonStyle" @click="checkInputFields">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          :class="isLoading ? 'animate-spin h-5 w-5 mr-3' : ''"
+        >
+          <path
+            d="M3 18a7 7 0 0 1 4-6.33V8.33A7 7 0 0 1 3 2H1V0h18v2h-2a7 7 0 0 1-4 6.33v3.34A7 7 0 0 1 17 18h2v2H1v-2h2zM5 2a5 5 0 0 0 4 4.9V10h2V6.9A5 5 0 0 0 15 2H5z"
+          />
+        </svg>
+
+        {{ ctaBtnText }}
       </button>
     </div>
     <!-- Aviso privacidad -->
@@ -161,6 +168,17 @@ export default {
           optionText: 'No lo sé, ¿me asesoráis?',
         },
       ],
+      isLoading: false,
+    }
+  },
+  computed: {
+    setButtonStyle() {
+      return !this.isLoading
+        ? 'flex items-center justify-center w-full py-3 font-sans text-base font-medium leading-6 text-black transition duration-150 ease-in-out border border-transparent rounded-md bg-an-salmon hover:bg-an-crema focus:outline-none focus:shadow-outline'
+        : 'flex items-center justify-center w-full py-3 font-sans text-base font-medium leading-6 text-black transition duration-150 ease-in-out border border-transparent rounded-md bg-an-salmon hover:bg-an-crema focus:outline-none focus:shadow-outline opacity-25'
+    },
+    ctaBtnText() {
+      return this.isLoading ? 'Enviando tus datos...' : 'Confirmar datos'
     }
   },
   methods: {
@@ -168,18 +186,25 @@ export default {
      * todo tiene que estar relleno
      * datos validos, si todo ok entonces enviar a BBDD
      */
-    checkInputFields() {
+    async checkInputFields() {
       this.formSubmitted = true
-      this.checkEmailValidity()
-      this.checkInvitacionesValidity()
-      this.checkTextoLargoValidity()
+      // this.checkEmailValidity()
+      // this.checkInvitacionesValidity()
+      // this.checkTextoLargoValidity()
       if (
         this.checkEmailValidity() &&
         this.checkInvitacionesValidity() &&
         this.checkTextoLargoValidity()
       ) {
-        this.sendEmailToUser()
-        this.addUserToDatabase(this.$router)
+        try {
+          this.isLoading = true
+          await this.sendEmailToUser()
+          await this.addUserToDatabase(this.$router)
+        } catch (err) {
+          this.isLoading = true
+          throw err
+        }
+        this.isLoading = true
       }
     },
     /** Chequeo de validez de email */
@@ -257,12 +282,8 @@ export default {
           interesPrincipal: this.userData.opcionInteres,
           textoDescriptivo: this.userData.textoLargo,
         })
-        .then(function(response) {
-          // handle success
-          console.log('Se ha enviado el email', response)
-        })
         .catch(function(error) {
-          console.log('Error al enviar email', error)
+          throw error
         })
     },
     /** Opcion de dropdown seleccionada por el usuario */
