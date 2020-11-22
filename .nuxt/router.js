@@ -5,6 +5,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _5de2a816 = () => interopDefault(import('../pages/contacto.vue' /* webpackChunkName: "pages/contacto" */))
 const _79f4618e = () => interopDefault(import('../pages/contacto-exito.vue' /* webpackChunkName: "pages/contacto-exito" */))
+const _3b707359 = () => interopDefault(import('../pages/cookies.vue' /* webpackChunkName: "pages/cookies" */))
 const _52853a5c = () => interopDefault(import('../pages/error.vue' /* webpackChunkName: "pages/error" */))
 const _63e6b9bb = () => interopDefault(import('../pages/error-ruta.vue' /* webpackChunkName: "pages/error-ruta" */))
 const _17a1f8a2 = () => interopDefault(import('../pages/nuestros-trabajos/index.vue' /* webpackChunkName: "pages/nuestros-trabajos/index" */))
@@ -37,6 +38,10 @@ export const routerOptions = {
     path: "/contacto-exito",
     component: _79f4618e,
     name: "contacto-exito"
+  }, {
+    path: "/cookies",
+    component: _3b707359,
+    name: "cookies"
   }, {
     path: "/error",
     component: _52853a5c,

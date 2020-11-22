@@ -108,7 +108,11 @@
     </div>
     <!-- Aviso privacidad -->
     <div class="text-xs font-medium text-gray-800">
-      No usamos estos datos con fines publicitarios.
+      No usamos estos datos con fines publicitarios. Puedes consultar más sobre
+      nuestra política sobre la privacidad
+      <nuxt-link to="/politica-privacidad" class="font-extrabold">
+        aquí.
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -246,8 +250,12 @@ export default {
     sendEmailToUser() {
       const BASE_URL = 'http://localhost:8000'
       axios
-        .get(BASE_URL + '/send-email', {
-          
+        .post(BASE_URL + '/send-email', {
+          email: this.userData.email,
+          telefono: this.userData.telefono,
+          invitaciones: this.userData.invitaciones,
+          interesPrincipal: this.userData.opcionInteres,
+          textoDescriptivo: this.userData.textoLargo,
         })
         .then(function(response) {
           // handle success

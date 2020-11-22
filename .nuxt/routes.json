@@ -14,6 +14,13 @@
     "_name": "_79f4618e"
   },
   {
+    "name": "cookies",
+    "path": "/cookies",
+    "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/cookies.vue",
+    "chunkName": "pages/cookies",
+    "_name": "_3b707359"
+  },
+  {
     "name": "error",
     "path": "/error",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/error.vue",

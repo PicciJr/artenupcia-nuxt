@@ -17,7 +17,7 @@
       <div class="absolute px-2 py-4 btn-style">
         <div class="p-1">
           <button
-            class="w-64 px-5 py-3 text-lg font-extrabold text-white transition duration-150 ease-in-out bg-opacity-75 border border-transparent rounded-md opacity-75 heartbeat bg-an-salmon hover:border-4 hover:border-white focus:outline-none"
+            class="w-64 px-5 py-3 text-lg font-bold tracking-wide text-gray-700 transition duration-150 ease-in-out bg-opacity-75 border border-transparent rounded-md opacity-75 heartbeat bg-an-salmon hover:border-4 hover:border-white focus:outline-none"
             @click.prevent="$router.push('/contacto')"
           >
             ¡Cuéntanos tu idea!
