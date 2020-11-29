@@ -11,14 +11,14 @@
       <h1 class="mb-4 text-4xl font-free">
         Gracias por contactarnos!
       </h1>
-      <div class="px-8 font-gravity-l">
+      <div class="px-8 text-lg font-gravity-l">
         <div class="mb-6">
           <span class="pr-4">💒</span>¡Ya tenemos ganas de empezar a preparar
           vuestra boda!
         </div>
         <div class="mb-6">
           <span class="pr-4">🔔</span> Te contactaremos en breves.
-          <span class="font-extrabold"
+          <span class="font-extrabold shadow-text"
             >Revisa tu buzón de SPAM por si acaso.</span
           >
         </div>
@@ -49,6 +49,10 @@ export default {
 </script>
 
 <style scoped>
+.shadow-text {
+  box-shadow: inset 0 -0.500em 0 0 rgba(238, 129, 113, 0.3);
+}
+
 .font-free {
   font-family: 'Freestyle';
 }
