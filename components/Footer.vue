@@ -2,7 +2,7 @@
 <template>
   <div class="w-full mb-4 bg-white">
     <div class="flex items-center justify-center mb-8">
-      <div class="flex justify-center w-full sm:pl-16 sm:w-5/6">
+      <div class="flex items-center justify-center w-full sm:pl-16 sm:w-5/6">
         <div v-for="profile in socialProfiles" :key="profile.id" class="p-2">
           <a :href="profile.linkTo" target="_blank">
             <img

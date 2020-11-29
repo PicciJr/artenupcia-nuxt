@@ -178,7 +178,7 @@ export default {
         : 'flex items-center justify-center w-full py-3 font-sans text-base font-medium leading-6 text-black transition duration-150 ease-in-out border border-transparent rounded-md bg-an-salmon hover:bg-an-crema focus:outline-none focus:shadow-outline opacity-25'
     },
     ctaBtnText() {
-      return this.isLoading ? 'Enviando tus datos...' : 'Confirmar datos'
+      return this.isLoading ? 'Enviando tus datos...' : 'Solicitar presupuesto'
     }
   },
   methods: {

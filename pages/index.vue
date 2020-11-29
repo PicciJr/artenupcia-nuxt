@@ -24,9 +24,11 @@
           </h2>
         </div>
         <div
-          class="w-full mb-2 border-b sm:w-1/3 sm:pr-8 border-an-marron"
+          class="w-full mb-4 border-b sm:w-1/3 sm:pr-8 border-an-marron"
         ></div>
-        <div class="flex flex-col justify-center mb-16 xl:flex-row">
+        <div
+          class="flex flex-col items-center justify-center mb-16 xl:flex-row"
+        >
           <div class="w-full p-1 sm:p-3 xl:p-4">
             <StyledRectangleShape
               :textRectangle="'Si tu boda es única, tu invitación también'"
@@ -183,7 +185,7 @@
           </h2>
         </div>
         <div
-          class="w-full mb-2 border-b sm:w-1/3 sm:pr-8 border-an-marron"
+          class="w-full mb-4 border-b sm:w-1/3 sm:pr-8 border-an-marron"
         ></div>
         <!-- Flex -->
         <div class="flex flex-col justify-center mb-16 xl:flex-row">
@@ -216,7 +218,7 @@
           <div class="w-full p-1 sm:p-3 xl:p-4">
             <div class="sm:px-20">
               <CardItem
-                imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Fabout_me.jpg?alt=media&token=b487f62b-2ad8-4965-80df-3b07014884b3"
+                imgSrc="https://firebasestorage.googleapis.com/v0/b/artenupcia.appspot.com/o/flamelink%2Fmedia%2Fsized%2F900_9999_100%2Fabout_me.jpg?alt=media&token=17cb4972-8c2e-418f-9a37-0e38c6fa7c21"
               />
             </div>
           </div>

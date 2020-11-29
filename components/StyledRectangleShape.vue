@@ -2,13 +2,13 @@
 <template>
   <div class="flex px-4 py-2 font-znikomit">
     <div
-      class="relative w-fit object-contain py-2 px-2 border-2 border-an-salmon text-3xl sm:text-4xl text-center"
+      class="relative object-contain px-2 pt-1 pb-4 text-2xl text-center border-2 w-fit border-an-salmon sm:text-4xl"
     >
       <div class="pl-4">
         {{ textRectangle }}
       </div>
       <div
-        class="absolute top-0 ml-1 -mt-3 w-full object-contain h-full px-4 py-2 border-2 border-an-salmon"
+        class="absolute top-0 object-contain w-full h-full px-4 py-2 ml-1 -mt-3 border-2 border-an-salmon"
       ></div>
     </div>
   </div>

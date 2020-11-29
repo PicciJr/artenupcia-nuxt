@@ -1,6 +1,8 @@
 <!-- Contiene logo, elementos del menu solo para movil -->
 <template>
-  <div class="flex flex-col items-center font-semibold text-gray-700 font-znikomit">
+  <div
+    class="flex flex-col items-center font-semibold text-gray-700 font-znikomit"
+  >
     <!-- Menu movil -->
     <div class="self-end pr-12">
       <svg
@@ -81,7 +83,9 @@
           >
         </div>
         <div @click="toggleMenu" class="mb-10 font-extrabold text-gray-700">
-          <nuxt-link to="/contacto" class="px-4 mb-6">Contacto</nuxt-link>
+          <nuxt-link to="/contacto" class="mb-6 shadow-text"
+            >Contacto</nuxt-link
+          >
         </div>
       </div>
     </div>
@@ -94,7 +98,7 @@
       />
     </nuxt-link>
     <!-- Heading text -->
-    <h1 class="text-4xl font-medium font-free">
+    <h1 class="text-4xl font-medium text-center font-free">
       Invitaciones de boda para el recuerdo
     </h1>
 
@@ -124,6 +128,10 @@ export default {
 </script>
 
 <style scoped>
+.shadow-text {
+  box-shadow: inset 0 -0.375em 0 0 rgba(214, 231, 238, 0.8);
+}
+
 .font-free {
   font-family: 'Freestyle';
 }

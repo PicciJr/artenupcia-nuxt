@@ -1,29 +1,29 @@
 <!-- Formulario simple de un solo campo para que usuario se pueda suscribir a un newsletter -->
 <template>
   <div class="bg-white">
-    <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <div class="max-w-screen-xl px-4 py-12 mx-auto sm:px-6 lg:py-16 lg:px-8">
       <h2
-        class="font-inkfree text-3xl leading-9 font-extrabold tracking-tight text-an-azul-oscuro sm:text-4xl sm:leading-10"
+        class="text-3xl font-extrabold leading-9 tracking-tight text-center font-inkfree text-an-azul-oscuro sm:text-4xl sm:leading-10"
       >
         ¿Quieres estar a la última en tendencias de boda?
         <br class="hidden sm:inline" />
       </h2>
-      <div class="font-eras text-an-cielo text-xl font-bold">
+      <div class="text-xl font-bold text-center font-eras text-an-cielo">
         Únete a nuestro newsletter.
       </div>
       <!-- Datos de usuario -->
-      <form class="mt-8 mb-2 sm:flex">
+      <form class="justify-center mt-8 mb-2 sm:flex">
         <input
           v-model="userData.email"
           aria-label="Email address"
           type="email"
           required
-          class="appearance-none w-full px-5 py-3 border border-gray-300 text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:max-w-xs"
+          class="w-full px-5 py-3 text-base leading-6 text-gray-900 placeholder-gray-500 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md appearance-none focus:outline-none focus:shadow-outline focus:border-blue-300 sm:max-w-xs"
           placeholder="Tu email"
         />
         <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
           <button
-            class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-black bg-an-salmon hover:bg-an-crema focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+            class="flex items-center justify-center w-full px-5 py-3 text-base font-medium leading-6 text-black transition duration-150 ease-in-out border border-transparent rounded-md bg-an-salmon hover:bg-an-crema focus:outline-none focus:shadow-outline"
             @click.prevent="checkEmailValidity"
           >
             Unirme

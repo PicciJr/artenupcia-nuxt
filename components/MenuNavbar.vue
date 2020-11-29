@@ -42,7 +42,7 @@
         >
         <div class="mb-2 border-r border-an-marron"></div>
         <div class="py-3 pl-12 font-extrabold tracking-wide no-underline">
-          <nuxt-link to="/contacto">Contacto</nuxt-link>
+          <nuxt-link to="/contacto" class="shadow-text">Contacto</nuxt-link>
         </div>
       </div>
     </div>
@@ -55,6 +55,10 @@ export default {}
 </script>
 
 <style scoped>
+.shadow-text {
+  box-shadow: inset 0 -0.375em 0 0 rgba(214, 231, 238, 0.8);
+}
+
 .font-free {
   font-family: 'Freestyle';
 }

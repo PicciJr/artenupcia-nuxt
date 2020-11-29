@@ -10,7 +10,7 @@
       >
         <!-- imagenes dimensionadas en cuadrado para que parezcan tipo instagram -->
         <img
-          class="p-2 rounded-lg cursor-pointer w-72 h-72 hover:shadow-outline"
+          class="p-2 transform rounded-lg cursor-pointer w-72 h-72 hover:shadow-md hover:translate-y-2"
           :src="img.src"
         />
       </a>

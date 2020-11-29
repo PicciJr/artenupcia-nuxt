@@ -1,6 +1,6 @@
 <!-- Pagina politica de privacidad -->
 <template>
-  <div>
+  <div class="px-4">
     <!-- Header with icon logo -->
     <Header class="relative top-0 z-30 w-full" />
     <!-- Menu nav Bar only visible in wide screens -->
@@ -228,7 +228,7 @@
         y a otros Órganos de la Administración Pública, caso de ser requeridos a
         ello.
       </p>
-      <h2>11. TRANSFERENCIAS INTERNACIONALES DE DATOS.</h2>
+      <h2>9. TRANSFERENCIAS INTERNACIONALES DE DATOS.</h2>
       <p>
         En Artenupcia, utilizamos Facebook. Esta red social está sita en Estados
         Unidos. Por ello, cualquier información que subamos a dicha red social,
@@ -280,7 +280,7 @@
         de datos facilitamos los siguientes datos: Attn: Law Enforcement
         Response Team 1601 Willow Road Menlo Park, CA 94025 Estados Unidos
       </p>
-      <h2>12. DERECHOS DE PROTECCIÓN DE DATOS.</h2>
+      <h2>10. DERECHOS DE PROTECCIÓN DE DATOS.</h2>
       <p>
         Cualquier persona, podrá ejercitar los derechos de acceso,
         rectificación, supresión, limitación del tratamiento, el derecho a la
@@ -380,7 +380,7 @@
           Protección de Datos.
         </li>
       </ul>
-      <h2>14. REDES SOCIALES</h2>
+      <h2>11. REDES SOCIALES</h2>
       <p>
         Artenupcia está presente en Facebook, Instagram y Pinterest, sin
         perjuicio de que pueda utilizar otras en el futuro. Es por ello que, a
@@ -427,7 +427,7 @@
         Usuarios encarecidamente lean las Políticas de Privacidad y Términos y
         Condiciones de las redes sociales donde estamos presentes.
       </p>
-      <h2>16. CONDICIONES.</h2>
+      <h2>12. CONDICIONES.</h2>
       <p>
         Recomendamos encarecidamente a los Usuarios que visiten también las
         secciones Condiciones Legales, Aviso Legal y Política de Cookies que

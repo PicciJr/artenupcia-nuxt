@@ -1,6 +1,6 @@
 <!-- Informar sobre las cookies usadas por la web -->
 <template>
-  <div>
+  <div class="px-4">
     <!-- Header with icon logo -->
     <Header class="relative top-0 z-30 w-full" />
     <!-- Menu nav Bar only visible in wide screens -->

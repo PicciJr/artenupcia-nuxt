@@ -15,7 +15,7 @@
       <!-- Formulario de contacto -->
       <div class="w-full p-1 xl:w-1/2 sm:p-3 xl:p-4">
         <h2
-          class="mb-2 text-2xl font-extrabold leading-8 tracking-tight text-gray-900 font-znikomit sm:text-3xl sm:leading-9"
+          class="mb-2 text-2xl font-extrabold leading-8 tracking-wider text-center text-gray-900 sm:text-left font-znikomit sm:text-3xl sm:leading-9"
         >
           ¡Empecemos!
         </h2>
