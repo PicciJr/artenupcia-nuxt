@@ -3,70 +3,60 @@
     "name": "contacto",
     "path": "/contacto",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/contacto.vue",
-    "chunkName": "pages/contacto",
-    "_name": "_5de2a816"
+    "chunkName": "pages/contacto"
   },
   {
     "name": "contacto-exito",
     "path": "/contacto-exito",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/contacto-exito.vue",
-    "chunkName": "pages/contacto-exito",
-    "_name": "_79f4618e"
+    "chunkName": "pages/contacto-exito"
   },
   {
     "name": "cookies",
     "path": "/cookies",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/cookies.vue",
-    "chunkName": "pages/cookies",
-    "_name": "_3b707359"
+    "chunkName": "pages/cookies"
   },
   {
     "name": "error",
     "path": "/error",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/error.vue",
-    "chunkName": "pages/error",
-    "_name": "_52853a5c"
+    "chunkName": "pages/error"
   },
   {
     "name": "error-ruta",
     "path": "/error-ruta",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/error-ruta.vue",
-    "chunkName": "pages/error-ruta",
-    "_name": "_63e6b9bb"
+    "chunkName": "pages/error-ruta"
   },
   {
     "name": "nuestros-trabajos",
     "path": "/nuestros-trabajos",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/nuestros-trabajos/index.vue",
-    "chunkName": "pages/nuestros-trabajos/index",
-    "_name": "_17a1f8a2"
+    "chunkName": "pages/nuestros-trabajos/index"
   },
   {
     "name": "politica-privacidad",
     "path": "/politica-privacidad",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/politica-privacidad.vue",
-    "chunkName": "pages/politica-privacidad",
-    "_name": "_a7b3c5d2"
+    "chunkName": "pages/politica-privacidad"
   },
   {
     "name": "nuestros-trabajos-id",
     "path": "/nuestros-trabajos/:id",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/nuestros-trabajos/_id/index.vue",
-    "chunkName": "pages/nuestros-trabajos/_id/index",
-    "_name": "_211ea1cc"
+    "chunkName": "pages/nuestros-trabajos/_id/index"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_da1176c8"
+    "chunkName": "pages/index"
   },
   {
     "name": "all",
     "path": "/*",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/_.vue",
-    "chunkName": "pages/_",
-    "_name": "_138f12ae"
+    "chunkName": "pages/_"
   }
 ]
