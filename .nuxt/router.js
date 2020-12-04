@@ -5,6 +5,8 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _5de2a816 = () => interopDefault(import('../pages/contacto.vue' /* webpackChunkName: "pages/contacto" */))
 const _79f4618e = () => interopDefault(import('../pages/contacto-exito.vue' /* webpackChunkName: "pages/contacto-exito" */))
+const _6fc8c30a = () => interopDefault(import('../pages/contacto-exito-promo.vue' /* webpackChunkName: "pages/contacto-exito-promo" */))
+const _37ba0392 = () => interopDefault(import('../pages/contacto-promo.vue' /* webpackChunkName: "pages/contacto-promo" */))
 const _3b707359 = () => interopDefault(import('../pages/cookies.vue' /* webpackChunkName: "pages/cookies" */))
 const _52853a5c = () => interopDefault(import('../pages/error.vue' /* webpackChunkName: "pages/error" */))
 const _63e6b9bb = () => interopDefault(import('../pages/error-ruta.vue' /* webpackChunkName: "pages/error-ruta" */))
@@ -38,6 +40,14 @@ export const routerOptions = {
     path: "/contacto-exito",
     component: _79f4618e,
     name: "contacto-exito"
+  }, {
+    path: "/contacto-exito-promo",
+    component: _6fc8c30a,
+    name: "contacto-exito-promo"
+  }, {
+    path: "/contacto-promo",
+    component: _37ba0392,
+    name: "contacto-promo"
   }, {
     path: "/cookies",
     component: _3b707359,

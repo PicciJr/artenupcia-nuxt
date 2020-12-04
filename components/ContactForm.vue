@@ -179,7 +179,7 @@ export default {
     },
     ctaBtnText() {
       return this.isLoading ? 'Enviando tus datos...' : 'Solicitar presupuesto'
-    }
+    },
   },
   methods: {
     /** Chequeo de todos los campos e invocacion a firebase para guardar
