@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/contacto-exito-promo", {data:[{}],fetch:[],mutations:void 0});

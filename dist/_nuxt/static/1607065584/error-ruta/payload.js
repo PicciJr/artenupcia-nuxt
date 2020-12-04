@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/error-ruta", {data:[{}],fetch:[],mutations:void 0});
