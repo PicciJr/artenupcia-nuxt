@@ -161,7 +161,7 @@ export default {
         },
         {
           idOption: 2,
-          optionText: 'Papelería de Eventos',
+          optionText: 'Postales de Navidad',
         },
         {
           idOption: 3,
