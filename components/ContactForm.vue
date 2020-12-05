@@ -273,9 +273,8 @@ export default {
         })
     },
     sendEmailToUser() {
-      const BASE_URL = 'http://localhost:8000'
       axios
-        .post(BASE_URL + '/send-email', {
+        .post(this.$config.do_baseURL + '/send-email', {
           email: this.userData.email,
           telefono: this.userData.telefono,
           invitaciones: this.userData.invitaciones,

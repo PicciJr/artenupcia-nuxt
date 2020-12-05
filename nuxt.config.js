@@ -82,7 +82,7 @@ export default {
       {
         id: 'UA-161289524-1',
       },
-    ]
+    ],
   ],
   /*
    ** Axios module configuration
@@ -129,5 +129,8 @@ export default {
           console.log(err)
         })
     },
-  }
+  },
+  publicRuntimeConfig: {
+    do_baseURL: 'https://artenupcia-server-fevwe.ondigitalocean.app/send-email',
+  },
 }
