@@ -131,6 +131,6 @@ export default {
     },
   },
   publicRuntimeConfig: {
-    do_baseURL: 'https://artenupcia-server-fevwe.ondigitalocean.app/send-email',
+    do_baseURL: 'https://artenupcia-server-fevwe.ondigitalocean.app',
   },
 }
