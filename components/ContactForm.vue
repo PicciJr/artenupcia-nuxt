@@ -7,7 +7,7 @@
       <div class="relative flex">
         <input
           v-model="userData.email"
-          class="relative w-full h-10 pl-6 mb-2 text-sm bg-white rounded-lg sm:w-1/2 focus:outline-none"
+          class="relative w-full h-10 pl-6 mb-2 text-sm text-black bg-white rounded-lg sm:w-1/2 focus:outline-none"
           :class="{
             'border-2 border-r-4 border-red-700 shadow-md':
               errorsFlag.email.length > 0,
@@ -35,7 +35,7 @@
     <div class="relative flex mb-4">
       <input
         v-model="userData.telefono"
-        class="relative w-full h-10 pl-6 mb-2 text-sm bg-white border-2 border-gray-300 rounded-lg sm:w-1/2 focus:outline-none"
+        class="relative w-full h-10 pl-6 mb-2 text-sm text-black bg-white border-2 border-gray-300 rounded-lg sm:w-1/2 focus:outline-none"
         type="tel"
         maxlength="9"
         @keydown="handleTelefonoInput($event)"
@@ -52,10 +52,10 @@
     </div>
     <!-- Num invitaciones -->
     <label>Número de invitaciones aproximado:</label>
-    <div class="mb-4">
+    <div class="mb-1">
       <input
-        placeholder="0"
-        class="w-full h-10 pl-2 border-2 border-gray-300 rounded-lg sm:w-1/2 place"
+        placeholder="50"
+        class="w-full h-10 pl-2 text-black border-2 border-gray-300 rounded-lg sm:w-1/2 place"
         :class="{
           'border-2 border-r-4 border-red-700 shadow-md':
             errorsFlag.invitaciones.length > 0,
@@ -66,8 +66,56 @@
         min="0"
         @keyup="handleNumInvitaciones($event)"
       />
-      <div v-if="errorsFlag.invitaciones" class="mb-6 text-sm text-red-700">
+      <div v-if="errorsFlag.invitaciones" class="mb-1 text-sm text-red-700">
         {{ errorsFlag.invitaciones }}
+      </div>
+    </div>
+    <!-- Calculadora de invitaciones estimadas -->
+    <div class="mb-6">
+      <div class="flex items-center">
+        <svg
+          class="w-4 h-4 fill-current text-an-azul-oscuro"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+        >
+          <path
+            d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm2-13c0 .28-.21.8-.42 1L10 9.58c-.57.58-1 1.6-1 2.42v1h2v-1c0-.29.21-.8.42-1L13 9.42c.57-.58 1-1.6 1-2.42a4 4 0 1 0-8 0h2a2 2 0 1 1 4 0zm-3 8v2h2v-2H9z"
+          /></svg
+        ><span
+          @click="showInvitacionesCalculator"
+          class="pl-1 text-sm italic font-medium text-gray-500 cursor-pointer hover:underline"
+          >¿Cuántas invitaciones necesito?</span
+        >
+      </div>
+      <div
+        v-show="isInvitacionesCalculatorClicked"
+        class="flex flex-col mt-1 sm:items-center sm:flex-row text-pop-up-top"
+      >
+        <input
+          v-model="numInvitados"
+          class="p-1 text-sm text-black border rounded-md w-72"
+          type="text"
+          @input="getNumInvitacionesEstimado"
+          placeholder="¿Cuántos invitados irán a vuestra boda?"
+        />
+        <div
+          v-if="isCalculatingInvitations && numInvitados > 0"
+          class="flex items-center"
+        >
+          <span class="px-2">Calculando...</span>
+          <div class="h-24 mb-12 lds-ripple">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div v-else>
+          <span v-show="numInvitados > 0" class="mt-1 sm:mt-0 sm:pl-4"
+            >Necesitarás unas
+            <span class="text-lg shadow-text"
+              >{{ numInvitacionesEstimado }} invitaciones</span
+            ></span
+          >
+        </div>
       </div>
     </div>
     <!-- Interes principal -->
@@ -83,7 +131,7 @@
     <div class="mb-2">
       <textarea
         v-model="userData.textoLargo"
-        class="w-full p-2 mb-2 rounded-md shadow-lg resize-none"
+        class="w-full p-2 mb-2 text-black rounded-md shadow-lg resize-none"
         :class="{
           'border-2 border-r-4 border-red-700 shadow-md':
             errorsFlag.textoLargo.length > 0,
@@ -161,7 +209,7 @@ export default {
         },
         {
           idOption: 2,
-          optionText: 'Postales de Navidad',
+          optionText: 'Papelería de Eventos',
         },
         {
           idOption: 3,
@@ -169,6 +217,10 @@ export default {
         },
       ],
       isLoading: false,
+      numInvitados: null,
+      numInvitacionesEstimado: 0,
+      isCalculatingInvitations: false,
+      isInvitacionesCalculatorClicked: false,
     }
   },
   computed: {
@@ -308,6 +360,19 @@ export default {
         return this.userData.telefono
       } else event.preventDefault()
     },
+    getNumInvitacionesEstimado() {
+      this.isCalculatingInvitations = true
+      setTimeout(() => {
+        this.numInvitacionesEstimado = Math.round(
+          this.numInvitados / 2 + this.numInvitados * 0.2
+        )
+        this.isCalculatingInvitations = false
+        return this.numInvitacionesEstimado
+      }, 2000)
+    },
+    showInvitacionesCalculator() {
+      this.isInvitacionesCalculatorClicked = true
+    },
   },
 }
 </script>
@@ -337,5 +402,71 @@ input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid rgb(189, 77, 77);
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+.text-pop-up-top {
+  -webkit-animation: text-pop-up-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: text-pop-up-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-12-12 14:21:4
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+@-webkit-keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    -webkit-transform-origin: 5% 50%;
+    transform-origin: 5% 50%;
+  }
+}
+
+.shadow-text {
+  box-shadow: inset 0 -0.4em 0 0 rgba(99, 195, 247, 0.8);
 }
 </style>
