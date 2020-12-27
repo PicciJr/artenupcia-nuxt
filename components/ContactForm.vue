@@ -54,7 +54,7 @@
     <label>Número de invitaciones aproximado:</label>
     <div class="mb-1">
       <input
-        placeholder="50"
+        placeholder=""
         class="w-full h-10 pl-2 text-black border-2 border-gray-300 rounded-lg sm:w-1/2 place"
         :class="{
           'border-2 border-r-4 border-red-700 shadow-md':
