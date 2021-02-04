@@ -1,0 +1,1 @@
+window.__NUXT__={staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1612461403",layout:"default",error:null,serverRendered:true,routePath:"\u002Fnuestros-trabajos\u002FG5pbvq36dkmvORJ71cPw",config:{do_baseURL:"https:\u002F\u002Fartenupcia-server-fevwe.ondigitalocean.app"}};
