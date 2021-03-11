@@ -131,6 +131,7 @@ export default {
     },
   },
   publicRuntimeConfig: {
-    do_baseURL: 'https://artenupcia-server-fevwe.ondigitalocean.app',
+    firebase_cloud_function_sendEmail:
+      'https://us-central1-artenupcia-server.cloudfunctions.net/sendEmail',
   },
 }

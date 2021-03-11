@@ -326,14 +326,11 @@ export default {
     },
     sendEmailToUser() {
       axios
-        .post(this.$config.do_baseURL + '/send-email', {
+        .post(this.$config.firebase_cloud_function_sendEmail, {
           email: this.userData.email,
-          telefono: this.userData.telefono,
-          invitaciones: this.userData.invitaciones,
-          interesPrincipal: this.userData.opcionInteres,
-          textoDescriptivo: this.userData.textoLargo,
         })
         .catch(function(error) {
+          console.log('error enviando', error)
           throw error
         })
     },
