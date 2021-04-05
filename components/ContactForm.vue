@@ -250,7 +250,9 @@ export default {
       ) {
         try {
           this.isLoading = true
-          await this.sendEmailToUser()
+          // TODO: cuando migre al VPS, volver a anidar una funcion de envio de email
+          // de momento se desactiva porque he quitado las cloud functions de Firebase
+          // await this.sendEmailToUser() 
           await this.addUserToDatabase(this.$router)
         } catch (err) {
           this.isLoading = true
