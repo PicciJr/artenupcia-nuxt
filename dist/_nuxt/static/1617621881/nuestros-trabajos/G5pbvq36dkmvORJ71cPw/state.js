@@ -1,1 +1,0 @@
-window.__NUXT__={staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1617621881",layout:"default",error:null,serverRendered:true,routePath:"\u002Fnuestros-trabajos\u002FG5pbvq36dkmvORJ71cPw",config:{firebase_cloud_function_sendEmail:"https:\u002F\u002Fus-central1-artenupcia-server.cloudfunctions.net\u002FsendEmail"}};
