@@ -3,72 +3,84 @@
     "name": "contacto",
     "path": "/contacto",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/contacto.vue",
-    "chunkName": "pages/contacto"
+    "chunkName": "pages/contacto",
+    "_name": "_5de2a816"
   },
   {
     "name": "contacto-exito",
     "path": "/contacto-exito",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/contacto-exito.vue",
-    "chunkName": "pages/contacto-exito"
+    "chunkName": "pages/contacto-exito",
+    "_name": "_79f4618e"
   },
   {
     "name": "contacto-exito-promo",
     "path": "/contacto-exito-promo",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/contacto-exito-promo.vue",
-    "chunkName": "pages/contacto-exito-promo"
+    "chunkName": "pages/contacto-exito-promo",
+    "_name": "_6fc8c30a"
   },
   {
     "name": "contacto-promo",
     "path": "/contacto-promo",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/contacto-promo.vue",
-    "chunkName": "pages/contacto-promo"
+    "chunkName": "pages/contacto-promo",
+    "_name": "_37ba0392"
   },
   {
     "name": "cookies",
     "path": "/cookies",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/cookies.vue",
-    "chunkName": "pages/cookies"
+    "chunkName": "pages/cookies",
+    "_name": "_3b707359"
   },
   {
     "name": "error",
     "path": "/error",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/error.vue",
-    "chunkName": "pages/error"
+    "chunkName": "pages/error",
+    "_name": "_52853a5c"
   },
   {
     "name": "error-ruta",
     "path": "/error-ruta",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/error-ruta.vue",
-    "chunkName": "pages/error-ruta"
+    "chunkName": "pages/error-ruta",
+    "_name": "_63e6b9bb"
   },
   {
     "name": "nuestros-trabajos",
     "path": "/nuestros-trabajos",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/nuestros-trabajos/index.vue",
-    "chunkName": "pages/nuestros-trabajos/index"
+    "chunkName": "pages/nuestros-trabajos/index",
+    "_name": "_17a1f8a2"
   },
   {
     "name": "politica-privacidad",
     "path": "/politica-privacidad",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/politica-privacidad.vue",
-    "chunkName": "pages/politica-privacidad"
+    "chunkName": "pages/politica-privacidad",
+    "_name": "_a7b3c5d2"
   },
   {
     "name": "nuestros-trabajos-id",
     "path": "/nuestros-trabajos/:id",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/nuestros-trabajos/_id/index.vue",
-    "chunkName": "pages/nuestros-trabajos/_id/index"
+    "chunkName": "pages/nuestros-trabajos/_id/index",
+    "_name": "_211ea1cc"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_da1176c8"
   },
   {
     "name": "all",
     "path": "/*",
     "component": "/Users/piccijr/Documents/Web/portfolio/artenupcia-nuxt/pages/_.vue",
-    "chunkName": "pages/_"
+    "chunkName": "pages/_",
+    "_name": "_138f12ae"
   }
 ]

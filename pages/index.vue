@@ -5,9 +5,10 @@
     <!-- Menu nav Bar only visible in wide screens -->
     <MenuNavbar />
     <!-- No margin Hero cover -->
-    <div class="mb-8">
+    <!-- TODO: restaurar si se vuelve a hostear el video en algun sitio -->
+    <!-- <div class="mb-8">
       <HeroCover :class="{ hidden: hideMainElements }" />
-    </div>
+    </div> -->
     <div
       :class="{
         hidden: hideMainElements,
